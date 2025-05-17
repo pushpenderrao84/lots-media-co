@@ -7,7 +7,7 @@ const About = () => {
     <section id="about" className="section-padding bg-soft-white">
       <div className="container-padding max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-center md:items-center justify-between">
-          <div className="md:w-2/5 relative flex justify-center md:justify-end items-center mb-6 md:mb-0">
+          <div className="md:w-2/5 relative flex justify-center md:justify-between items-center mb-6 md:mb-0">
              <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-warm-yellow">
                 <img 
                   src="https://selecttraining.ae/wp-content/uploads/2024/01/team-building-for-graphic-designers-1063x800.png" 
