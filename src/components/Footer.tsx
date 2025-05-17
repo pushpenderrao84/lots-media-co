@@ -10,6 +10,7 @@ const Footer = () => {
           <div className="mb-6 md:mb-0">
             <a href="#" className="flex items-center">
               <img 
+                variant="outline"
                 src="/lovable-uploads/a6e0b97c-98e4-46fd-bb8d-0ef459a48468.png" 
                 alt="LOTS Media Logo" 
                 className="h-12 mb-2"
