@@ -53,8 +53,8 @@ const Contact = () => {
                     rows={6}
                   />
                 </div>
-                <Button type="submit" className="w-full bg-warm-yellow text-charcoal hover:bg-charcoal hover:bg-charcoal transition-colors px-6 py-6 h-auto text-base">
-                  <Send className="h-4 w-4 mr-2" />
+                <Button type="submit" className="w-full bg-warm-yellow text-charcoal hover:bg-charcoal hover:text-soft-white transition-colors px-6 py-6 h-auto text-base">
+                  <Send className="h-4 w-4 mr-2 group-hover:warm-yellow transition colors" />
                   Send Message
                 </Button>
               </form>
