@@ -11,7 +11,7 @@ const testimonials = [
   },
   {
     id: 2,
-    quote: "Working with LOTS Media for my album covers & videos has been an absolute game-changer. The creativity, attention to detail, and understanding of my artistic vision were beyond impressive. Every design perfectly captured the essence of my music, making each release visually striking and unique. The professionalism and dedication from LOTS Media made the entire process seamless. I highly recommend them to any artist looking to elevate their brand with top-tier visuals!",
+    quote: "Working with LOTS Media was a game-changer! Their creativity, detail, and grasp of my vision brought my music to life visually. Every design was unique and striking. Highly professional and seamless—perfect for any artist looking to elevate their brand!",
     author: "PRNC",
     company: "Musician"
   }
