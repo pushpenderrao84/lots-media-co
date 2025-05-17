@@ -89,6 +89,7 @@ const Contact = () => {
                     <p className="font-medium">Instagram</p>
                     <p className="text-charcoal/70">@lotsmediaco</p>
                   </div>
+                  </a>
 
                 <a href="https://x.com/lotsmediaco" target="_blank" rel="noopener noreferrer" className="flex items-center group">
                   <div className="bg-warm-yellow p-3 rounded-full mr-4 group-hover:bg-charcoal transition-colors">
@@ -98,6 +99,7 @@ const Contact = () => {
                     <p className="font-medium">Twitter</p>
                     <p className="text-charcoal/70">@lotsmediaco</p>
                   </div>
+                  </a>
                   
                 <a href="https://x.com/lotsmediaco" target="_blank" rel="noopener noreferrer" className="flex items-center group">
                   <div className="bg-warm-yellow p-3 rounded-full mr-4 group-hover:bg-charcoal transition-colors">
