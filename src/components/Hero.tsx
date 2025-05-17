@@ -20,7 +20,7 @@ const Hero = () => {
               <Button 
                 asChild
                 size="lg" 
-                className="h-5 w-5 text-charcoal group-hover:text-warm-yellow transition-colors"
+                className="bg-warm-yellow text-charcoal hover:bg-warm-yellow/90 font-medium"
               >
                 <a href="#portfolio">
                   View Portfolio
