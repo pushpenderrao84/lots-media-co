@@ -4,7 +4,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Mail, Send, Instagram, Twitter, X } from 'lucide-react';
-import XLogo from '@/components/icons';
 
 const Contact = () => {
   return (
@@ -100,16 +99,6 @@ const Contact = () => {
                     <p className="text-charcoal/70">@lotsmediaco</p>
                   </div>
                   </a>
-                  
-                <a href="https://x.com/lotsmediaco" target="_blank" rel="noopener noreferrer" className="flex items-center group">
-                  <div className="bg-warm-yellow p-3 rounded-full mr-4 group-hover:bg-charcoal transition-colors flex items-center gap-4">
-                    <XLogo className="h-5 w-5 text-charcoal group-hover:text-warm-yellow transition-colors" />
-                  </div>
-                  <div>
-                    <p className="font-medium">X</p>
-                    <p className="text-charcoal/70">@lotsmediacoooo</p>
-                  </div>
-                </a>
               </div>
             </div>
           </div>
