@@ -8,21 +8,21 @@ const portfolioItems = [
     id: 1,
     title: "Instagram Sports Post",
     category: "Social Media",
-    image: "./public/assets/Post.jpg",
+    image: "lots-media-visions/public/assets/Post.jpg",
     description: "A series of Instagram posts designed for a sports brand focusing on minimalist aesthetics and engaging content."
   },
   {
     id: 2,
     title: "EdTech Logo Design",
     category: "Branding",
-    image: "./public/assets/Logo.jpg",
+    image: "lots-media-visions/public/assets/Logo.jpg",
     description: "Modern logo design for a edtech startup, focusing on simplicity, memorability, and brand values."
   },
   {
     id: 3,
     title: "YouTube Thumbnail",
     category: "Content Creator",
-    image: "./public/assets/Thumbnail.jpg",
+    image: "lots-media-visions/public/assets/Thumbnail.jpg",
     description: "Eye-catching YouTube thumbnail that drive clicks and maintain consistent branding across a creator's channel."
   }
 ];
