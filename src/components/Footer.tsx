@@ -10,10 +10,9 @@ const Footer = () => {
           <div className="mb-6 md:mb-0">
             <a href="#" className="flex items-center">
               <img 
-                variant="border border-input bg-background hover:bg-accent hover:text-accent-foreground"
                 src="/lovable-uploads/a6e0b97c-98e4-46fd-bb8d-0ef459a48468.png" 
                 alt="LOTS Media Logo" 
-                className="h-12 mb-2"
+                className="h-12 mr-2 border-2 border-black rounded-md"
               />
             </a>
             <p className="mt-2 text-soft-white/70">
