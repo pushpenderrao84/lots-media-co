@@ -13,7 +13,7 @@ const Footer = () => {
                 src="/lovable-uploads/a6e0b97c-98e4-46fd-bb8d-0ef459a48468.png" 
                 alt="LOTS Media Logo" 
                 className="h-12 mr-2 outline outline-2 rounded-md"
-                style={{ outlineColor: '#FCCA32' }}
+                style={{ outlineColor: '#FAFAFA' }}
               />
             </a>
             <p className="mt-2 text-soft-white/70">
