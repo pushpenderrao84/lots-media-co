@@ -11,7 +11,7 @@ const About = () => {
             <div className="relative">
               <div className={cn(
                 "w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-warm-yellow",
-                "before:content-[''] before:absolute before:inset-0 before:bg-warm-yellow/20 before:z-10"
+                "absolute inset-0 bg-warm-yellow/20 z-10 rounded-full pointer-events-none"
               )}>
                 <img 
                   src="https://selecttraining.ae/wp-content/uploads/2024/01/team-building-for-graphic-designers-1063x800.png" 
