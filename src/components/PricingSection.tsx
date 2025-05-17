@@ -346,7 +346,7 @@ const PricingSection = () => {
             <Instagram className="h-5 w-5 mr-2 group-hover:warm-yellow transition-colors"/>
             DM on Instagram
           </Button>
-          <Button className="bg-charcoal text-soft-white hover:text-charcoal transition-colors px-6 py-6 h-auto text-base">
+          <Button className="border-charcoal bg-soft-white text-charcoal hover:text-soft-white hover:bg-charcoal transition-colors px-6 py-6 h-auto text-base">
             Request Custom Quote
           </Button>
         </div>
