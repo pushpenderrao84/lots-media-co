@@ -102,15 +102,7 @@ const Contact = () => {
                   </div>
                   </a>
                   
-                <a href="https://x.com/lotsmediaco" target="_blank" rel="noopener noreferrer" className="flex items-center group">
-                  <div className="bg-warm-yellow p-3 rounded-full mr-4 group-hover:bg-charcoal transition-colors">
-                    <XLogo className="h-5 w-5 text-charcoal group-hover:text-warm-yellow transition-colors" />
-                  </div>
-                  <div>
-                    <p className="font-medium">X</p>
-                    <p className="text-charcoal/70">@lotsmediac</p>
-                  </div>
-                </a>
+
               </div>
             </div>
           </div>
