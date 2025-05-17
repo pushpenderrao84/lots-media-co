@@ -20,11 +20,9 @@ const Footer = () => {
             </p>
           </div>
           
-          <div className="flex space-x-4">
-            <SocialIcon href="https://instagram.com/lotsmedia" icon={<Instagram />} />
-            <SocialIcon href="https://wa.me/1234567890" icon={<MessageSquare />} />
-            <SocialIcon href="https://github.com/lotsmedia" icon={<Github />} />
-            <SocialIcon href="mailto:hello@lotsmedia.com" icon={<Mail />} />
+          <div className="flex space-x-2">
+            <SocialIcon href="https://instagram.com/lotsmediaco" icon={<Instagram />} />
+            <SocialIcon href="mailto:lotsmediaco@gmail.com" icon={<Mail />} />
           </div>
         </div>
         
