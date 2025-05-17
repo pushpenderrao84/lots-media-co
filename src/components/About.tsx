@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section id="about" className="section-padding bg-soft-white">
       <div className="container-padding max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row gap-12 items-center">
+        <div className="flex flex-col md:flex-row items-center md:items-center justify-between">
           <div className="md:w-2/5 realtive flex justify-center md:justify-end items-center mb-6 md:mb-0">
              <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-warm-yellow">
                 <img 
@@ -17,7 +17,7 @@ const About = () => {
                 <div className="absolute inset-0 bg-warm-yellow/20 rounded-full pointer-events-none z-10" />
           </div>
           
-          <div className="md:w-3/5">
+          <div className="md:w-3/5 self-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               About <span className="text-warm-yellow">Us</span>
             </h2>
