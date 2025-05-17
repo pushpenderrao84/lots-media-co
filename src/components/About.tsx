@@ -15,6 +15,7 @@ const About = () => {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-warm-yellow/20 rounded-full pointer-events-none z-10" />
+               </div>
           </div>
           
           <div className="md:w-3/5 self-center">
