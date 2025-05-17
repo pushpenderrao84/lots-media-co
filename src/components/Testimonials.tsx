@@ -5,21 +5,15 @@ import { Card, CardContent } from "@/components/ui/card";
 const testimonials = [
   {
     id: 1,
-    quote: "LOTS Media made my business look modern and professional. The designs perfectly capture our brand essence. Highly recommended!",
-    author: "Sarah Johnson",
-    company: "Bloom Boutique"
+    quote: "LOTS Media completely transformed my content! Their expert SEO and thumbnail strategies boosted my CTR by 50%, ranked my videos on the first page, and significantly increased engagement. Highly recommended for any creator or brand looking to grow!",
+    author: "Sanjay",
+    company: "Physics Pulse"
   },
   {
     id: 2,
-    quote: "Quick delivery and great designs. The thumbnails improved my click-through rate by 40%! Perfect for my YouTube channel.",
-    author: "Michael Chen",
-    company: "Tech Insights Channel"
-  },
-  {
-    id: 3,
-    quote: "Working with LOTS Media transformed our social media presence. We've seen a significant increase in engagement since implementing the new designs.",
-    author: "Emma Rodriguez",
-    company: "Coastal Cafe"
+    quote: "Working with LOTS Media for my album covers & videos has been an absolute game-changer. The creativity, attention to detail, and understanding of my artistic vision were beyond impressive. Every design perfectly captured the essence of my music, making each release visually striking and unique. The professionalism and dedication from LOTS Media made the entire process seamless. I highly recommend them to any artist looking to elevate their brand with top-tier visuals!",
+    author: "PRNC",
+    company: "Musician"
   }
 ];
 
