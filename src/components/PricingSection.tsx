@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
-import { Instagram, MessageSquare, FileText } from 'lucide-react';
+import { Instagram, Mail, FileText } from 'lucide-react';
 
 const PricingSection = () => {
   // Social Media Design pricing data
@@ -339,7 +339,7 @@ const PricingSection = () => {
         {/* CTA Buttons */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-4">
           <Button className="bg-warm-yellow text-charcoal hover:bg-warm-yellow/90 px-6 py-6 h-auto text-base">
-            <Mail className="h-5 w-5" hover:text-warm-yellow transition-colors/>
+            <Mail className="h-5 w-5 mr-2" hover:text-warm-yellow transition-colors/>
             Mail Us
           </Button>
           <Button className="bg-warm-yellow text-charcoal hover:bg-warm-yellow/90 px-6 py-6 h-auto text-base">
