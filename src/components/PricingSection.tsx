@@ -339,10 +339,6 @@ const PricingSection = () => {
         {/* CTA Buttons */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-4">
           <Button className="bg-warm-yellow text-charcoal hover:bg-warm-yellow/90 px-6 py-6 h-auto text-base">
-            <MessageSquare className="h-5 w-5 mr-2" />
-            Book Now on WhatsApp
-          </Button>
-          <Button className="bg-warm-yellow text-charcoal hover:bg-warm-yellow/90 px-6 py-6 h-auto text-base">
             <Instagram className="h-5 w-5 mr-2" />
             DM on Instagram
           </Button>
@@ -353,7 +349,7 @@ const PricingSection = () => {
 
         {/* Custom Request Note - reduced margin-top */}
         <p className="text-center text-charcoal/70 mt-4 mb-0">
-          For custom requests, reach out via Instagram DM or WhatsApp.
+          For custom requests, reach out via Instagram DM or Mail us.
         </p>
       </div>
     </section>
