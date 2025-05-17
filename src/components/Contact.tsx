@@ -4,7 +4,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Mail, Send, Instagram, Twitter, X } from 'lucide-react';
+import { Mail, Send, Instagram, Twitter } from 'lucide-react';
+import X from '@/public/X.png';
 
 const Contact = () => {
   return (
