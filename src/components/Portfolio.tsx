@@ -63,7 +63,7 @@ const portfolioItems = [
   {
     id: 9,
     title: "App UI Design",
-    category: "UI/UX",
+    category: "Branding",
     image: "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8dWkgZGVzaWdufHx8fHx8MTY4NDE1MDg2OA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600",
     description: "Clean, intuitive UI design for a mobile application, focusing on user experience and accessibility."
   }
@@ -71,7 +71,7 @@ const portfolioItems = [
 
 const Portfolio = () => {
   const [filter, setFilter] = useState('All');
-  const categories = ['All', 'Social Media', 'Branding', 'Content Creator', 'UI/UX'];
+  const categories = ['All', 'Social Media', 'Branding', 'Content Creator'];
   
   const filteredItems = filter === 'All' 
     ? portfolioItems 
@@ -82,7 +82,7 @@ const Portfolio = () => {
       <div className="container-padding max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            My <span className="text-warm-yellow">Portfolio</span>
+            Our <span className="text-warm-yellow">Portfolio</span>
           </h2>
           <p className="text-charcoal/80 max-w-2xl mx-auto">
             Explore a selection of my recent design work across various categories.
