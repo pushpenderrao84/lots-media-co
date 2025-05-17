@@ -1,6 +1,6 @@
-import myImage from '@/large-x-logo.png.twimg.1920.png';
+import myImage from '@/xlogo.png';
 
-const Logo = () => (
+const XLogo = () => (
   <img src={myImage} alt="XLogo" width={100} height={100} />
 );
 
