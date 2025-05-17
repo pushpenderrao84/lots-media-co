@@ -27,7 +27,7 @@ const Services = () => {
       <div className="container-padding max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            My <span className="text-warm-yellow">Services</span>
+            Our <span className="text-warm-yellow">Services</span>
           </h2>
           <p className="text-soft-white/80 max-w-2xl mx-auto">
             I offer specialized design services tailored to make your brand stand out in today's competitive digital landscape.
