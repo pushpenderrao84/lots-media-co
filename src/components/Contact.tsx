@@ -1,11 +1,10 @@
-
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Mail, Send, Instagram, Twitter } from 'lucide-react';
-import { ReactComponent as XLogo } from '@/components/icons/XLogo.svg';
+import { Mail, Send, Instagram, Twitter, X } from 'lucide-react';
+import XLogo from '@/components/icons/XLogo.jsx';
 
 const Contact = () => {
   return (
@@ -72,7 +71,7 @@ const Contact = () => {
               </p>
               
               <div className="space-y-6">
-                <a href="mailto:lotsmedia@gmail.com" className="flex items-center group">
+                <a href="mailto:lotsmediaco@gmail.com" className="flex items-center group">
                   <div className="bg-warm-yellow p-3 rounded-full mr-4 group-hover:bg-charcoal transition-colors">
                     <Mail className="h-5 w-5 text-charcoal group-hover:text-warm-yellow transition-colors" />
                   </div>
