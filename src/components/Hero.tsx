@@ -31,7 +31,7 @@ const Hero = () => {
                 asChild
                 variant="outline" 
                 size="lg"
-                className="border-charcoal text-charcoal hover:bg-charcoal hover:text-soft-white" 
+                className="border-charcoal bg-soft-white text-charcoal hover:bg-charcoal hover:text-soft-white" 
               >
                 <a href="#contact">Contact Us</a>
               </Button>
