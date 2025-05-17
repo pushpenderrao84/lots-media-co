@@ -23,6 +23,7 @@ const Footer = () => {
           <div className="flex space-x-2">
             <SocialIcon href="https://instagram.com/lotsmediaco" icon={<Instagram />} />
             <SocialIcon href="mailto:lotsmediaco@gmail.com" icon={<Mail />} />
+            <SocialIcon href="https://x.com/lotsmediaco" icon={<Twitter />} />
           </div>
         </div>
         
