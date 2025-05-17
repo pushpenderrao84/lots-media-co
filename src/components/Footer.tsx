@@ -54,9 +54,9 @@ const SocialIcon = ({ href, icon }: SocialIconProps) => {
       href={href} 
       target="_blank" 
       rel="noopener noreferrer" 
-      className="bg-soft-white/5 p-3 rounded-full hover:bg-soft-white transition-colors group"
+      className="bg-warm-yellow/5 p-3 rounded-full hover:bg-charcoal text-soft-white transition-colors group"
     >
-      <span className="text-soft-white group-hover:text-charcoal transition-colors">
+      <span className="text-charcoal group-hover:bg-charcoal text-soft-white transition-colors">
         {icon}
       </span>
     </a>
