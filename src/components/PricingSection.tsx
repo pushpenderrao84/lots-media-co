@@ -339,7 +339,7 @@ const PricingSection = () => {
         {/* CTA Buttons */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-4">
           <Button className="bg-warm-yellow text-charcoal hover:bg-warm-yellow/90 px-6 py-6 h-auto text-base">
-            <MessageSquare className="h-5 w-5 mr-2" />
+            <Mail className="h-5 w-5 mr-2" />
             Mail Us
           </Button>
           <Button className="bg-warm-yellow text-charcoal hover:bg-warm-yellow/90 px-6 py-6 h-auto text-base">
