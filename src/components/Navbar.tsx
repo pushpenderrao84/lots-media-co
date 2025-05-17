@@ -34,7 +34,7 @@ const Navbar = () => {
       <div className="container-padding max-w-7xl mx-auto flex justify-between items-center">
         <a href="#" className="text-2xl font-bold text-charcoal z-50 flex items-center">
           <img 
-            variant="outline"
+            variant="border border-input bg-background hover:bg-accent hover:text-accent-foreground"
             src="/lovable-uploads/a6e0b97c-98e4-46fd-bb8d-0ef459a48468.png" 
             alt="LOTS Media Logo" 
             className="h-12 mr-2"
