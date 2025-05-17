@@ -10,7 +10,7 @@ const About = () => {
           <div className="md:w-2/5">
             <div className="relative">
               <div className={cn(
-                "w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-warm-yellow",
+                "w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-warm-yellow",
                 "before:content-[''] before:absolute before:inset-0 before:bg-warm-yellow/20 before:z-10"
               )}>
                 <img 
