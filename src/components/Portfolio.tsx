@@ -15,57 +15,15 @@ const portfolioItems = [
     id: 2,
     title: "Business Logo Design",
     category: "Branding",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8d2ViLWRlc2lnbnx8fHx8fDE2ODQxNTA1MDc&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600",
+    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8YnJhbmQgZGVzaWdufHx8fHx8MTY4NDE1MDY4OQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600",
     description: "Modern logo design for a tech startup, focusing on simplicity, memorability, and brand values."
   },
   {
     id: 3,
     title: "YouTube Thumbnail Series",
     category: "Content Creator",
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8cHJvZ3JhbW1pbmcgZGVzaWdufHx8fHx8MTY4NDE1MDU5NQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600",
-    description: "Eye-catching YouTube thumbnails that drive clicks and maintain consistent branding across a creator's channel."
-  },
-  {
-    id: 4,
-    title: "Product Promotion Carousel",
-    category: "Social Media",
-    image: "https://images.unsplash.com/photo-1541462608143-67571c6738dd?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8c29jaWFsIG1lZGlhIGRlc2lnbnx8fHx8fDE2ODQxNTA2Mzc&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600",
-    description: "Multi-slide Instagram carousel designed to showcase product features and benefits with engaging visuals."
-  },
-  {
-    id: 5,
-    title: "Brand Identity Package",
-    category: "Branding",
-    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8YnJhbmQgZGVzaWdufHx8fHx8MTY4NDE1MDY4OQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600",
-    description: "Complete branding package including logo, business cards, letterheads, and brand guidelines."
-  },
-  {
-    id: 6,
-    title: "Channel Graphics Pack",
-    category: "Content Creator",
-    image: "https://images.unsplash.com/photo-1579412690850-bd41cd0af397?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8eW91dHViZSB0aHVtYm5haWx8fHx8fHwxNjg0MTUwNzM4&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600",
-    description: "Comprehensive graphics package for YouTube channels including banner, thumbnails, and lower thirds."
-  },
-  {
-    id: 7,
-    title: "Event Promotion Material",
-    category: "Branding",
-    image: "https://images.unsplash.com/photo-1506097425191-7ad538b29cef?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8ZXZlbnQgZmx5ZXJ8fHx8fHwxNjg0MTUwNzg2&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600",
-    description: "Promotional materials for a corporate event including digital invitations, banners, and printed collateral."
-  },
-  {
-    id: 8,
-    title: "Story Template Collection",
-    category: "Social Media",
     image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8aW5zdGFncmFtIHN0b3J5fHx8fHx8MTY4NDE1MDgyMw&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600",
-    description: "Collection of customizable Instagram story templates designed for consistent brand storytelling."
-  },
-  {
-    id: 9,
-    title: "App UI Design",
-    category: "Branding",
-    image: "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8dWkgZGVzaWdufHx8fHx8MTY4NDE1MDg2OA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600",
-    description: "Clean, intuitive UI design for a mobile application, focusing on user experience and accessibility."
+    description: "Eye-catching YouTube thumbnails that drive clicks and maintain consistent branding across a creator's channel."
   }
 ];
 
