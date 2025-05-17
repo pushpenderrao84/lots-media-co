@@ -101,6 +101,13 @@ const NavLinks = ({ onClick }: { onClick?: () => void }) => {
         Testimonials
       </a>
       <a 
+        href="#packages" 
+        className="text-charcoal hover:text-warm-yellow transition-colors"
+        onClick={onClick}
+      >
+        Packages
+      </a>
+      <a 
         href="#contact" 
         className="text-charcoal hover:text-warm-yellow transition-colors"
         onClick={onClick}
