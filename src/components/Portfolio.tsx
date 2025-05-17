@@ -6,24 +6,24 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 const portfolioItems = [
   {
     id: 1,
-    title: "Instagram Post Series",
+    title: "Instagram Sports Post",
     category: "Social Media",
-    image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8d2ViLWRlc2lnbnx8fHx8fDE2ODQxNTA1NTc&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600",
-    description: "A series of Instagram posts designed for a lifestyle brand focusing on minimalist aesthetics and engaging content."
+    image: "./public/assets/Post.jpg",
+    description: "A series of Instagram posts designed for a sports brand focusing on minimalist aesthetics and engaging content."
   },
   {
     id: 2,
-    title: "Business Logo Design",
+    title: "EdTech Logo Design",
     category: "Branding",
-    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8YnJhbmQgZGVzaWdufHx8fHx8MTY4NDE1MDY4OQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600",
-    description: "Modern logo design for a tech startup, focusing on simplicity, memorability, and brand values."
+    image: "./public/assets/Logo.jpg",
+    description: "Modern logo design for a edtech startup, focusing on simplicity, memorability, and brand values."
   },
   {
     id: 3,
-    title: "YouTube Thumbnail Series",
+    title: "YouTube Thumbnail",
     category: "Content Creator",
-    image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8aW5zdGFncmFtIHN0b3J5fHx8fHx8MTY4NDE1MDgyMw&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600",
-    description: "Eye-catching YouTube thumbnails that drive clicks and maintain consistent branding across a creator's channel."
+    image: "./public/assets/Thumbnail.jpg",
+    description: "Eye-catching YouTube thumbnail that drive clicks and maintain consistent branding across a creator's channel."
   }
 ];
 
