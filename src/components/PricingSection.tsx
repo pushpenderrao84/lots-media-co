@@ -338,11 +338,11 @@ const PricingSection = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-          <Button className="bg-warm-yellow text-charcoal hover:bg-charcoal hover:text-soft-white px-6 py-6 h-auto text-base">
+          <Button className="bg-warm-yellow text-charcoal hover:bg-charcoal hover:text-soft-white transition-colors px-6 py-6 h-auto text-base">
             <Mail className="h-5 w-5 mr-2 group-hover:warm-yellow transition-colors"/>
             Mail Us
           </Button>
-          <Button className="bg-warm-yellow text-charcoal hover:bg-charcoal hover:text-soft-white px-6 py-6 h-auto text-base">
+          <Button className="bg-warm-yellow text-charcoal hover:bg-charcoal hover:text-soft-white transition-colors px-6 py-6 h-auto text-base">
             <Instagram className="h-5 w-5 mr-2 group-hover:warm-yellow transition-colors"/>
             DM on Instagram
           </Button>
