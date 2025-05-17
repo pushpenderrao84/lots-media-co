@@ -20,7 +20,7 @@ const Hero = () => {
               <Button 
                 asChild
                 size="lg" 
-                className="bg-warm-yellow text-charcoal hover:bg-charcoal hover:text-soft-white transition-colors h-auto text-base"
+                className="bg-warm-yellow text-charcoal hover:bg-charcoal hover:text-soft-white transition-colors h-auto"
               >
                 <a href="#portfolio">
                   View Portfolio
@@ -33,7 +33,7 @@ const Hero = () => {
                 size="lg"
                 className="border-charcoal text-charcoal hover:bg-charcoal hover:text-soft-white" 
               >
-                <a href="#contact">Contact Me</a>
+                <a href="#contact">Contact Us</a>
               </Button>
             </div>
           </div>
