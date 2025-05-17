@@ -113,14 +113,13 @@ const PortfolioItem = ({ item }: PortfolioItemProps) => {
             <img 
               src={item.image} 
               alt={item.title} 
-              className="w-full h-auto object-contain max-h-[70vh] rounded-lg md:justify-between items-center"
+              className="w-full h-auto max-h-[70vh] object-contain rounded-lg"
             />
           </div>
           <div className="self-start">
             <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
             <p className="text-sm text-charcoal/70 mb-4">Category: {item.category}</p>
             <p className="text-charcoal/80">{item.description}</p>
-            
             <div className="mt-6">
               <h4 className="font-semibold mb-2">Project Details</h4>
               <div className="grid grid-cols-2 gap-4">
