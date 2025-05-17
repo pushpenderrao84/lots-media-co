@@ -43,7 +43,7 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-[url('https://silica.co.in/wp-content/uploads/2022/09/Job-opportunities-after-Diploma-in-graphic-design-842x842.jpg')] bg-cover bg-center opacity-80 mix-blend-multiply"></div>
               </div>
               <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-charcoal rounded-full"></div>
-              <div className="absolute -top-8 -right-8 w-24 h-24 bg-warm-yellow/10 backdrop-blur-sm rounded-xl"></div>
+              <div className="absolute -top-8 -right-8 w-24 h-24 bg-warm-yellow/50 backdrop-blur-sm rounded-xl"></div>
             </div>
           </div>
         </div>
