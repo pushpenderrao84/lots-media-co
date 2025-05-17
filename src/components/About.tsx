@@ -7,7 +7,7 @@ const About = () => {
     <section id="about" className="section-padding bg-soft-white">
       <div className="container-padding max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row gap-12 items-center">
-          <div className="md:w-2/5 flex justify-center items-center">
+          <div className="md:w-2/5 realtive flex justify-center items-center">
              <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-warm-yellow">
                 <img 
                   src="https://selecttraining.ae/wp-content/uploads/2024/01/team-building-for-graphic-designers-1063x800.png" 
@@ -15,10 +15,6 @@ const About = () => {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-warm-yellow/20 rounded-full pointer-events-none z-10" />
-              </div>
-              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-charcoal rounded-full -z-10"></div>
-              <div className="absolute -top-4 -left-4 w-16 h-16 bg-warm-yellow rounded-lg -z-10"></div>
-            </div>
           </div>
           
           <div className="md:w-3/5">
