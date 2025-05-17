@@ -7,7 +7,7 @@ const serviceData = [
   {
     icon: <Instagram className="h-12 w-12 text-warm-yellow" />,
     title: "Social Media Design",
-    description: "Eye-catching Instagram posts, carousels, story templates, and YouTube thumbnails that drive engagement and reinforce brand identity."
+    description: "Eye-catching Instagram posts, carousels and story templates that drive engagement and reinforce brand identity."
   },
   {
     icon: <Briefcase className="h-12 w-12 text-warm-yellow" />,
@@ -30,7 +30,7 @@ const Services = () => {
             Our <span className="text-warm-yellow">Services</span>
           </h2>
           <p className="text-soft-white/80 max-w-2xl mx-auto">
-            I offer specialized design services tailored to make your brand stand out in today's competitive digital landscape.
+            We offer specialized design services tailored to make your brand stand out in today's competitive digital landscape.
           </p>
         </div>
         
