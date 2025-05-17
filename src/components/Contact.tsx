@@ -67,7 +67,7 @@ const Contact = () => {
             <div>
               <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
               <p className="mb-8 text-charcoal/80">
-                Feel free to reach out through any of these channels. I'm always eager to discuss new projects and opportunities.
+                Feel free to reach out through any of these contacts. We're always eager to discuss new projects and opportunities.
               </p>
               
               <div className="space-y-6">
@@ -77,17 +77,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-medium">Email Address</p>
-                    <p className="text-charcoal/70">hello@lotsmedia.com</p>
-                  </div>
-                </a>
-                
-                <a href="tel:+1234567890" className="flex items-center group">
-                  <div className="bg-warm-yellow p-3 rounded-full mr-4 group-hover:bg-charcoal transition-colors">
-                    <Phone className="h-5 w-5 text-charcoal group-hover:text-warm-yellow transition-colors" />
-                  </div>
-                  <div>
-                    <p className="font-medium">Phone Number</p>
-                    <p className="text-charcoal/70">+1 (234) 567-890</p>
+                    <p className="text-charcoal/70">lotsmediaco@gmail.com</p>
                   </div>
                 </a>
                 
@@ -98,16 +88,6 @@ const Contact = () => {
                   <div>
                     <p className="font-medium">Instagram</p>
                     <p className="text-charcoal/70">@lotsmedia</p>
-                  </div>
-                </a>
-                
-                <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="flex items-center group">
-                  <div className="bg-warm-yellow p-3 rounded-full mr-4 group-hover:bg-charcoal transition-colors">
-                    <MessageSquare className="h-5 w-5 text-charcoal group-hover:text-warm-yellow transition-colors" />
-                  </div>
-                  <div>
-                    <p className="font-medium">WhatsApp</p>
-                    <p className="text-charcoal/70">+1 (234) 567-890</p>
                   </div>
                 </a>
               </div>
