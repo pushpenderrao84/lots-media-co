@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, Send, Instagram, Github, MessageSquare } from 'lucide-react';
+import { Mail, Send, Instagram, Twitter, X } from 'lucide-react';
 
 const Contact = () => {
   return (
@@ -71,7 +71,7 @@ const Contact = () => {
               </p>
               
               <div className="space-y-6">
-                <a href="mailto:hello@lotsmedia.com" className="flex items-center group">
+                <a href="mailto:lotsmedia@gmail.com" className="flex items-center group">
                   <div className="bg-warm-yellow p-3 rounded-full mr-4 group-hover:bg-charcoal transition-colors">
                     <Mail className="h-5 w-5 text-charcoal group-hover:text-warm-yellow transition-colors" />
                   </div>
@@ -81,12 +81,30 @@ const Contact = () => {
                   </div>
                 </a>
                 
-                <a href="https://instagram.com/lotsmedia" target="_blank" rel="noopener noreferrer" className="flex items-center group">
+                <a href="https://instagram.com/lotsmediaco" target="_blank" rel="noopener noreferrer" className="flex items-center group">
                   <div className="bg-warm-yellow p-3 rounded-full mr-4 group-hover:bg-charcoal transition-colors">
                     <Instagram className="h-5 w-5 text-charcoal group-hover:text-warm-yellow transition-colors" />
                   </div>
                   <div>
                     <p className="font-medium">Instagram</p>
+                    <p className="text-charcoal/70">@lotsmediaco</p>
+                  </div>
+
+                <a href="https://x.com/lotsmediaco" target="_blank" rel="noopener noreferrer" className="flex items-center group">
+                  <div className="bg-warm-yellow p-3 rounded-full mr-4 group-hover:bg-charcoal transition-colors">
+                    <Twitter className="h-5 w-5 text-charcoal group-hover:text-warm-yellow transition-colors" />
+                  </div>
+                  <div>
+                    <p className="font-medium">Twitter</p>
+                    <p className="text-charcoal/70">@lotsmediaco</p>
+                  </div>
+                  
+                <a href="https://x.com/lotsmediaco" target="_blank" rel="noopener noreferrer" className="flex items-center group">
+                  <div className="bg-warm-yellow p-3 rounded-full mr-4 group-hover:bg-charcoal transition-colors">
+                    <X className="h-5 w-5 text-charcoal group-hover:text-warm-yellow transition-colors" />
+                  </div>
+                  <div>
+                    <p className="font-medium">X</p>
                     <p className="text-charcoal/70">@lotsmediaco</p>
                   </div>
                 </a>
