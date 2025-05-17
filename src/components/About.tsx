@@ -14,8 +14,8 @@ const About = () => {
                 "before:content-[''] before:absolute before:inset-0 before:bg-warm-yellow/20 before:z-10"
               )}>
                 <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=500&ixid=MnwxfDB8MXxyYW5kb218MHx8ZGVzaWduZXJ8fHx8fHwxNjg0MTUwNDc3&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=500" 
-                  alt="Designer Photo" 
+                  src="https://selecttraining.ae/wp-content/uploads/2024/01/team-building-for-graphic-designers-1063x800.png" 
+                  alt="Designing Team Photo" 
                   className="w-full h-full object-cover"
                 />
               </div>
