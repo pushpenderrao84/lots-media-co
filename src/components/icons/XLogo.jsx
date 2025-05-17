@@ -2,8 +2,8 @@ const XLogo = (props) => (
 <svg 
     version="1.1"   
     xmlns="http://www.w3.org/2000/svg"
-    width="3840"
-    height="2160"
+    width="38.4"
+    height="21.6"
     fill="none"
     stroke="currentColor"
     strokeWidth="2"
