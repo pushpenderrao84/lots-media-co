@@ -26,26 +26,26 @@ const About = () => {
           
           <div className="md:w-3/5">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              About <span className="text-warm-yellow">Me</span>
+              About <span className="text-warm-yellow">Us</span>
             </h2>
             <p className="text-lg mb-6 text-charcoal/90">
-              Hi, I'm Jessica Davis, a graphic designer passionate about crafting visuals that communicate clearly and leave a lasting impression.
+              Hi, we’re LOTS Media — a creative team passionate about telling visual stories that truly connect.
             </p>
             <p className="text-lg mb-6 text-charcoal/90">
-              With over 5 years of experience in the creative industry, I specialize in social media design, branding, and content visuals — blending creativity and storytelling with every project. My goal is to help businesses and content creators establish a strong visual identity that resonates with their audience.
+              With a blend of strategic design and artistic flair, we specialize in branding, content creation, and digital media solutions tailored to both brands and creators. Whether you're launching something new or looking to refresh your presence, we’re here to help you craft visuals that resonate, inspire, and leave a lasting impact.
             </p>
             <p className="text-lg text-charcoal/90">
-              I believe that great design is not just about making things look good, but about solving problems and creating meaningful connections. Whether you're a small business looking to establish your brand or a content creator wanting to stand out, I'm here to help you achieve your goals.
+              We believe great storytelling is the key to meaningful connection. That’s why every project we take on is designed not just to look good, but to elevate your message and build lasting relationships with your audience. Let’s create something memorable together.
             </p>
             
             <div className="mt-8 flex flex-wrap gap-6">
               <div className="flex items-center gap-2">
                 <div className="h-1 w-12 bg-warm-yellow"></div>
-                <p className="font-semibold">5+ Years Experience</p>
+                <p className="font-semibold">3+ Years Experience</p>
               </div>
               <div className="flex items-center gap-2">
                 <div className="h-1 w-12 bg-warm-yellow"></div>
-                <p className="font-semibold">150+ Projects</p>
+                <p className="font-semibold">50+ Projects</p>
               </div>
               <div className="flex items-center gap-2">
                 <div className="h-1 w-12 bg-warm-yellow"></div>
