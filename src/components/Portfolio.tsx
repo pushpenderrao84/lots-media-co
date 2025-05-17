@@ -43,7 +43,7 @@ const Portfolio = () => {
             Our <span className="text-warm-yellow">Portfolio</span>
           </h2>
           <p className="text-charcoal/80 max-w-2xl mx-auto">
-            Explore a selection of my recent design work across various categories.
+            Explore a selection of our recent design work across various categories.
           </p>
         </div>
         
@@ -126,7 +126,7 @@ const PortfolioItem = ({ item }: PortfolioItemProps) => {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <p className="text-sm text-charcoal/70">Client</p>
-                  <p>Sample Client</p>
+                  <p>Pulse EdTech</p>
                 </div>
                 <div>
                   <p className="text-sm text-charcoal/70">Date</p>
