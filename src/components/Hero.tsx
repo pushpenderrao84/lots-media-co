@@ -40,7 +40,7 @@ const Hero = () => {
           <div className="order-1 md:order-2 flex justify-center md:justify-end">
             <div className="relative w-full max-w-md">
               <div className="aspect-square bg-warm-yellow rounded-3xl overflow-hidden shadow-xl animate-float">
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b')] bg-cover bg-center opacity-80 mix-blend-multiply"></div>
+                <div className="absolute inset-0 bg-[url('https://t3.ftcdn.net/jpg/01/67/78/38/360_F_167783828_JJi1bjBS3G6GgoCVnLvtDRgX1qksDBcN.jpg')] bg-cover bg-center opacity-80 mix-blend-multiply"></div>
               </div>
               <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-charcoal rounded-full"></div>
               <div className="absolute -top-8 -right-8 w-24 h-24 bg-warm-yellow/30 backdrop-blur-sm rounded-xl"></div>
