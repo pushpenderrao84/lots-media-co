@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Instagram, Github, MessageSquare, Mail, Twitter } from 'lucide-react';
+import { Instagram, Mail, Twitter } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -54,7 +54,7 @@ const SocialIcon = ({ href, icon }: SocialIconProps) => {
       href={href} 
       target="_blank" 
       rel="noopener noreferrer" 
-      className="bg-soft-white/5 p-3 rounded-full hover:bg-warm-yellow transition-colors group"
+      className="bg-soft-white/5 p-3 rounded-full hover:bg-soft-white transition-colors group"
     >
       <span className="text-soft-white group-hover:text-charcoal transition-colors">
         {icon}
