@@ -107,13 +107,13 @@ const PortfolioItem = ({ item }: PortfolioItemProps) => {
           </div>
         </div>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-3xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <DialogContent className="sm:max-w-4xl w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
           <div className="rounded-lg overflow-hidden">
             <img 
               src={item.image} 
               alt={item.title} 
-              className="w-full h-full object-cover"
+              className="w-auto h-auto object-contain max-h-[70vh] rounded-lg object-cover"
             />
           </div>
           <div>
