@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 const XLogo = (props) => (
 <svg 
     version="1.1"   
