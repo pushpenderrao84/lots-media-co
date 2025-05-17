@@ -39,7 +39,7 @@ const Hero = () => {
           </div>
           <div className="order-1 md:order-2 flex justify-center md:justify-end">
             <div className="relative w-full max-w-md">
-              <div className="aspect-square bg-warm-yellow/50 rounded-3xl overflow-hidden shadow-xl animate-float">
+              <div className="aspect-square bg-warm-yellow/80 rounded-3xl overflow-hidden shadow-xl animate-float">
                 <div className="absolute inset-0 bg-[url('https://silica.co.in/wp-content/uploads/2022/09/Job-opportunities-after-Diploma-in-graphic-design-842x842.jpg')] bg-cover bg-center opacity-80 mix-blend-multiply"></div>
               </div>
               <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-charcoal rounded-full"></div>
