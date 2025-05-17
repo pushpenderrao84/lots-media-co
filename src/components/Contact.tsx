@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Mail, Send, Instagram, Twitter, X } from 'lucide-react';
-import XLogo from '@/components/icons/XLogo.jsx';
+import XLogo from '@/components/icons';
 
 const Contact = () => {
   return (
