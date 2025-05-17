@@ -54,7 +54,7 @@ const Contact = () => {
                   />
                 </div>
                 <Button type="submit" className="w-full bg-warm-yellow text-charcoal hover:bg-warm-yellow/90">
-                  <Send className="h-4 w-4 mr-2 text-charcoal group-hover:text-warm-yellow transition-colors" />
+                  <Send className="h-4 w-4 mr-2" />
                   Send Message
                 </Button>
               </form>
