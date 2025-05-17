@@ -87,7 +87,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-medium">Instagram</p>
-                    <p className="text-charcoal/70">@lotsmedia</p>
+                    <p className="text-charcoal/70">@lotsmediaco</p>
                   </div>
                 </a>
               </div>
