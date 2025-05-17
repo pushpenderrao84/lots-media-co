@@ -36,8 +36,7 @@ const Navbar = () => {
           <img 
             src="/lovable-uploads/a6e0b97c-98e4-46fd-bb8d-0ef459a48468.png" 
             alt="LOTS Media Logo" 
-            className="h-12 mr-2 outline outline-2 rounded-md"
-            style={{ outlineColor: '#333333' }}
+            className="h-12 mr-2 outline outline-[2px] outline-[#333333] rounded-md"
           />
         </a>
 
