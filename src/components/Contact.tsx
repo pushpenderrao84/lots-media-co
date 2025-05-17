@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Mail, Send, Instagram, Twitter } from 'lucide-react';
-import X from '@/public/X.png';
+import { ReactComponent as XLogo } from '@/components/icons/XLogo.svg';
 
 const Contact = () => {
   return (
@@ -104,7 +104,7 @@ const Contact = () => {
                   
                 <a href="https://x.com/lotsmediaco" target="_blank" rel="noopener noreferrer" className="flex items-center group">
                   <div className="bg-warm-yellow p-3 rounded-full mr-4 group-hover:bg-charcoal transition-colors">
-                    <X className="h-5 w-5 text-charcoal group-hover:text-warm-yellow transition-colors" />
+                    <XLogo className="h-5 w-5 text-charcoal group-hover:text-warm-yellow transition-colors" />
                   </div>
                   <div>
                     <p className="font-medium">X</p>
