@@ -72,7 +72,7 @@ const Contact = () => {
               <div className="space-y-6">
                 <a href="mailto:lotsmediaco@gmail.com" className="flex items-center group">
                   <div className="bg-warm-yellow p-3 rounded-full mr-4 group-hover:bg-charcoal transition-colors">
-                    <Mail className="h-5 w-5 text-charcoal group-hover:text-warm-yellow transition-colors" />
+                    <Mail className="h-5 w-5 text-charcoal group-hover:text-soft-white transition-colors" />
                   </div>
                   <div>
                     <p className="font-medium">Email Address</p>
@@ -82,7 +82,7 @@ const Contact = () => {
                 
                 <a href="https://instagram.com/lotsmediaco" target="_blank" rel="noopener noreferrer" className="flex items-center group">
                   <div className="bg-warm-yellow p-3 rounded-full mr-4 group-hover:bg-charcoal transition-colors">
-                    <Instagram className="h-5 w-5 text-charcoal group-hover:text-warm-yellow transition-colors" />
+                    <Instagram className="h-5 w-5 text-charcoal group-hover:text-soft-white transition-colors" />
                   </div>
                   <div>
                     <p className="font-medium">Instagram</p>
@@ -92,7 +92,7 @@ const Contact = () => {
 
                 <a href="https://x.com/lotsmediaco" target="_blank" rel="noopener noreferrer" className="flex items-center group">
                   <div className="bg-warm-yellow p-3 rounded-full mr-4 group-hover:bg-charcoal transition-colors">
-                    <Twitter className="h-5 w-5 text-charcoal group-hover:text-warm-yellow transition-colors" />
+                    <Twitter className="h-5 w-5 text-charcoal group-hover:text-soft-white transition-colors" />
                   </div>
                   <div>
                     <p className="font-medium">Twitter</p>
