@@ -107,8 +107,8 @@ const PortfolioItem = ({ item }: PortfolioItemProps) => {
           </div>
         </div>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-4xl w-full">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+      <DialogContent className="sm:max-w-4xl w-full flex justify-center items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center justify-center">
           <div className="flex justify-center items-center">
             <img 
               src={item.image} 
@@ -129,7 +129,7 @@ const PortfolioItem = ({ item }: PortfolioItemProps) => {
                 </div>
                 <div>
                   <p className="text-sm text-charcoal/70">Date</p>
-                  <p>March 2025</p>
+                  <p>January 2025</p>
                 </div>
                 <div>
                   <p className="text-sm text-charcoal/70">Skills</p>
