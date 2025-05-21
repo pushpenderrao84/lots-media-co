@@ -32,13 +32,13 @@ const Navbar = () => {
       )}
     >
       <div className="container-padding max-w-7xl mx-auto flex justify-between items-center">
-        <a href="#" className="text-2xl font-bold text-charcoal z-50 flex items-center">
+      <Link to="/" className="text-2xl font-bold text-charcoal z-50 flex items-center">
           <img 
             src="/lovable-uploads/a6e0b97c-98e4-46fd-bb8d-0ef459a48468.png" 
             alt="LOTS Media Logo" 
             className="h-12 mr-2 outline outline-[0.5px] outline-[#333333] rounded-md"
           />
-        </a>
+      </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8 items-center">
