@@ -107,29 +107,29 @@ const PortfolioItem = ({ item }: PortfolioItemProps) => {
           </div>
         </div>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-4xl w-full flex justify-center items-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center justify-center text-center">
-          <div className="flex justify-center items-center">
+      <DialogContent className="sm:max-w-4xl w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+          <div className="<div className="flex flex-col md:flex-row gap-6 items-start rounded-lg overflow-hidden">
             <img 
               src={item.image} 
               alt={item.title} 
               className="w-full h-auto max-h-[70vh] object-contain rounded-lg"
             />
           </div>
-          <div className="flex flex-col justify-center items-center">
+          <div className="self-start">
             <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
             <p className="text-sm text-charcoal/70 mb-4">Category: {item.category}</p>
-            <p className="text-charcoal/80 mb-4">{item.description}</p>
+            <p className="text-charcoal/80">{item.description}</p>
             <div className="mt-6">
               <h4 className="font-semibold mb-2">Project Details</h4>
-              <div className="grid grid-cols-2 gap-4 text-left">
+              <div className="grid grid-cols-2 gap-4">
                 <div>
                   <p className="text-sm text-charcoal/70">Client</p>
                   <p>Pulse EdTech</p>
                 </div>
                 <div>
                   <p className="text-sm text-charcoal/70">Date</p>
-                  <p>March 2025</p>
+                  <p>July 2025</p>
                 </div>
                 <div>
                   <p className="text-sm text-charcoal/70">Skills</p>
