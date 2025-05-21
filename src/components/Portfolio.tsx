@@ -129,7 +129,7 @@ const PortfolioItem = ({ item }: PortfolioItemProps) => {
                 </div>
                 <div>
                   <p className="text-sm text-charcoal/70">Date</p>
-                  <p>July 2025</p>
+                  <p>June 2025</p>
                 </div>
                 <div>
                   <p className="text-sm text-charcoal/70">Skills</p>
