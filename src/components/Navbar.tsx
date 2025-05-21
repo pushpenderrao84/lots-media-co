@@ -72,48 +72,24 @@ const Navbar = () => {
 const NavLinks = ({ onClick }: { onClick?: () => void }) => {
   return (
     <>
-      <a 
-        href="#about" 
-        className="text-charcoal hover:text-warm-yellow transition-colors"
-        onClick={onClick}
-      >
+      <Link to="/about" className="text-charcoal hover:text-warm-yellow transition-colors">
         About
-      </a>
-      <a 
-        href="#services" 
-        className="text-charcoal hover:text-warm-yellow transition-colors"
-        onClick={onClick}
-      >
+      </Link>
+      <Link to="/services" className="text-charcoal hover:text-warm-yellow transition-colors">
         Services
-      </a>
-      <a 
-        href="#portfolio" 
-        className="text-charcoal hover:text-warm-yellow transition-colors"
-        onClick={onClick}
-      >
+      </Link>
+      <Link to="/portfolio" className="text-charcoal hover:text-warm-yellow transition-colors">
         Portfolio
-      </a>
-      <a 
-        href="#testimonials" 
-        className="text-charcoal hover:text-warm-yellow transition-colors"
-        onClick={onClick}
-      >
+      </Link>
+      <Link to="/testimonials" className="text-charcoal hover:text-warm-yellow transition-colors">
         Testimonials
-      </a>
-      <a 
-        href="#pricing" 
-        className="text-charcoal hover:text-warm-yellow transition-colors"
-        onClick={onClick}
-      >
+      </Link>
+      <Link to="/pricing" className="text-charcoal hover:text-warm-yellow transition-colors">
         Pricing
-      </a>
-      <a 
-        href="#contact" 
-        className="text-charcoal hover:text-warm-yellow transition-colors"
-        onClick={onClick}
-      >
+      </Link>
+      <Link to="/contact" className="text-charcoal hover:text-warm-yellow transition-colors">
         Contact
-      </a>
+      </Link>
     </>
   );
 };
