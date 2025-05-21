@@ -109,7 +109,7 @@ const PortfolioItem = ({ item }: PortfolioItemProps) => {
       </DialogTrigger>
       <DialogContent className="sm:max-w-4xl w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
-          <div className="flex justify-center items-start">
+          <div className="flex justify-center items-center">
             <img 
               src={item.image} 
               alt={item.title} 
