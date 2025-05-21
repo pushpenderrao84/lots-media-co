@@ -113,7 +113,7 @@ const PortfolioItem = ({ item }: PortfolioItemProps) => {
             <img 
               src={item.image} 
               alt={item.title} 
-              className="w-full h-auto max-h-[70vh] object-contain rounded-lg"
+              className="max-w-md w-full h-auto max-h-[70vh] object-contain rounded-lg"
             />
           </div>
           <div className="self-start">
@@ -129,7 +129,7 @@ const PortfolioItem = ({ item }: PortfolioItemProps) => {
                 </div>
                 <div>
                   <p className="text-sm text-charcoal/70">Date</p>
-                  <p>January 2025</p>
+                  <p>April 2025</p>
                 </div>
                 <div>
                   <p className="text-sm text-charcoal/70">Skills</p>
