@@ -26,7 +26,7 @@ const PrivacyPolicy = () => {
           <span className="text-warm-yellow">Privacy</span> Policy<br />
         </h1>
         
-        <div className="prose max-w-none">
+        <div className="max-w-none">
             <p className="mt-6 text-lg text-charcoal/80 max-w-lg">
               <b>Disclaimer:</b> In case of any discrepancy or difference, the English version will take precedence over any translation.
             </p>
@@ -77,7 +77,6 @@ const PrivacyPolicy = () => {
             <li><b>Internal Teams and Affiliates</b> within LOTS Media Co. for operations and insights.</li>
             <li><b>Service Providers and Partners</b> (e.g., hosting providers, analytics platforms, email marketing services) who assist in delivering our services.</li>
             <li><b>Legal and Regulatory Authorities</b> if required by law or to protect our rights, users, and services.</li>
-            <li><b>Communications</b> when you contact us or respond to our surveys or forms.</li>
             <li><b>Potential Acquirers or Partners</b> in case of a merger, acquisition, or reorganization.</li>
           </ul>
           <p className="mt-6 text-lg text-charcoal/80 max-w-lg">
