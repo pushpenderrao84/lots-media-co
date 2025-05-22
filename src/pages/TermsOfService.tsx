@@ -8,7 +8,7 @@ const TermsOfService = () => {
       <Navbar />
       <div className="container mx-auto px-4 py-20 flex-grow">
                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-          Terms Of<span className="text-warm-yellow">Services</span><br />
+          Terms of<span className="text-warm-yellow">Services</span><br />
         </h1>
           <p className="mt-6 text-charcoal/80 ">
             Last updated: {new Date().toLocaleDateString()}
