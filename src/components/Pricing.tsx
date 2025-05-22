@@ -4,7 +4,7 @@ import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { Instagram, Mail, FileText } from 'lucide-react';
 
-const PricingSection = () => {
+const Pricing = () => {
   // Social Media Design pricing data
   const socialMediaPackages = [
     {
@@ -415,4 +415,4 @@ const PricingCard = ({ title, price, period = "", features, popular = false }: P
   );
 };
 
-export default PricingSection;
+export default Pricing;
