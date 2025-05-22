@@ -9,19 +9,6 @@ const PrivacyPolicy = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <div className="container mx-auto px-4 py-12 flex-grow">
-        <div className="mb-8">
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/">Home</BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage>Privacy Policy</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-        </div>
                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
           <span className="text-warm-yellow">Privacy</span> Policy<br />
         </h1>
