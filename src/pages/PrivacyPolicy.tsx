@@ -46,36 +46,58 @@ const PrivacyPolicy = () => {
             <li><b>Technical Data</b> including IP address, browser type, device identifiers, and access times.</li>
             <li><b>Usage Information</b> including your interactions with our content, services, and features.</li>
             <li><b>Communications</b> when you contact us or respond to our surveys or forms.</li>
-            <li>Social Media Data when you interact with our social handles, including likes, comments, or shares.</li>
+            <li><b>Social Media Data</b> when you interact with our social handles, including likes, comments, or shares.</li>
             <li><b>Marketing Preferences</b> and response to promotional campaigns.</li>
           </ul>
           <p className="mt-6 text-lg text-charcoal/80 max-w-lg">
             In cases where you participate in contests, campaigns, collaborations, or job/internship opportunities, we may collect additional information required for such engagements.
           </p>
-          
-          <h2 className="text-2xl font-semibold mt-8 mb-4">3. How We Use Your Personal Data</h2>
-          <p className="mb-4">
-            We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following circumstances:
+
+          <h4 className="text-2xl font-semibold mt-8 mb-4">Use of Your Information</h4>
+          <p className="mt-6 text-lg text-charcoal/80 max-w-lg">
+            The data we collect is used for purposes including but not limited to:
           </p>
-          <ul className="list-disc pl-6 mb-4">
-            <li>Where we need to perform the contract we are about to enter into or have entered into with you.</li>
-            <li>Where it is necessary for our legitimate interests (or those of a third party) and your interests and fundamental rights do not override those interests.</li>
-            <li>Where we need to comply with a legal obligation.</li>
+          <ul className="mt-6 text-lg text-charcoal/80 max-w-lg">
+            <li>Operating and maintaining our services and content platforms.</li>
+            <li>Personalizing your experience and content delivery.</li>
+            <li>Improving and analyzing user engagement, trends, and performance.</li>
+            <li>Sending service-related notifications, announcements, or support information.</li>
+            <li>Delivering newsletters, offers, event invites, or promotional content (with opt-out available).</li>
+            <li>Fulfilling our legal, compliance, or security obligations.</li>
           </ul>
-          
-          <h2 className="text-2xl font-semibold mt-8 mb-4">4. Data Security</h2>
-          <p className="mb-4">
-            We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorized way, altered or disclosed. In addition, we limit access to your personal data to those employees, agents, contractors and other third parties who have a business need to know.
+          <p className="mt-6 text-lg text-charcoal/80 max-w-lg">
+            We may also use aggregated or anonymized data for research, performance metrics, and business development.
           </p>
           
-          <h2 className="text-2xl font-semibold mt-8 mb-4">5. Data Retention</h2>
-          <p className="mb-4">
-            We will only retain your personal data for as long as reasonably necessary to fulfill the purposes we collected it for, including for the purposes of satisfying any legal, regulatory, tax, accounting or reporting requirements.
+          <h4 className="text-2xl font-semibold mt-8 mb-4">Sharing of Your Information</h4>
+          <p className="mt-6 text-lg text-charcoal/80 max-w-lg">
+            We do not sell or rent your personal information. However, we may share it with:
           </p>
-          
-          <h2 className="text-2xl font-semibold mt-8 mb-4">6. Your Legal Rights</h2>
-          <p className="mb-4">
-            Under certain circumstances, you have rights under data protection laws in relation to your personal data, including the right to request access, correction, erasure, restriction, transfer, to object to processing, to portability of data and (where the lawful ground of processing is consent) to withdraw consent.
+          <ul className="mt-6 text-lg text-charcoal/80 max-w-lg">
+            <li><b>Internal Teams and Affiliates</b> within LOTS Media Co. for operations and insights.</li>
+            <li><b>Service Providers and Partners</b> (e.g., hosting providers, analytics platforms, email marketing services) who assist in delivering our services.</li>
+            <li><b>Legal and Regulatory Authorities</b> if required by law or to protect our rights, users, and services.</li>
+            <li><b>Communications</b> when you contact us or respond to our surveys or forms.</li>
+            <li><b>Potential Acquirers or Partners</b> in case of a merger, acquisition, or reorganization.</li>
+          </ul>
+          <p className="mt-6 text-lg text-charcoal/80 max-w-lg">
+            All such disclosures are made with appropriate data protection and confidentiality agreements in place.
+          </p>
+
+          <h4 className="text-2xl font-semibold mt-8 mb-4">Cookies and Tracking Technologies</h4>
+          <p className="mt-6 text-lg text-charcoal/80 max-w-lg">
+            We use cookies, pixels, and similar tools to:
+          </p>
+          <ul className="mt-6 text-lg text-charcoal/80 max-w-lg">
+            <li>Operating and maintaining our services and content platforms.</li>
+            <li>Personalizing your experience and content delivery.</li>
+            <li>Improving and analyzing user engagement, trends, and performance.</li>
+            <li>Sending service-related notifications, announcements, or support information.</li>
+            <li>Delivering newsletters, offers, event invites, or promotional content (with opt-out available).</li>
+            <li>Fulfilling our legal, compliance, or security obligations.</li>
+          </ul>
+          <p className="mt-6 text-lg text-charcoal/80 max-w-lg">
+            We may also use aggregated or anonymized data for research, performance metrics, and business development.
           </p>
           
           <h2 className="text-2xl font-semibold mt-8 mb-4">7. Contact Us</h2>
