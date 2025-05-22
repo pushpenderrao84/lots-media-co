@@ -38,15 +38,20 @@ const PrivacyPolicy = () => {
             </p>
           
           <h4 className="text-2xl font-semibold mt-8 mb-4">Collection of Your Information</h4>
-          <p className="mb-4">
-            Personal data, or personal information, means any information about an individual from which that person can be identified. We may collect, use, store and transfer different kinds of personal data about you which we have grouped together as follows:
+          <p className="mt-6 text-lg text-charcoal/80 max-w-lg">
+            We collect various types of personal and non-personal data to provide and enhance our services, including but not limited to:
           </p>
-          <ul className="list-disc pl-6 mb-4">
-            <li>Identity Data includes first name, last name, username or similar identifier.</li>
-            <li>Contact Data includes email address and telephone numbers.</li>
-            <li>Technical Data includes internet protocol (IP) address, browser type and version, time zone setting and location, browser plug-in types and versions, operating system and platform, and other technology on the devices you use to access this website.</li>
-            <li>Usage Data includes information about how you use our website and services.</li>
+          <ul className="mt-6 text-lg text-charcoal/80 max-w-lg">
+            <li><b>Basic Identifiers</b> such as your name, email address, phone number, and location.</li>
+            <li><b>Technical Data</b> including IP address, browser type, device identifiers, and access times.</li>
+            <li><b>Usage Information</b> including your interactions with our content, services, and features.</li>
+            <li><b>Communications</b> when you contact us or respond to our surveys or forms.</li>
+            <li>Social Media Data when you interact with our social handles, including likes, comments, or shares.</li>
+            <li><b>Marketing Preferences</b> and response to promotional campaigns.</li>
           </ul>
+          <p className="mt-6 text-lg text-charcoal/80 max-w-lg">
+            In cases where you participate in contests, campaigns, collaborations, or job/internship opportunities, we may collect additional information required for such engagements.
+          </p>
           
           <h2 className="text-2xl font-semibold mt-8 mb-4">3. How We Use Your Personal Data</h2>
           <p className="mb-4">
