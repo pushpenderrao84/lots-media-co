@@ -1,9 +1,13 @@
 
 import React from 'react';
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { cn } from "@/lib/utils";
 
 const About = () => {
   return (
+  <>
+   <Navbar />
     <section id="about" className="section-padding bg-soft-white">
       <div className="container-padding max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-center md:items-center justify-between">
@@ -50,6 +54,7 @@ const About = () => {
         </div>
       </div>
     </section>
+  <Footer />
   );
 };
 
