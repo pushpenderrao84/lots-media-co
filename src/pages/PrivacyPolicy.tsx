@@ -139,6 +139,11 @@ const PrivacyPolicy = () => {
             <b>LOTS Media Co.</b><br/ >
             Email: lotsmediaco@gmail.com<br />
           </p>
+
+          <h2 className="font-semibold mt-8 mb-4">Last updated:</h2>
+          <p className="mt-6 text-charcoal/80 ">
+            Last updated: {new Date().toLocaleDateString()}
+          </p>
         </div>
       </div>
       <Footer />
