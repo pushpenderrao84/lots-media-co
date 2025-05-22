@@ -33,7 +33,7 @@ const PrivacyPolicy = () => {
             <p className="mt-6 text-lg text-charcoal/80 max-w-lg">
               LOTS Media Co. ("LOTS Media," "we," "us," or "our") values the trust you place in us and is committed to protecting your personal information. This Privacy Policy outlines how we collect, use, share, and safeguard your information through our website (www.lotsmedia.in), applications, services, and any other digital platforms operated by LOTS Media (hereinafter referred to as the "Platform").
             </p>
-            <p>
+            <p className="mt-6 text-lg text-charcoal/80 max-w-lg">
               By accessing or using our Platform, you agree to be bound by the terms of this Privacy Policy and our Terms of Use. If you do not agree, please refrain from using our services.
             </p>
           
@@ -154,7 +154,7 @@ const PrivacyPolicy = () => {
             For any questions, concerns, or grievances related to this Privacy Policy or your data, please contact:
           </p>
           <h5 className="text-2xl font-semibold mt-8 mb-4">LOTS Media Co.</h5>
-          <p className="mb-4">
+          <p className="mt-6 text-lg text-charcoal/80 max-w-lg">
             Email: lotsmediaco@gmail.com<br />
           </p>
         </div>
