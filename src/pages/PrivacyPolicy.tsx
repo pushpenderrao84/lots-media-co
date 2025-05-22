@@ -7,8 +7,8 @@ const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <div className="container mx-auto px-4 py-100 flex-grow">
-               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading=tight">
+      <div className="container mx-auto px-4 py-12 flex-grow">
+               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
           <span className="text-warm-yellow">Privacy</span> Policy<br />
         </h1>
         
