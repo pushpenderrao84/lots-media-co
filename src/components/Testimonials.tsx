@@ -91,6 +91,7 @@ const Testimonials = () => {
       </div>
     </section>
   <Footer />
+    </>
   );
 };
 
