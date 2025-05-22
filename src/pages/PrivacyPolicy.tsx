@@ -22,17 +22,22 @@ const PrivacyPolicy = () => {
           </Breadcrumb>
         </div>
         
-        <h1 className="text-3xl font-bold mb-8">Privacy Policy</h1>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+          <span className="text-warm-yellow">Privacy</span> Policy<br />
+        </h1>
         
         <div className="prose max-w-none">
-          <p className="mb-4">Last updated: {new Date().toLocaleDateString()}</p>
+            <p className="mt-6 text-lg text-charcoal/80 max-w-lg">
+              <b>Disclaimer:</b> In case of any discrepancy or difference, the English version will take precedence over any translation.
+            </p>
+            <p className="mt-6 text-lg text-charcoal/80 max-w-lg">
+              LOTS Media Co. (“LOTS Media,” “we,” “us,” or “our”) values the trust you place in us and is committed to protecting your personal information. This Privacy Policy outlines how we collect, use, share, and safeguard your information through our website (www.lotsmedia.in), applications, services, and any other digital platforms operated by LOTS Media (hereinafter referred to as the “Platform”).
+            </p>
+            <p>
+              By accessing or using our Platform, you agree to be bound by the terms of this Privacy Policy and our Terms of Use. If you do not agree, please refrain from using our services.
+            </p>
           
-          <h2 className="text-2xl font-semibold mt-8 mb-4">1. Introduction</h2>
-          <p className="mb-4">
-            Welcome to DesignFlex ("Company", "we", "our", "us"). We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you as to how we look after your personal data when you visit our website and tell you about your privacy rights and how the law protects you.
-          </p>
-          
-          <h2 className="text-2xl font-semibold mt-8 mb-4">2. The Data We Collect About You</h2>
+          <h4 className="text-2xl font-semibold mt-8 mb-4">Collection of Your Information</h4>
           <p className="mb-4">
             Personal data, or personal information, means any information about an individual from which that person can be identified. We may collect, use, store and transfer different kinds of personal data about you which we have grouped together as follows:
           </p>
