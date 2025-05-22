@@ -91,7 +91,7 @@ const CookiePolicy = () => {
           
           <h2 className="font-semibold mt-8 mb-4">Contact Us</h2>
           <p className="mt-6 text-charcoal/80 ">
-            For any questions, concerns, or grievances related to this Privacy Policy or your data, please contact:
+            For any questions, concerns, or grievances related to this Cookie Policy or your data, please contact:
           </p>
           <p className="mt-6 text-charcoal/80 ">
             <b>LOTS Media Co.</b> <br/>
