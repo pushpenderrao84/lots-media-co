@@ -1,5 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 
 const testimonials = [
@@ -30,6 +32,8 @@ const Testimonials = () => {
   }, []);
 
   return (
+  <>
+   <Navbar />
     <section id="testimonials" className="section-padding bg-charcoal">
       <div className="container-padding max-w-7xl mx-auto">
         <div className="text-center mb-16">
@@ -86,6 +90,7 @@ const Testimonials = () => {
         </div>
       </div>
     </section>
+  <Footer />
   );
 };
 
