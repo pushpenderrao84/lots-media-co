@@ -27,7 +27,7 @@ const PrivacyPolicy = () => {
           <p className="mt-6 text-lg text-charcoal/80 ">
             We collect various types of personal and non-personal data to provide and enhance our services, including but not limited to:
           </p>
-          <ul className=" mt-6 text-lg text-charcoal/80">
+          <ul className="list-disc pl-6 mt-6 text-lg text-charcoal/80">
             <li><b>Basic Identifiers</b> such as your name, email address, phone number, and location.</li>
             <li><b>Technical Data</b> including IP address, browser type, device identifiers, and access times.</li>
             <li><b>Usage Information</b> including your interactions with our content, services, and features.</li>
@@ -43,7 +43,7 @@ const PrivacyPolicy = () => {
           <p className="mt-6 text-lg text-charcoal/80 ">
             The data we collect is used for purposes including but not limited to:
           </p>
-          <ul className=" mt-6 text-lg text-charcoal/80 ">
+          <ul className="list-disc pl-6 mt-6 text-lg text-charcoal/80 ">
             <li>Operating and maintaining our services and content platforms.</li>
             <li>Personalizing your experience and content delivery.</li>
             <li>Improving and analyzing user engagement, trends, and performance.</li>
@@ -59,7 +59,7 @@ const PrivacyPolicy = () => {
           <p className="mt-6 text-lg text-charcoal/80 ">
             We do not sell or rent your personal information. However, we may share it with:
           </p>
-          <ul className=" mt-6 text-lg text-charcoal/80 ">
+          <ul className="list-disc pl-6 mt-6 text-lg text-charcoal/80 ">
             <li><b>Internal Teams and Affiliates</b> within LOTS Media Co. for operations and insights.</li>
             <li><b>Service Providers and Partners</b> (e.g., hosting providers, analytics platforms, email marketing services) who assist in delivering our services.</li>
             <li><b>Legal and Regulatory Authorities</b> if required by law or to protect our rights, users, and services.</li>
