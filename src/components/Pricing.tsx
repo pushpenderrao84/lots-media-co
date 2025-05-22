@@ -1,4 +1,6 @@
 import React from 'react';
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
@@ -153,6 +155,8 @@ const Pricing = () => {
   ];
 
   return (
+  <>
+   <Navbar />
     <section id="pricing" className="section-padding bg-soft-white pb-8">
       <div className="container-padding max-w-7xl mx-auto">
         <div className="text-center mb-16">
@@ -412,6 +416,7 @@ const PricingCard = ({ title, price, period = "", features, popular = false }: P
         </Button>
       </CardContent>
     </Card>
+   <Footer />
   );
 };
 
