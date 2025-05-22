@@ -26,12 +26,23 @@ export default function Careers() {
           <p className="text-charcoal/70 mb-6 max-w-xl mx-auto">
             Feel free to send us your portfolio for future opportunities.
           </p>
+
+          <Button 
+            asChild
+            variant="outline" 
+            size="lg"
+            className="border-charcoal bg-soft-white text-charcoal hover:bg-charcoal hover:text-soft-white" 
+          >
+            <a href="mailto:lotsmediaco@gmail.com">Send Us Your Portfolio</a>
+            </Button>
+          
           <a
             href="mailto:lotsmediaco@gmail.com"
             className="inline-block bg-yellow text-charcoal font-medium px-6 py-3 rounded-full shadow hover:shadow-lg transition"
           >
             Send Us Your Portfolio
           </a>
+          
           <br/><br/>
           <p className="mt-6 text-charcoal/80 ">
             Last updated: {new Date().toLocaleDateString('en-GB')}
