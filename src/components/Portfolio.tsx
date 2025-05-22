@@ -1,5 +1,7 @@
 
 import React, { useState } from 'react';
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 // Portfolio data
@@ -36,6 +38,8 @@ const Portfolio = () => {
     : portfolioItems.filter(item => item.category === filter);
 
   return (
+  <>
+   <Navbar />
     <section id="portfolio" className="section-padding bg-soft-white">
       <div className="container-padding max-w-7xl mx-auto">
         <div className="text-center mb-16">
@@ -145,6 +149,7 @@ const PortfolioItem = ({ item }: PortfolioItemProps) => {
         </div>
       </DialogContent>
     </Dialog>
+   <Footer />
   );
 };
 
