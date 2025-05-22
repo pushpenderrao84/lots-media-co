@@ -8,10 +8,10 @@ const TermsOfService = () => {
       <Navbar />
       <div className="container mx-auto px-4 py-20 flex-grow">
                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-          Terms of<span className="text-warm-yellow">Services</span><br />
+          Terms of <span className="text-warm-yellow">Service</span><br />
         </h1>
           <p className="mt-6 text-charcoal/80 ">
-            Last updated: {new Date().toLocaleDateString()}
+            Last updated: {new Date().toLocaleDateString('en-GB')}
           </p>
         
         <div className="max-w-none">
@@ -26,13 +26,13 @@ const TermsOfService = () => {
 
           <h2 className="font-semibold mt-8 mb-4">Use of Services</h2>
           <p className="mt-6 text-charcoal/80 ">
-            <b>a. Account and Payments:</b> To use LOTS Media’s services, you may be required to provide accurate billing information. Payments for design projects must be completed as per the payment schedule agreed upon. Failure to pay may result in suspension or termination of services.
+            <strong>a. Account and Payments:</strong> To use LOTS Media’s services, you may be required to provide accurate billing information. Payments for design projects must be completed as per the payment schedule agreed upon. Failure to pay may result in suspension or termination of services.
           </p>
           <p className="mt-6 text-charcoal/80 ">
-            <b>b. Design Ownership:</b> Upon full payment, you will receive the rights to use the delivered graphic designs for your intended purpose. LOTS Media retains the right to display the work in our portfolio or marketing materials unless you explicitly request otherwise.
+            <strong>b. Design Ownership:</strong> Upon full payment, you will receive the rights to use the delivered graphic designs for your intended purpose. LOTS Media retains the right to display the work in our portfolio or marketing materials unless you explicitly request otherwise.
           </p>
           <p className="mt-6 text-charcoal/80 ">
-            <b>c. Revisions:</b> We offer design revisions as agreed in the project scope. Additional revisions beyond the agreed number may incur extra charges.
+            <strong>c. Revisions:</strong> We offer design revisions as agreed in the project scope. Additional revisions beyond the agreed number may incur extra charges.
           </p>
           
           <h2 className="font-semibold mt-8 mb-4">Client Responsibilities</h2>
@@ -68,7 +68,7 @@ const TermsOfService = () => {
 
           <h2 className="font-semibold mt-8 mb-4">Governing Laws and Disputes</h2>
           <p className="mt-6 text-charcoal/80 ">
-            These Terms are governed by the laws of [Your Jurisdiction]. Any disputes arising from these Terms or the use of our services will be resolved through amicable negotiations or, if necessary, through binding arbitration.
+            These Terms are governed by the laws of India. Any disputes arising from these Terms or the use of our services will be resolved through amicable negotiations or, if necessary, through binding arbitration.
           </p>
           
           <h2 className="font-semibold mt-8 mb-4">Contact Us</h2>
@@ -76,7 +76,7 @@ const TermsOfService = () => {
             For any questions, concerns, or grievances related to this Privacy Policy or your data, please contact:
           </p>
           <p className="mt-6 text-charcoal/80 ">
-            <b>LOTS Media Co.</b> <br/>
+            <strong>LOTS Media Co.</strong> <br/>
             Email: lotsmediaco@gmail.com<br/>
           </p>
         </div>
