@@ -45,7 +45,7 @@ const TermsOfService = () => {
             LOTS Media may update, modify, or discontinue any service or feature at any time without prior notice. We reserve the right to amend these Terms by posting the updated version on our website. Continued use of our services after changes constitutes acceptance of the revised Terms.
           </p>
 
-          <h2 className="font-semibold mt-8 mb-4">Intellactual Property and Content</h2>
+          <h2 className="font-semibold mt-8 mb-4">Intellectual Property and Content</h2>
           <p className="mt-6 text-charcoal/80 ">
             a. You represent and warrant that any content or materials you submit to LOTS Media do not violate any copyrights, trademarks, or other intellectual property rights of third parties.
           </p>
@@ -73,7 +73,7 @@ const TermsOfService = () => {
           
           <h2 className="font-semibold mt-8 mb-4">Contact Us</h2>
           <p className="mt-6 text-charcoal/80 ">
-            For any questions, concerns, or grievances related to this Privacy Policy or your data, please contact:
+            For any questions, concerns, or grievances related to these Terms of Service, please contact:
           </p>
           <p className="mt-6 text-charcoal/80 ">
             <strong>LOTS Media Co.</strong> <br/>
