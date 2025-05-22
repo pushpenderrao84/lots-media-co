@@ -10,7 +10,7 @@ const Careers = () => {
       <Navbar />
       <div className="container mx-auto px-4 py-20 flex-grow">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-          Join <span className="text-warm-yellow">the LOTS Media Team</span><br />
+          <span className="text-warm-yellow">Join</span> Us<br />
         </h1>
         
         <div className="max-w-none">
