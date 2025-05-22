@@ -140,7 +140,7 @@ const PrivacyPolicy = () => {
             For any questions, concerns, or grievances related to this Privacy Policy or your data, please contact:
           </p>
           <p className="mt-6 text-lg text-charcoal/80 ">
-            <b>LOTS Media Co.</b>
+            <b>LOTS Media Co.</b><br/ >
             Email: lotsmediaco@gmail.com<br />
           </p>
         </div>
