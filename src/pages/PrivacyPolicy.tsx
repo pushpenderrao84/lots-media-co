@@ -89,25 +89,74 @@ const PrivacyPolicy = () => {
             We use cookies, pixels, and similar tools to:
           </p>
           <ul className="mt-6 text-lg text-charcoal/80 max-w-lg">
-            <li>Operating and maintaining our services and content platforms.</li>
-            <li>Personalizing your experience and content delivery.</li>
-            <li>Improving and analyzing user engagement, trends, and performance.</li>
-            <li>Sending service-related notifications, announcements, or support information.</li>
-            <li>Delivering newsletters, offers, event invites, or promotional content (with opt-out available).</li>
-            <li>Fulfilling our legal, compliance, or security obligations.</li>
+            <li>Improve user experience by remembering preferences.</li>
+            <li>Analyze website traffic and usage behavior.</li>
+            <li>Offer relevant ads and promotions through third-party platforms.</li>
           </ul>
           <p className="mt-6 text-lg text-charcoal/80 max-w-lg">
-            We may also use aggregated or anonymized data for research, performance metrics, and business development.
+            You can control cookies through your browser settings or opt-out from certain third-party cookies. However, disabling cookies may limit your access to some features on our Platform.
+          </p>
+
+          <h4 className="text-2xl font-semibold mt-8 mb-4">Data Security</h4>
+          <p className="mt-6 text-lg text-charcoal/80 max-w-lg">
+            We take appropriate technical and organizational measures to protect your data from unauthorized access, disclosure, or misuse. These include:
+          </p>
+          <ul className="mt-6 text-lg text-charcoal/80 max-w-lg">
+            <li>Secure servers and encryption protocols.</li>
+            <li>Access controls and internal data policies.</li>
+            <li>Regular security audits and updates.</li>
+          </ul>
+          <p className="mt-6 text-lg text-charcoal/80 max-w-lg">
+            However, no digital transmission or storage method is 100% secure. By using our Platform, you acknowledge these inherent risks.
+          </p>
+
+          <h4 className="text-2xl font-semibold mt-8 mb-4">Your Rights & Choices</h4>
+          <p className="mt-6 text-lg text-charcoal/80 max-w-lg">
+            You have the right to:
+          </p>
+          <ul className="mt-6 text-lg text-charcoal/80 max-w-lg">
+            <li>Access, update, or delete your personal information.</li>
+            <li>Opt-out of promotional communications at any time.</li>
+            <li>Withdraw consent for data processing (subject to limitations).</li>
+            <li>Request data portability or object to processing under certain conditions.</li>
+          </ul>
+          <p className="mt-6 text-lg text-charcoal/80 max-w-lg">
+            To exercise your rights, you can contact us at lotsmediaco@gmail.com.
+          </p>
+
+          <h4 className="text-2xl font-semibold mt-8 mb-4">Data Retention</h4>
+          <p className="mt-6 text-lg text-charcoal/80 max-w-lg">
+            We retain your data only for as long as necessary to:
+          </p>
+          <ul className="mt-6 text-lg text-charcoal/80 max-w-lg">
+            <li>Provide services.</li>
+            <li>Comply with legal obligations.</li>
+            <li>Enforce our policies.</li>
+            <li>Support business operations or research in anonymized form.</li>
+          </ul>
+
+          <h4 className="text-2xl font-semibold mt-8 mb-4">Children's Privacy</h4>
+          <p className="mt-6 text-lg text-charcoal/80 max-w-lg">
+            Our Platform is not intended for use by children under 13 (or the age defined by local laws). We do not knowingly collect data from minors without verified parental consent. If you believe we have done so inadvertently, please contact us to take corrective action.
+          </p>
+
+          <h4 className="text-2xl font-semibold mt-8 mb-4">Third Party Links & Content</h4>
+          <p className="mt-6 text-lg text-charcoal/80 max-w-lg">
+            Our Platform may contain links to third-party websites, services, or social platforms. We are not responsible for their privacy practices or content. Please review their policies before engaging with such platforms.
+          </p>
+
+          <h4 className="text-2xl font-semibold mt-8 mb-4">Policy Updates</h4>
+          <p className="mt-6 text-lg text-charcoal/80 max-w-lg">
+            This Privacy Policy may be updated from time to time. Any changes will be posted on this page with a revised “Last Updated” date. We encourage you to review this policy periodically.
           </p>
           
-          <h2 className="text-2xl font-semibold mt-8 mb-4">7. Contact Us</h2>
-          <p className="mb-4">
-            If you have any questions about this privacy policy or our privacy practices, please contact us at:
+          <h4 className="text-2xl font-semibold mt-8 mb-4">Contact Us</h4>
+          <p className="mt-6 text-lg text-charcoal/80 max-w-lg">
+            For any questions, concerns, or grievances related to this Privacy Policy or your data, please contact:
           </p>
+          <h5 className="text-2xl font-semibold mt-8 mb-4">LOTS Media Co.</h5>
           <p className="mb-4">
-            Email: privacy@designflex.com<br />
-            Phone: +1 (555) 123-4567<br />
-            Address: 123 Design Street, Creativity City, DC 12345
+            Email: lotsmediaco@gmail.com<br />
           </p>
         </div>
       </div>
