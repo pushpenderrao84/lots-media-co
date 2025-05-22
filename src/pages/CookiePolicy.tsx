@@ -1,83 +1,100 @@
 import React from 'react';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 
 const CookiePolicy = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <div className="container mx-auto px-4 py-12 flex-grow">
-        <div className="mb-8">
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/">Home</BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage>Cookie Policy</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-        </div>
+      <div className="container mx-auto px-4 py-20 flex-grow">
+               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
+          <span className="text-warm-yellow">Cookie</span> Policy<br />
+        </h1>
+          <p className="mt-6 text-charcoal/80 ">
+            Last updated: {new Date().toLocaleDateString()}
+          </p>
         
-        <h1 className="text-3xl font-bold mb-8">Cookie Policy</h1>
-        
-        <div className="prose max-w-none">
-          <p className="mb-4">Last updated: {new Date().toLocaleDateString()}</p>
+        <div className="max-w-none">
+            <p className="mt-6 text-charcoal/80">
+              LOTS Media Co. ("LOTS Media", "we", "us", or "our") is committed to protecting your privacy and ensuring transparency about how we use cookies and similar technologies when you visit our website or engage with our digital platforms (collectively referred to as the "Platform").
+            </p>
+            <p className="mt-6 text-charcoal/80 ">
+              This Cookie Policy explains what cookies are, how we use them, and the choices you have in managing them.
+            </p>
           
-          <h2 className="text-2xl font-semibold mt-8 mb-4">1. What Are Cookies</h2>
-          <p className="mb-4">
-            Cookies are small pieces of text sent by your web browser by a website you visit. A cookie file is stored in your web browser and allows the service or a third-party to recognize you and make your next visit easier and more useful to you.
+          <h2 className="font-semibold mt-8 mb-4">What Are Cookies?</h2>
+          <p className="mt-6 text-charcoal/80 ">
+            Cookies are small text files that are stored on your browser or device when you visit a website. They help websites remember your preferences, enhance user experience, and provide relevant content or advertising. Cookies can be session-based (deleted when you close the browser) or persistent (remain until they expire or are deleted).
           </p>
-          
-          <h2 className="text-2xl font-semibold mt-8 mb-4">2. How We Use Cookies</h2>
-          <p className="mb-4">
-            We use cookies for a variety of reasons detailed below:
+          <p className="mt-6 text-charcoal/80 ">
+            We also use similar tracking technologies such as pixels, web beacons, local storage, and scripts which function similarly.
           </p>
-          <ul className="list-disc pl-6 mb-4">
-            <li><strong>Essential cookies:</strong> These cookies are essential to provide you with services available through our website and to enable you to use some of its features.</li>
-            <li><strong>Analytics cookies:</strong> These cookies allow us to collect information about how you use our website, which pages you visited and which links you clicked on. This helps us to improve our website and tailor it to user needs.</li>
-            <li><strong>Preference cookies:</strong> These cookies allow our website to remember choices you have made in the past, like what language you prefer or what your user name and password are so you can automatically log in.</li>
-            <li><strong>Marketing cookies:</strong> These cookies are used to track visitors across websites. The intention is to display ads that are relevant and engaging for the individual user.</li>
+
+          <h2 className="font-semibold mt-8 mb-4">Types of Cookies We Use</h2>
+          <p className="mt-6 text-charcoal/80 ">
+            We use the following categories of cookies on our Platform:
+          <h3 className="font-semibold mt-8 mb-4">a. Strictly Necessary Cookies</h3>
+          <p className="mt-6 text-charcoal/80 ">
+            These cookies are essential for the basic functioning of our website. They enable features like page navigation, access to secure areas, and protection against fraudulent activities. These cookies do not store any personally identifiable information.
+          </p>
+          <p className="mt-6 text-charcoal/80 ">
+            Example: Remembering login sessions, language preferences, form submissions.
+          </p>
+          <h3 className="font-semibold mt-8 mb-4">b. Performance and Analytics Cookies</h3>
+          <p className="mt-6 text-charcoal/80 ">
+            These cookies help us understand how users interact with our Platform. They collect information such as page visits, bounce rates, traffic sources, and loading times to improve website performance and user experience.
+          </p>
+          <p className="mt-6 text-charcoal/80 ">
+            Example: Google Analytics, Hotjar.
+          </p>
+          <h3 className="font-semibold mt-8 mb-4">c. Functionality Cookies</h3>
+          <p className="mt-6 text-charcoal/80 ">
+            These cookies allow us to remember your preferences and choices (like your username or region) to personalize your experience.
+          </p>
+          <p className="mt-6 text-charcoal/80 ">
+            Example: Saving your preferred theme (light/dark), autoplay settings, or saved filters.
+          </p>
+          <h3 className="font-semibold mt-8 mb-4">d. Targeting and Advertising Cookies</h3>
+          <p className="mt-6 text-charcoal/80 ">
+            We use these cookies to deliver relevant advertisements and measure the effectiveness of our marketing campaigns. They may be set through our site by us or third-party partners (e.g., Meta, Google Ads).
+          </p>
+          <p className="mt-6 text-charcoal/80 ">
+            Example: Showing you LOTS Media campaigns or offers on other platforms based on your interaction with us.
+          </p>
+
+          <h2 className="font-semibold mt-8 mb-4">Third-Party Cookies</h2>
+          <p className="mt-6 text-charcoal/80 ">
+            Some cookies may be set by trusted third-party services that appear on our website, such as embedded videos, social media sharing buttons, or analytics tools. These third parties have their own privacy policies, which we recommend you review.
+          </p>
+          <p className="mt-6 text-charcoal/80 ">
+            Examples include: YouTube (for embedded video playback), Instagram (for feeds), Google Tag Manager, and Facebook Pixel.
+          </p>
+
+          <h2 className="font-semibold mt-8 mb-4">Managing Your Cookie Preferences</h2>
+          <p className="mt-6 text-charcoal/80 ">
+            You have full control over how cookies are used:
+          </p>
+          <ul className="list-disc pl-6 mt-6  text-charcoal/80 ">
+            <li><b>Browser Settings:</b> Most browsers allow you to view, delete, and block cookies. You can modify your settings to notify you when cookies are being set or disable them entirely.</li>
+            <li><b>Consent Banner:</b> When you first visit our site, you'll see a cookie consent banner. You can accept all cookies, reject non-essential ones, or customize your preferences.</li>
+            <li><b>Opt-Out Tools:</b> You may opt out of targeted advertising through tools such as the Digital Advertising Alliance, Your Online Choices, or Google Ads Settings.</li>
           </ul>
-          
-          <h2 className="text-2xl font-semibold mt-8 mb-4">3. Types of Cookies We Use</h2>
-          <p className="mb-4">
-            <strong>Session Cookies:</strong> These cookies are temporary and expire once you close your browser (or once your session ends).
+          <p className="mt-6 text-charcoal/80 ">
+            <b>Note:</b> Disabling certain cookies may affect the functionality and user experience of our Platform.
           </p>
-          <p className="mb-4">
-            <strong>Persistent Cookies:</strong> These cookies remain on your hard drive until you erase them or they expire.
-          </p>
-          
-          <h2 className="text-2xl font-semibold mt-8 mb-4">4. How to Control Cookies</h2>
-          <p className="mb-4">
-            Most web browsers automatically accept cookies, but you can usually modify your browser setting to decline cookies if you prefer. This may prevent you from taking full advantage of the website.
+
+          <h2 className="font-semibold mt-8 mb-4">Changes to This Policy</h2>
+          <p className="mt-6 text-charcoal/80 ">
+            We may update this Cookie Policy periodically to reflect changes in our practices or legal obligations. When we do, we will update the "Last Updated" date at the top of the page. We encourage you to review this policy regularly.
           </p>
           
-          <h2 className="text-2xl font-semibold mt-8 mb-4">5. Third-Party Cookies</h2>
-          <p className="mb-4">
-            In addition to our own cookies, we may also use various third-party cookies to report usage statistics of the website, deliver advertisements on and through the website, and so on.
+          <h2 className="font-semibold mt-8 mb-4">Contact Us</h2>
+          <p className="mt-6 text-charcoal/80 ">
+            For any questions, concerns, or grievances related to this Privacy Policy or your data, please contact:
           </p>
-          
-          <h2 className="text-2xl font-semibold mt-8 mb-4">6. More Information</h2>
-          <p className="mb-4">
-            If you are looking for more information about cookies and how they impact your online activities, you may visit:
-          </p>
-          <ul className="list-disc pl-6 mb-4">
-            <li>All About Cookies: <a href="https://www.allaboutcookies.org/" className="text-agency-blue hover:underline">https://www.allaboutcookies.org/</a></li>
-            <li>Network Advertising Initiative: <a href="https://www.networkadvertising.org/" className="text-agency-blue hover:underline">https://www.networkadvertising.org/</a></li>
-          </ul>
-          
-          <h2 className="text-2xl font-semibold mt-8 mb-4">7. Contact Us</h2>
-          <p className="mb-4">
-            If you have any questions about our Cookie Policy, please contact us at:
-          </p>
-          <p className="mb-4">
-            Email: privacy@designflex.com<br />
-            Phone: +1 (555) 123-4567<br />
-            Address: 123 Design Street, Creativity City, DC 12345
+          <p className="mt-6 text-charcoal/80 ">
+            <b>LOTS Media Co.</b><br/ >
+            Email: lotsmediaco@gmail.com<br />
           </p>
         </div>
       </div>
