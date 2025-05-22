@@ -1,5 +1,7 @@
 
 import React from 'react';
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { Instagram, Briefcase, Image } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -23,6 +25,8 @@ const serviceData = [
 
 const Services = () => {
   return (
+  <>
+   <Navbar />
     <section id="services" className="section-padding bg-charcoal text-soft-white">
       <div className="container-padding max-w-7xl mx-auto">
         <div className="text-center mb-16">
@@ -51,6 +55,7 @@ const Services = () => {
         </div>
       </div>
     </section>
+   <Footer />
   );
 };
 
