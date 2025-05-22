@@ -22,7 +22,7 @@ const Hero = () => {
                 size="lg" 
                 className="bg-warm-yellow text-charcoal hover:bg-charcoal hover:text-soft-white transition-colors h-auto"
               >
-                <a href="#portfolio">
+                <a href="/portfolio">
                   View Portfolio
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
@@ -33,7 +33,7 @@ const Hero = () => {
                 size="lg"
                 className="border-charcoal bg-soft-white text-charcoal hover:bg-charcoal hover:text-soft-white" 
               >
-                <a href="#contact">Contact Us</a>
+                <a href="/contact">Contact Us</a>
               </Button>
             </div>
           </div>
