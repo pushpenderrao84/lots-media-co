@@ -417,6 +417,7 @@ const PricingCard = ({ title, price, period = "", features, popular = false }: P
       </CardContent>
     </Card>
    <Footer />
+    </>
   );
 };
 
