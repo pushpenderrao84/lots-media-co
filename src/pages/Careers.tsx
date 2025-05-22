@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-export default function Careers() {
+const Careers = () => {
   return (
     <>
       <Navbar />
@@ -12,8 +12,7 @@ export default function Careers() {
         </h1>
         
         <div className="max-w-none">
-            <p className="mt-6 text-charcoal/80">
-           <p className="text-lg text-charcoal/80 mb-10 max-w-2xl">
+           <p className="text-lg text-charcoal/80 mb-10 mt-6 max-w-2xl">
             We're a creative powerhouse that designs bold, meaningful experiences. If you’re passionate about storytelling, design, tech, or media — we’d love to hear from you.
           </p>
 
