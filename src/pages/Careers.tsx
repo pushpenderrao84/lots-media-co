@@ -34,14 +34,7 @@ export default function Careers() {
             className="border-charcoal bg-soft-white text-charcoal hover:bg-charcoal hover:text-soft-white" 
           >
             <a href="mailto:lotsmediaco@gmail.com">Send Us Your Portfolio</a>
-            </Button>
-          
-          <a
-            href="mailto:lotsmediaco@gmail.com"
-            className="inline-block bg-yellow text-charcoal font-medium px-6 py-3 rounded-full shadow hover:shadow-lg transition"
-          >
-            Send Us Your Portfolio
-          </a>
+          </Button>
           
           <br/><br/>
           <p className="mt-6 text-charcoal/80 ">
