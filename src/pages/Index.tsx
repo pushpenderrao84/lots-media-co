@@ -6,7 +6,7 @@ import About from '../components/About';
 import Services from '../components/Services';
 import Portfolio from '../components/Portfolio';
 import Testimonials from '../components/Testimonials';
-import PricingSection from '../components/PricingSection';
+import Pricing from '../components/Pricing';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
