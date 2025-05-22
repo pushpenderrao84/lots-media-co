@@ -150,6 +150,7 @@ const PortfolioItem = ({ item }: PortfolioItemProps) => {
       </DialogContent>
     </Dialog>
    <Footer />
+    </>
   );
 };
 
