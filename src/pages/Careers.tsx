@@ -6,17 +6,6 @@ export default function Careers() {
   return (
     <>
       <Navbar />
-      <div className="container mx-auto px-4 py-16">
-
-
-import React from 'react';
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-
-const TermsOfService = () => {
-  return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
       <div className="container mx-auto px-4 py-20 flex-grow">
                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
           Join <span className="text-warm-yellow">the LOTS Media Team</span><br />
