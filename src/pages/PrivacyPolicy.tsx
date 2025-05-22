@@ -139,8 +139,8 @@ const PrivacyPolicy = () => {
           <p className="mt-6 text-lg text-charcoal/80 ">
             For any questions, concerns, or grievances related to this Privacy Policy or your data, please contact:
           </p>
-          <h5 className="font-semibold mt-8 mb-4">LOTS Media Co.</h5>
           <p className="mt-6 text-lg text-charcoal/80 ">
+            <b>LOTS Media Co.</b>
             Email: lotsmediaco@gmail.com<br />
           </p>
         </div>
