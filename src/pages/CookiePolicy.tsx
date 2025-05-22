@@ -33,6 +33,7 @@ const CookiePolicy = () => {
           <h2 className="font-semibold mt-8 mb-4">Types of Cookies We Use</h2>
           <p className="mt-6 text-charcoal/80 ">
             We use the following categories of cookies on our Platform:
+          </p>
           <h3 className="font-semibold mt-8 mb-4">a. Strictly Necessary Cookies</h3>
           <p className="mt-6 text-charcoal/80 ">
             These cookies are essential for the basic functioning of our website. They enable features like page navigation, access to secure areas, and protection against fraudulent activities. These cookies do not store any personally identifiable information.
@@ -93,8 +94,8 @@ const CookiePolicy = () => {
             For any questions, concerns, or grievances related to this Privacy Policy or your data, please contact:
           </p>
           <p className="mt-6 text-charcoal/80 ">
-            <b>LOTS Media Co.</b><br/ >
-            Email: lotsmediaco@gmail.com<br />
+            <b>LOTS Media Co.</b> <br/>
+            Email: lotsmediaco@gmail.com<br/>
           </p>
         </div>
       </div>
