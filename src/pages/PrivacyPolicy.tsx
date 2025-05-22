@@ -9,7 +9,7 @@ const PrivacyPolicy = () => {
       <Navbar />
       <div className="container mx-auto px-4 py-100 flex-grow">
                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading=tight">
-          <span className="text-warm-yellow">Privacyyyyyyy</span> Policy<br />
+          <span className="text-warm-yellow">Privacy</span> Policy<br />
         </h1>
         
         <div className="max-w-none">
