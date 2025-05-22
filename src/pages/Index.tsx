@@ -54,7 +54,7 @@ const Index = () => {
       </div>
 
       {/* Reduced gap by removing the animate-on-scroll div wrapper */}
-      <PricingSection />
+      <Pricing />
 
       {/* Directly attach Contact section with no gap */}
       <Contact />
