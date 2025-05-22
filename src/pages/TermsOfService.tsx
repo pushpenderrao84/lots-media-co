@@ -1,82 +1,83 @@
 import React from 'react';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 
 const TermsOfService = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <div className="container mx-auto px-4 py-12 flex-grow">
-        <div className="mb-8">
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/">Home</BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage>Terms of Service</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-        </div>
+      <div className="container mx-auto px-4 py-20 flex-grow">
+               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
+          Terms Of<span className="text-warm-yellow">Services</span><br />
+        </h1>
+          <p className="mt-6 text-charcoal/80 ">
+            Last updated: {new Date().toLocaleDateString()}
+          </p>
         
-        <h1 className="text-3xl font-bold mb-8">Terms of Service</h1>
-        
-        <div className="prose max-w-none">
-          <p className="mb-4">Last updated: {new Date().toLocaleDateString()}</p>
+        <div className="max-w-none">
+            <p className="mt-6 text-charcoal/80">
+              This is an agreement between you (“you” or “Client”) and LOTS Media (“we,” “us,” or “LOTS Media”). Please read these Terms of Use carefully before using our graphic design services. By placing an order or using any of our services, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use our services.
+            </p>
           
-          <h2 className="text-2xl font-semibold mt-8 mb-4">1. Introduction</h2>
-          <p className="mb-4">
-            These Terms of Service ("Terms") govern your use of the website operated by DesignFlex ("Company", "we", "our", "us") and any related services offered by us. By accessing our website, you agree to be bound by these Terms. If you disagree with any part of the terms, you may not access the website.
+          <h2 className="font-semibold mt-8 mb-4">Services Provided</h2>
+          <p className="mt-6 text-charcoal/80 ">
+            LOTS Media specializes in creating custom graphic designs for social media, content creators, and businesses. Our services include designing digital graphics, social media posts, banners, logos, and other creative visual content based on your requirements. You acknowledge that these services are provided for a fee, payable according to the agreed terms at the time of ordering.
+          </p>
+
+          <h2 className="font-semibold mt-8 mb-4">Use of Services</h2>
+          <p className="mt-6 text-charcoal/80 ">
+            <b>a. Account and Payments:</b> To use LOTS Media’s services, you may be required to provide accurate billing information. Payments for design projects must be completed as per the payment schedule agreed upon. Failure to pay may result in suspension or termination of services.
+          </p>
+          <p className="mt-6 text-charcoal/80 ">
+            <b>b. Design Ownership:</b> Upon full payment, you will receive the rights to use the delivered graphic designs for your intended purpose. LOTS Media retains the right to display the work in our portfolio or marketing materials unless you explicitly request otherwise.
+          </p>
+          <p className="mt-6 text-charcoal/80 ">
+            <b>c. Revisions:</b> We offer design revisions as agreed in the project scope. Additional revisions beyond the agreed number may incur extra charges.
           </p>
           
-          <h2 className="text-2xl font-semibold mt-8 mb-4">2. Use License</h2>
-          <p className="mb-4">
-            Permission is granted to temporarily download one copy of the materials on our website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
+          <h2 className="font-semibold mt-8 mb-4">Client Responsibilities</h2>
+          <p className="mt-6 text-charcoal/80 ">
+            You agree to provide all necessary materials, information, and approvals promptly to enable us to complete your project. You warrant that all materials you provide do not infringe any third-party rights and comply with applicable laws.
           </p>
-          <ul className="list-disc pl-6 mb-4">
-            <li>Modify or copy the materials;</li>
-            <li>Use the materials for any commercial purpose or for any public display;</li>
-            <li>Attempt to reverse engineer any software contained on our website;</li>
-            <li>Remove any copyright or other proprietary notations from the materials; or</li>
-            <li>Transfer the materials to another person or "mirror" the materials on any other server.</li>
-          </ul>
+
+          <h2 className="font-semibold mt-8 mb-4">Availability and Modifications</h2>
+          <p className="mt-6 text-charcoal/80 ">
+            LOTS Media may update, modify, or discontinue any service or feature at any time without prior notice. We reserve the right to amend these Terms by posting the updated version on our website. Continued use of our services after changes constitutes acceptance of the revised Terms.
+          </p>
+
+          <h2 className="font-semibold mt-8 mb-4">Intellactual Property and Content</h2>
+          <p className="mt-6 text-charcoal/80 ">
+            a. You represent and warrant that any content or materials you submit to LOTS Media do not violate any copyrights, trademarks, or other intellectual property rights of third parties.
+          </p>
+          <p className="mt-6 text-charcoal/80 ">
+            b. LOTS Media retains ownership of all preliminary concepts, source files, and unused designs unless otherwise agreed in writing.
+          </p>
+
+          <h2 className="font-semibold mt-8 mb-4">Termination</h2>
+          <p className="mt-6 text-charcoal/80 ">
+            We may terminate or suspend your access to our services immediately if you breach these Terms. Upon termination, all unpaid fees shall become immediately due.
+          </p>
+
+          <h2 className="font-semibold mt-8 mb-4">Disclaimers and Limitation of Liability</h2>
+          <p className="mt-6 text-charcoal/80 ">
+            a. LOTS Media provides services “as is” and makes no warranties, express or implied, regarding the quality or suitability of our designs for your particular needs.
+          </p>
+          <p className="mt-6 text-charcoal/80 ">
+            b. Except where prohibited by law, our liability arising from or related to the services shall be limited to the amount paid by you for the specific design project.
+          </p>
+
+          <h2 className="font-semibold mt-8 mb-4">Governing Laws and Disputes</h2>
+          <p className="mt-6 text-charcoal/80 ">
+            These Terms are governed by the laws of [Your Jurisdiction]. Any disputes arising from these Terms or the use of our services will be resolved through amicable negotiations or, if necessary, through binding arbitration.
+          </p>
           
-          <h2 className="text-2xl font-semibold mt-8 mb-4">3. Disclaimer</h2>
-          <p className="mb-4">
-            The materials on our website are provided on an 'as is' basis. We make no warranties, expressed or implied, and hereby disclaim and negate all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
+          <h2 className="font-semibold mt-8 mb-4">Contact Us</h2>
+          <p className="mt-6 text-charcoal/80 ">
+            For any questions, concerns, or grievances related to this Privacy Policy or your data, please contact:
           </p>
-          
-          <h2 className="text-2xl font-semibold mt-8 mb-4">4. Limitations</h2>
-          <p className="mb-4">
-            In no event shall we or our suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on our website, even if we or an authorized representative has been notified orally or in writing of the possibility of such damage.
-          </p>
-          
-          <h2 className="text-2xl font-semibold mt-8 mb-4">5. Revisions and Errata</h2>
-          <p className="mb-4">
-            The materials appearing on our website could include technical, typographical, or photographic errors. We do not warrant that any of the materials on this website are accurate, complete, or current. We may make changes to the materials contained on its website at any time without notice.
-          </p>
-          
-          <h2 className="text-2xl font-semibold mt-8 mb-4">6. Links</h2>
-          <p className="mb-4">
-            We have not reviewed all of the sites linked to our website and are not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by us of the site. Use of any such linked website is at the user's own risk.
-          </p>
-          
-          <h2 className="text-2xl font-semibold mt-8 mb-4">7. Governing Law</h2>
-          <p className="mb-4">
-            These terms and conditions are governed by and construed in accordance with the laws and you irrevocably submit to the exclusive jurisdiction of the courts in that location.
-          </p>
-          
-          <h2 className="text-2xl font-semibold mt-8 mb-4">8. Contact Us</h2>
-          <p className="mb-4">
-            If you have any questions about these Terms of Service, please contact us at:
-          </p>
-          <p className="mb-4">
-            Email: legal@designflex.com<br />
-            Phone: +1 (555) 123-4567<br />
-            Address: 123 Design Street, Creativity City, DC 12345
+          <p className="mt-6 text-charcoal/80 ">
+            <b>LOTS Media Co.</b> <br/>
+            Email: lotsmediaco@gmail.com<br/>
           </p>
         </div>
       </div>
