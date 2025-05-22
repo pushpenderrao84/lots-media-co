@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -11,26 +10,8 @@ const PrivacyPolicy = () => {
                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
           <span className="text-warm-yellow">Privacy</span> Policy<br />
         </h1>
-        <select
-          className="border border-gray-300 rounded px-3 py-2 text-base text-charcoal bg-white shadow-sm focus:outline-none"
-          onChange={(e) => {
-          const selectedLang = e.target.value;
-          // You can trigger translation logic here
-          alert(`Change language to: ${selectedLang}`);
-        }}
-      >
-        <option value="en">English</option>
-        <option value="hi">Hindi</option>
-        <option value="es">Spanish</option>
-        <option value="fr">French</option>
-        <option value="de">German</option>
-        {/* Add more languages as needed */}
-      </select>
         
         <div className="max-w-none">
-            <p className="mt-6 text-charcoal/80">
-              <b>Disclaimer:</b> In case of any discrepancy or difference, the English version will take precedence over any translation.
-            </p>
             <p className="mt-6 text-charcoal/80">
               LOTS Media Co. ("LOTS Media," "we," "us," or "our") values the trust you place in us and is committed to protecting your personal information. This Privacy Policy outlines how we collect, use, share, and safeguard your information through our website (www.lotsmedia.in), applications, services, and any other digital platforms operated by LOTS Media (hereinafter referred to as the "Platform").
             </p>
