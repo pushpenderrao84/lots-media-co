@@ -1,4 +1,6 @@
 import React from 'react';
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -7,6 +9,8 @@ import { Mail, Send, Instagram, Twitter } from 'lucide-react';
 
 const Contact = () => {
   return (
+  <>
+   <Navbar />
     <section id="contact" className="section-padding bg-soft-white pt-8">
       <div className="container-padding max-w-7xl mx-auto">
         <div className="text-center mb-16">
@@ -105,6 +109,7 @@ const Contact = () => {
         </div>
       </div>
     </section>
+   <Footer />
   );
 };
 
