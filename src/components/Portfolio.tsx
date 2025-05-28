@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import Navbar from "@/Navbar";
-import Footer from "@/Footer";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 // Portfolio data
