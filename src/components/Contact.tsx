@@ -1,6 +1,6 @@
 import React from 'react';
-import Navbar from "@/Navbar";
-import Footer from "@/Footer";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
