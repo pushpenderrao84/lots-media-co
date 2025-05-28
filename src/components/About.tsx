@@ -1,7 +1,7 @@
 
 import React from 'react';
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Navbar from "../Navbar";
+import Footer from "../Footer";
 import { cn } from "@/lib/utils";
 
 const About = () => {
@@ -24,7 +24,7 @@ const About = () => {
           
           <div className="md:w-3/5 self-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              About <span className="text-warm-yellow">U</span>
+              About <span className="text-warm-yellow">Usssss</span>
             </h2>
             <p className="text-lg mb-6 text-charcoal/90">
               Hi, we’re LOTS Media — a creative team passionate about telling visual stories that truly connect.
