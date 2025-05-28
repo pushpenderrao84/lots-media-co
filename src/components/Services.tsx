@@ -1,7 +1,7 @@
 
 import React from 'react';
-import Navbar from "@/Navbar";
-import Footer from "@/Footer";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 import { Instagram, Briefcase, Image } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
