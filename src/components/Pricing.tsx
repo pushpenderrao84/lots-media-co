@@ -1,6 +1,6 @@
 import React from 'react';
-import Navbar from "@/Navbar";
-import Footer from "@/Footer";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
