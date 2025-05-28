@@ -142,7 +142,7 @@ const PrivacyPolicy = () => {
 
           <br />
           <p className="mt-6 text-charcoal/80 ">
-            Last updated: {new Date().toLocaleDateString()}
+            Last updated: {new Date().toLocaleDateString('en-GB')}
           </p>
         </div>
       </div>
