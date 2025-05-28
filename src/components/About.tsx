@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -24,16 +23,16 @@ const About = () => {
           
           <div className="md:w-3/5 self-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              About <span className="text-warm-yellow">Usssss</span>
+              About <span className="text-warm-yellow">Us</span>
             </h2>
             <p className="text-lg mb-6 text-charcoal/90">
-              Hi, we’re LOTS Media — a creative team passionate about telling visual stories that truly connect.
+              Hi, we're LOTS Media — a creative team passionate about telling visual stories that truly connect.
             </p>
             <p className="text-lg mb-6 text-charcoal/90">
-              With a blend of strategic design and artistic flair, we specialize in branding, content creation, and digital media solutions tailored to both brands and creators. Whether you're launching something new or looking to refresh your presence, we’re here to help you craft visuals that resonate, inspire, and leave a lasting impact.
+              With a blend of strategic design and artistic flair, we specialize in branding, content creation, and digital media solutions tailored to both brands and creators. Whether you're launching something new or looking to refresh your presence, we're here to help you craft visuals that resonate, inspire, and leave a lasting impact.
             </p>
             <p className="text-lg text-charcoal/90">
-              We believe great storytelling is the key to meaningful connection. That’s why every project we take on is designed not just to look good, but to elevate your message and build lasting relationships with your audience. Let’s create something memorable together.
+              We believe great storytelling is the key to meaningful connection. That's why every project we take on is designed not just to look good, but to elevate your message and build lasting relationships with your audience. Let's create something memorable together.
             </p>
             
             <div className="mt-8 flex flex-wrap gap-6">
