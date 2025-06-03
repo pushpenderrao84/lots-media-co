@@ -38,44 +38,46 @@ const Portfolio = () => {
     : portfolioItems.filter(item => item.category === filter);
 
   return (
-  <>
-   <Navbar />
-    <section id="portfolio" className="section-padding bg-soft-white">
-      <div className="container-padding max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Our <span className="text-warm-yellow">Portfolio</span>
-          </h2>
-          <p className="text-charcoal/80 max-w-2xl mx-auto">
-            Explore a selection of our recent design work across various categories.
-          </p>
+    <>
+      <Navbar />
+      <section id="portfolio" className="section-padding bg-soft-white">
+        <div className="container-padding max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Our <span className="text-warm-yellow">Portfolio</span>
+            </h2>
+            <p className="text-charcoal/80 max-w-2xl mx-auto">
+              Explore a selection of our recent design work across various categories.
+            </p>
+          </div>
+          
+          {/* Category filter */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {categories.map(category => (
+              <button
+                key={category}
+                onClick={() => setFilter(category)}
+                className={`px-4 py-2 rounded-full transition-colors ${
+                  filter === category 
+                    ? 'bg-warm-yellow text-charcoal' 
+                    : 'bg-charcoal/5 text-charcoal/70 hover:bg-charcoal/10'
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+          
+          {/* Portfolio grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredItems.map(item => (
+              <PortfolioItem key={item.id} item={item} />
+            ))}
+          </div>
         </div>
-        
-        {/* Category filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map(category => (
-            <button
-              key={category}
-              onClick={() => setFilter(category)}
-              className={`px-4 py-2 rounded-full transition-colors ${
-                filter === category 
-                  ? 'bg-warm-yellow text-charcoal' 
-                  : 'bg-charcoal/5 text-charcoal/70 hover:bg-charcoal/10'
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-        
-        {/* Portfolio grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredItems.map(item => (
-            <PortfolioItem key={item.id} item={item} />
-          ))}
-        </div>
-      </div>
-    </section>
+      </section>
+      <Footer />
+    </>
   );
 };
 
@@ -149,8 +151,6 @@ const PortfolioItem = ({ item }: PortfolioItemProps) => {
         </div>
       </DialogContent>
     </Dialog>
-   <Footer />
-    </>
   );
 };
 
