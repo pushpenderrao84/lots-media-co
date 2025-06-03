@@ -21,36 +21,21 @@ const Footer = () => {
             <p className="text-soft-white/70 mb-4">
               Designs that speak. Stories that connect.
             </p>
+          </div>
+
+          {/* Newsletter - Centered */}
+          <div className="flex justify-center">
+            <div className="w-full max-w-md">
+              <Newsletter />
+            </div>
+          </div>
+
+          {/* Social Icons - Right aligned */}
+          <div className="flex justify-end">
             <div className="flex space-x-2">
               <SocialIcon href="https://instagram.com/lotsmediaco" icon={<Instagram />} />
               <SocialIcon href="mailto:lotsmediaco@gmail.com" icon={<Mail />} />
               <SocialIcon href="https://x.com/lotsmediaco" icon={<Twitter />} />
-            </div>
-          </div>
-
-          {/* Newsletter */}
-          <div>
-            <Newsletter />
-          </div>
-
-          {/* Links */}
-          <div className="flex flex-col md:flex-row justify-between">
-            <div className="mb-4 md:mb-0">
-              <h4 className="font-semibold mb-3">Quick Links</h4>
-              <div className="space-y-2">
-                <Link to="/about" className="block text-gray-400 hover:text-white text-sm transition-colors">
-                  About Us
-                </Link>
-                <Link to="/services" className="block text-gray-400 hover:text-white text-sm transition-colors">
-                  Services
-                </Link>
-                <Link to="/portfolio" className="block text-gray-400 hover:text-white text-sm transition-colors">
-                  Portfolio
-                </Link>
-                <Link to="/pricing" className="block text-gray-400 hover:text-white text-sm transition-colors">
-                  Pricing
-                </Link>
-              </div>
             </div>
           </div>
         </div>
@@ -72,6 +57,9 @@ const Footer = () => {
             </Link>
             <Link to="/careers" className="text-gray-400 hover:text-white text-sm transition-colors">
               Careers
+            </Link>
+            <Link to="/feedback" className="text-gray-400 hover:text-white text-sm transition-colors">
+              Feedback
             </Link>
           </div>
         </div>

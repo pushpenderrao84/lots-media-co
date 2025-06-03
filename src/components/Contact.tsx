@@ -37,7 +37,7 @@ const Contact = ({ isHomePage = false }: ContactProps) => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) {
+    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
       toast({
         title: "Error",
         description: "Please fill in all required fields.",
@@ -48,20 +48,12 @@ const Contact = ({ isHomePage = false }: ContactProps) => {
 
     setIsSubmitting(true);
 
-    // Create mailto link
-    const subject = encodeURIComponent(formData.subject || 'Contact Form Submission');
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\n` +
-      `Email: ${formData.email}\n` +
-      `Phone: ${formData.phone || 'Not provided'}\n\n` +
-      `Message:\n${formData.message}`
-    );
-    
-    // Open email client
-    window.location.href = `mailto:lotsmediaco@gmail.com?subject=${subject}&body=${body}`;
-
-    // Show success message
-    setTimeout(() => {
+    // Simulate sending email to backend
+    try {
+      // Here you would normally send to your backend API
+      // For now, we'll simulate the process
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
       setIsSubmitting(false);
       setShowSuccess(true);
       
@@ -76,7 +68,14 @@ const Contact = ({ isHomePage = false }: ContactProps) => {
           message: ''
         });
       }, 5000);
-    }, 1000);
+    } catch (error) {
+      setIsSubmitting(false);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive"
+      });
+    }
   };
 
   const content = (
@@ -146,13 +145,14 @@ const Contact = ({ isHomePage = false }: ContactProps) => {
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="subject" className="text-sm font-medium">
-                      Subject
+                      Subject <span className="text-red-500">*</span>
                     </label>
                     <Input 
                       id="subject" 
                       placeholder="Project inquiry" 
                       value={formData.subject}
                       onChange={handleInputChange}
+                      required
                     />
                   </div>
                   <div className="space-y-2">

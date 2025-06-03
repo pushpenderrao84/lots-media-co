@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -254,7 +253,7 @@ const PricingPage = () => {
             {currentPackages.map((pkg, index) => (
               <Card 
                 key={index}
-                className={`overflow-hidden transition-all duration-300 hover:shadow-xl ${
+                className={`overflow-hidden transition-all duration-300 hover:shadow-xl flex flex-col ${
                   pkg.popular 
                     ? 'border-warm-yellow shadow-lg transform hover:-translate-y-1' 
                     : 'border-soft-white/20 shadow hover:border-warm-yellow/50'
@@ -274,8 +273,8 @@ const PricingPage = () => {
                   </div>
                 </CardHeader>
                 
-                <CardContent className="pt-6">
-                  <ul className="space-y-3 mb-8">
+                <CardContent className="pt-6 flex flex-col flex-grow">
+                  <ul className="space-y-3 mb-8 flex-grow">
                     {pkg.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start">
                         <div className="h-2 w-2 bg-warm-yellow rounded-full mt-2 mr-2"></div>
@@ -285,7 +284,7 @@ const PricingPage = () => {
                   </ul>
                   
                   <Button 
-                    className={`w-full ${
+                    className={`w-full mt-auto ${
                       pkg.popular 
                         ? 'bg-warm-yellow text-charcoal hover:bg-warm-yellow/90' 
                         : 'bg-charcoal/90 text-soft-white hover:bg-charcoal'

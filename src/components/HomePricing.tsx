@@ -72,7 +72,7 @@ const HomePricing = () => {
           {recommendedPackages.map((pkg, index) => (
             <Card 
               key={index}
-              className={`overflow-hidden transition-all duration-300 hover:shadow-xl ${
+              className={`overflow-hidden transition-all duration-300 hover:shadow-xl flex flex-col ${
                 pkg.popular 
                   ? 'border-warm-yellow shadow-lg transform hover:-translate-y-1' 
                   : 'border-soft-white/20 shadow hover:border-warm-yellow/50'
@@ -93,8 +93,8 @@ const HomePricing = () => {
                 </div>
               </CardHeader>
               
-              <CardContent className="pt-4">
-                <ul className="space-y-2 mb-6">
+              <CardContent className="pt-4 flex flex-col flex-grow">
+                <ul className="space-y-2 mb-6 flex-grow">
                   {pkg.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start text-sm">
                       <div className="h-1.5 w-1.5 bg-warm-yellow rounded-full mt-2 mr-2"></div>
@@ -104,7 +104,7 @@ const HomePricing = () => {
                 </ul>
                 
                 <Button 
-                  className={`w-full text-sm ${
+                  className={`w-full text-sm mt-auto ${
                     pkg.popular 
                       ? 'bg-warm-yellow text-charcoal hover:bg-warm-yellow/90' 
                       : 'bg-charcoal/90 text-soft-white hover:bg-charcoal'

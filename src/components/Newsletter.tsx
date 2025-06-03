@@ -34,7 +34,7 @@ const Newsletter = () => {
         Newsletter
       </h3>
       <p className="text-charcoal/70 mb-4 text-sm">
-        Stay updated with our latest design tips, trends, and special offers.
+        Subscribe to our newsletter for design tips, industry insights, and exclusive offers delivered straight to your inbox.
       </p>
       <form onSubmit={handleSubmit} className="flex gap-2">
         <Input
