@@ -42,7 +42,7 @@ const Navbar = () => {
         isScrolled 
           ? "bg-soft-white shadow-md py-3" 
           : needsLightBackground 
-            ? "bg-soft-white/90 backdrop-blur-sm py-3" 
+            ? "bg-soft-white shadow-md py-3" 
             : "bg-transparent py-5"
       )}
     >

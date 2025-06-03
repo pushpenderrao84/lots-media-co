@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -7,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Mail, Send, Instagram, Twitter } from 'lucide-react';
+import { cn } from "@/lib/utils";
 
 interface ContactProps {
   isHomePage?: boolean;
@@ -14,7 +14,13 @@ interface ContactProps {
 
 const Contact = ({ isHomePage = false }: ContactProps) => {
   const content = (
-    <section id="contact" className="section-padding bg-soft-white pt-8">
+    <section 
+      id="contact" 
+      className={cn(
+        "section-padding bg-soft-white",
+        isHomePage ? "pt-8" : "pt-24"
+      )}
+    >
       <div className="container-padding max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">

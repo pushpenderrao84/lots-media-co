@@ -11,21 +11,33 @@ const portfolioItems = [
     title: "Instagram Sports Post",
     category: "Social Media",
     image: "/assets/Post.jpg",
-    description: "A series of Instagram posts designed for a sports brand focusing on minimalist aesthetics and engaging content."
+    description: "A series of Instagram posts designed for a sports brand focusing on minimalist aesthetics and engaging content.",
+    client: "FitZone Athletics",
+    date: "March 2025",
+    skills: "Social Media Design, Content Strategy",
+    tools: "Photoshop, Illustrator"
   },
   {
     id: 2,
     title: "EdTech Logo Design",
     category: "Branding",
     image: "/assets/Logo.jpg",
-    description: "Modern logo design for a edtech startup, focusing on simplicity, memorability, and brand values."
+    description: "Modern logo design for a edtech startup, focusing on simplicity, memorability, and brand values.",
+    client: "Pulse EdTech",
+    date: "April 2025",
+    skills: "Logo Design, Brand Identity",
+    tools: "Illustrator, Figma"
   },
   {
     id: 3,
     title: "YouTube Thumbnail",
     category: "Content Creator",
     image: "/assets/Thumbnail.jpg",
-    description: "Eye-catching YouTube thumbnail that drive clicks and maintain consistent branding across a creator's channel."
+    description: "Eye-catching YouTube thumbnail that drive clicks and maintain consistent branding across a creator's channel.",
+    client: "Physics Pulse",
+    date: "May 2025",
+    skills: "Thumbnail Design, Visual Hierarchy",
+    tools: "Photoshop, Canva"
   }
 ];
 
@@ -100,6 +112,10 @@ interface PortfolioItemProps {
     category: string;
     image: string;
     description: string;
+    client: string;
+    date: string;
+    skills: string;
+    tools: string;
   };
 }
 
@@ -143,19 +159,19 @@ const PortfolioItem = ({ item }: PortfolioItemProps) => {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <p className="text-sm text-charcoal/70">Client</p>
-                  <p>Pulse EdTech</p>
+                  <p>{item.client}</p>
                 </div>
                 <div>
                   <p className="text-sm text-charcoal/70">Date</p>
-                  <p>April 2025</p>
+                  <p>{item.date}</p>
                 </div>
                 <div>
                   <p className="text-sm text-charcoal/70">Skills</p>
-                  <p>Design, Branding</p>
+                  <p>{item.skills}</p>
                 </div>
                 <div>
                   <p className="text-sm text-charcoal/70">Tools</p>
-                  <p>Photoshop, Figma</p>
+                  <p>{item.tools}</p>
                 </div>
               </div>
             </div>
