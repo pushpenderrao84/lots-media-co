@@ -1,12 +1,15 @@
+
 import React from 'react';
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { cn } from "@/lib/utils";
 
-const About = () => {
-  return (
-  <>
-   <Navbar />
+interface AboutProps {
+  isHomePage?: boolean;
+}
+
+const About = ({ isHomePage = false }: AboutProps) => {
+  const content = (
     <section id="about" className="section-padding bg-soft-white">
       <div className="container-padding max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-center md:items-center justify-between">
@@ -53,8 +56,18 @@ const About = () => {
         </div>
       </div>
     </section>
-  <Footer />
-  </>
+  );
+
+  if (isHomePage) {
+    return content;
+  }
+
+  return (
+    <>
+      <Navbar />
+      {content}
+      <Footer />
+    </>
   );
 };
 

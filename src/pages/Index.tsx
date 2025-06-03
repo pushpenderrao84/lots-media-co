@@ -37,27 +37,31 @@ const Index = () => {
       <Navbar />
       <Hero />
 
-      <div className="animate-on-scroll">
-        <About />
+      <div className="animate-on-scroll" id="about">
+        <About isHomePage={true} />
       </div>
 
-      <div className="animate-on-scroll">
-        <Services />
+      <div className="animate-on-scroll" id="services">
+        <Services isHomePage={true} />
       </div>
 
-      <div className="animate-on-scroll">
-        <Portfolio />
+      <div className="animate-on-scroll" id="portfolio">
+        <Portfolio isHomePage={true} />
       </div>
 
-      <div className="animate-on-scroll">
-        <Testimonials />
+      <div className="animate-on-scroll" id="testimonials">
+        <Testimonials isHomePage={true} />
       </div>
 
       {/* Reduced gap by removing the animate-on-scroll div wrapper */}
-      <Pricing />
+      <div id="pricing">
+        <Pricing isHomePage={true} />
+      </div>
 
       {/* Directly attach Contact section with no gap */}
-      <Contact />
+      <div id="contact">
+        <Contact />
+      </div>
 
       <Footer />
     </div>

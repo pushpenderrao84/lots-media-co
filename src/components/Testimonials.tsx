@@ -19,7 +19,11 @@ const testimonials = [
   }
 ];
 
-const Testimonials = () => {
+interface TestimonialsProps {
+  isHomePage?: boolean;
+}
+
+const Testimonials = ({ isHomePage = false }: TestimonialsProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
   
   // Auto-slide effect
@@ -31,9 +35,7 @@ const Testimonials = () => {
     return () => clearInterval(interval);
   }, []);
 
-  return (
-  <>
-   <Navbar />
+  const content = (
     <section id="testimonials" className="section-padding bg-charcoal">
       <div className="container-padding max-w-7xl mx-auto">
         <div className="text-center mb-16">
@@ -90,7 +92,17 @@ const Testimonials = () => {
         </div>
       </div>
     </section>
-  <Footer />
+  );
+
+  if (isHomePage) {
+    return content;
+  }
+
+  return (
+    <>
+      <Navbar />
+      {content}
+      <Footer />
     </>
   );
 };

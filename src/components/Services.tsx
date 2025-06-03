@@ -23,10 +23,12 @@ const serviceData = [
   }
 ];
 
-const Services = () => {
-  return (
-  <>
-   <Navbar />
+interface ServicesProps {
+  isHomePage?: boolean;
+}
+
+const Services = ({ isHomePage = false }: ServicesProps) => {
+  const content = (
     <section id="services" className="section-padding bg-charcoal text-soft-white">
       <div className="container-padding max-w-7xl mx-auto">
         <div className="text-center mb-16">
@@ -55,9 +57,19 @@ const Services = () => {
         </div>
       </div>
     </section>
-   <Footer />
-  </>
-    );
+  );
+
+  if (isHomePage) {
+    return content;
+  }
+
+  return (
+    <>
+      <Navbar />
+      {content}
+      <Footer />
+    </>
+  );
 };
 
 export default Services;
