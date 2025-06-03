@@ -60,7 +60,7 @@ const Index = () => {
 
       {/* Directly attach Contact section with no gap */}
       <div id="contact">
-        <Contact />
+        <Contact isHomePage={true} />
       </div>
 
       <Footer />

@@ -3,11 +3,15 @@ import React, { useState, useEffect } from 'react';
 import { Menu } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  
+  // Check if we're on pages that need different header behavior
+  const needsLightBackground = location.pathname === '/services' || location.pathname === '/testimonials';
 
   // Handle scroll effect
   useEffect(() => {
@@ -25,11 +29,21 @@ const Navbar = () => {
     };
   }, []);
 
+  // Preload the logo image
+  useEffect(() => {
+    const img = new Image();
+    img.src = "/lovable-uploads/a6e0b97c-98e4-46fd-bb8d-0ef459a48468.png";
+  }, []);
+
   return (
     <header 
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300", 
-        isScrolled ? "bg-soft-white shadow-md py-3" : "bg-transparent py-5"
+        isScrolled 
+          ? "bg-soft-white shadow-md py-3" 
+          : needsLightBackground 
+            ? "bg-soft-white/90 backdrop-blur-sm py-3" 
+            : "bg-transparent py-5"
       )}
     >
       <div className="container-padding max-w-7xl mx-auto flex justify-between items-center">
@@ -38,6 +52,8 @@ const Navbar = () => {
             src="/lovable-uploads/a6e0b97c-98e4-46fd-bb8d-0ef459a48468.png" 
             alt="LOTS Media Logo" 
             className="h-12 mr-2 outline outline-[0.5px] outline-[#333333] rounded-md"
+            loading="eager"
+            fetchPriority="high"
           />
       </Link>
 

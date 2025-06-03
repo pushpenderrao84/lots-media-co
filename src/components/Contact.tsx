@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -7,10 +8,12 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Mail, Send, Instagram, Twitter } from 'lucide-react';
 
-const Contact = () => {
-  return (
-  <>
-   <Navbar />
+interface ContactProps {
+  isHomePage?: boolean;
+}
+
+const Contact = ({ isHomePage = false }: ContactProps) => {
+  const content = (
     <section id="contact" className="section-padding bg-soft-white pt-8">
       <div className="container-padding max-w-7xl mx-auto">
         <div className="text-center mb-16">
@@ -109,7 +112,17 @@ const Contact = () => {
         </div>
       </div>
     </section>
-   <Footer />
+  );
+
+  if (isHomePage) {
+    return content;
+  }
+
+  return (
+    <>
+      <Navbar />
+      {content}
+      <Footer />
     </>
   );
 };
