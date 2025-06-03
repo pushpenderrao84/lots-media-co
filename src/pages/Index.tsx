@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
@@ -6,7 +5,7 @@ import About from '../components/About';
 import Services from '../components/Services';
 import Portfolio from '../components/Portfolio';
 import Testimonials from '../components/Testimonials';
-import Pricing from '../components/Pricing';
+import HomePricing from '../components/HomePricing';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
@@ -53,12 +52,10 @@ const Index = () => {
         <Testimonials isHomePage={true} />
       </div>
 
-      {/* Reduced gap by removing the animate-on-scroll div wrapper */}
       <div id="pricing">
-        <Pricing isHomePage={true} />
+        <HomePricing />
       </div>
 
-      {/* Directly attach Contact section with no gap */}
       <div id="contact">
         <Contact isHomePage={true} />
       </div>

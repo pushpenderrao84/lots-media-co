@@ -1,18 +1,84 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Mail, Send, Instagram, Twitter } from 'lucide-react';
+import { Mail, Send, Instagram, Twitter, Phone } from 'lucide-react';
 import { cn } from "@/lib/utils";
+import ContactSuccess from './ContactSuccess';
+import { useToast } from "@/hooks/use-toast";
 
 interface ContactProps {
   isHomePage?: boolean;
 }
 
 const Contact = ({ isHomePage = false }: ContactProps) => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+  const { toast } = useToast();
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [id]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formData.name || !formData.email || !formData.message) {
+      toast({
+        title: "Error",
+        description: "Please fill in all required fields.",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    // Create mailto link
+    const subject = encodeURIComponent(formData.subject || 'Contact Form Submission');
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\n` +
+      `Email: ${formData.email}\n` +
+      `Phone: ${formData.phone || 'Not provided'}\n\n` +
+      `Message:\n${formData.message}`
+    );
+    
+    // Open email client
+    window.location.href = `mailto:lotsmediaco@gmail.com?subject=${subject}&body=${body}`;
+
+    // Show success message
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setShowSuccess(true);
+      
+      // Reset form and hide success message after 5 seconds
+      setTimeout(() => {
+        setShowSuccess(false);
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: ''
+        });
+      }, 5000);
+    }, 1000);
+  };
+
   const content = (
     <section 
       id="contact" 
@@ -35,42 +101,83 @@ const Contact = ({ isHomePage = false }: ContactProps) => {
           {/* Contact form */}
           <Card className="shadow-lg border-none">
             <CardContent className="pt-8">
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm font-medium">
-                      Full Name
-                    </label>
-                    <Input id="name" placeholder="Your name" />
+              {showSuccess ? (
+                <ContactSuccess />
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <label htmlFor="name" className="text-sm font-medium">
+                        Full Name <span className="text-red-500">*</span>
+                      </label>
+                      <Input 
+                        id="name" 
+                        placeholder="Your name" 
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required 
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label htmlFor="email" className="text-sm font-medium">
+                        Email Address <span className="text-red-500">*</span>
+                      </label>
+                      <Input 
+                        id="email" 
+                        type="email" 
+                        placeholder="your@email.com" 
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required 
+                      />
+                    </div>
                   </div>
                   <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium">
-                      Email Address
+                    <label htmlFor="phone" className="text-sm font-medium">
+                      Phone Number (Optional)
                     </label>
-                    <Input id="email" type="email" placeholder="your@email.com" />
+                    <Input 
+                      id="phone" 
+                      type="tel" 
+                      placeholder="+1 (555) 123-4567" 
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                    />
                   </div>
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="subject" className="text-sm font-medium">
-                    Subject
-                  </label>
-                  <Input id="subject" placeholder="Project inquiry" />
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium">
-                    Message
-                  </label>
-                  <Textarea
-                    id="message"
-                    placeholder="Tell me about your project..."
-                    rows={6}
-                  />
-                </div>
-                <Button type="submit" className="w-full bg-warm-yellow text-charcoal hover:bg-charcoal hover:text-soft-white transition-colors px-6 py-6 h-auto text-base">
-                  <Send className="h-4 w-4 mr-2 group-hover:warm-yellow transition colors" />
-                  Send Message
-                </Button>
-              </form>
+                  <div className="space-y-2">
+                    <label htmlFor="subject" className="text-sm font-medium">
+                      Subject
+                    </label>
+                    <Input 
+                      id="subject" 
+                      placeholder="Project inquiry" 
+                      value={formData.subject}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label htmlFor="message" className="text-sm font-medium">
+                      Message <span className="text-red-500">*</span>
+                    </label>
+                    <Textarea
+                      id="message"
+                      placeholder="Tell me about your project..."
+                      rows={6}
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      required
+                    />
+                  </div>
+                  <Button 
+                    type="submit" 
+                    disabled={isSubmitting}
+                    className="w-full bg-warm-yellow text-charcoal hover:bg-charcoal hover:text-soft-white transition-colors px-6 py-6 h-auto text-base"
+                  >
+                    <Send className="h-4 w-4 mr-2" />
+                    {isSubmitting ? "Sending..." : "Send Message"}
+                  </Button>
+                </form>
+              )}
             </CardContent>
           </Card>
           
@@ -101,7 +208,7 @@ const Contact = ({ isHomePage = false }: ContactProps) => {
                     <p className="font-medium">Instagram</p>
                     <p className="text-charcoal/70">@lotsmediaco</p>
                   </div>
-                  </a>
+                </a>
 
                 <a href="https://x.com/lotsmediaco" target="_blank" rel="noopener noreferrer" className="flex items-center group">
                   <div className="bg-warm-yellow p-3 rounded-full mr-4 group-hover:bg-charcoal transition-colors">
@@ -111,7 +218,7 @@ const Contact = ({ isHomePage = false }: ContactProps) => {
                     <p className="font-medium">Twitter</p>
                     <p className="text-charcoal/70">@lotsmediaco</p>
                   </div>
-                  </a>
+                </a>
               </div>
             </div>
           </div>
