@@ -24,7 +24,7 @@ const Footer = () => {
           </div>
 
           {/* Newsletter - Centered */}
-          <div className="flex justify-center">
+          <div className="flex justify-center-top">
             <div className="w-full max-w-md">
               <Newsletter />
             </div>
