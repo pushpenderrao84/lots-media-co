@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="bg-charcoal text-soft-white py-12">
       <div className="container-padding max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8 items-center">
           {/* Logo, Description and Social Icons */}
           <div>
             <a href="#" className="flex items-center mb-4">
