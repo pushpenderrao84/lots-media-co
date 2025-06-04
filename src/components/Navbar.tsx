@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -10,8 +9,8 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   
-  // Check if we're on pages that need different header behavior
-  const needsLightBackground = location.pathname === '/services' || location.pathname === '/testimonials';
+  // Only home page should have transparent header behavior
+  const isHomePage = location.pathname === '/';
 
   // Handle scroll effect
   useEffect(() => {
@@ -39,11 +38,9 @@ const Navbar = () => {
     <header 
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300", 
-        isScrolled 
+        isScrolled || !isHomePage
           ? "bg-soft-white shadow-md py-3" 
-          : needsLightBackground 
-            ? "bg-soft-white shadow-md py-3" 
-            : "bg-transparent py-5"
+          : "bg-transparent py-5"
       )}
     >
       <div className="container-padding max-w-7xl mx-auto flex justify-between items-center">
