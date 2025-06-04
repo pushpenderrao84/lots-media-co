@@ -169,7 +169,7 @@ const PricingPage = () => {
 
   const formatPrice = (priceINR: number) => {
     if (currency === 'USD') {
-      const priceUSD = Math.round(priceINR / 45);
+      const priceUSD = Math.round(2 * (priceINR / 85.84));
       return `$${priceUSD}`;
     }
     return `₹${priceINR}`;
