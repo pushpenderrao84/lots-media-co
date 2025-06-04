@@ -297,6 +297,29 @@ const PricingPage = () => {
             ))}
           </div>
 
+        {/* Smart Pricing Notes */}
+        <div className="bg-charcoal/5 p-8 rounded-lg mb-12">
+          <h4 className="text-xl font-bold mb-4">Smart Pricing Notes:</h4>
+          <ul className="space-y-3">
+            <li className="flex items-start">
+              <div className="h-2 w-2 bg-warm-yellow rounded-full mt-2 mr-3"></div>
+              <p>At LOTS Media, we believe in fair pricing that respects creative value and client goals.</p>
+            </li>
+            <li className="flex items-start">
+              <div className="h-2 w-2 bg-warm-yellow rounded-full mt-2 mr-3"></div>
+              <p>We start affordably, but never undervalue.</p>
+            </li>
+            <li className="flex items-start">
+              <div className="h-2 w-2 bg-warm-yellow rounded-full mt-2 mr-3"></div>
+              <p>You get strategic design support, not just pretty visuals.</p>
+            </li>
+            <li className="flex items-start">
+              <div className="h-2 w-2 bg-warm-yellow rounded-full mt-2 mr-3"></div>
+              <p>Repeat clients & bundles get exclusive discounts.</p>
+            </li>
+          </ul>
+        </div>
+          
           {/* CTA Buttons */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-4">
             <Button className="bg-warm-yellow text-charcoal hover:bg-charcoal hover:text-soft-white transition-colors px-6 py-6 h-auto text-base">
