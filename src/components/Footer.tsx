@@ -8,8 +8,8 @@ const Footer = () => {
   return (
     <footer className="bg-charcoal text-soft-white py-12">
       <div className="container-padding max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8 items-start">
-          {/* Logo and Description */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8 items-start">
+          {/* Logo, Description and Social Icons */}
           <div>
             <a href="#" className="flex items-center mb-4">
               <img 
@@ -21,21 +21,17 @@ const Footer = () => {
             <p className="text-soft-white/70 mb-4">
               Designs that speak. Stories that connect.
             </p>
-          </div>
-
-          {/* Newsletter - Centered */}
-          <div className="flex justify-center">
-            <div className="w-full max-w-sm">
-              <Newsletter />
-            </div>
-          </div>
-
-          {/* Social Icons - Right aligned */}
-          <div className="flex justify-end items-start">
-            <div className="flex space-x-3">
+            <div className="flex space-x-4">
               <SocialIcon href="https://instagram.com/lotsmediaco" icon={<Instagram size={20} />} />
               <SocialIcon href="mailto:lotsmediaco@gmail.com" icon={<Mail size={20} />} />
               <SocialIcon href="https://x.com/lotsmediaco" icon={<Twitter size={20} />} />
+            </div>
+          </div>
+
+          {/* Newsletter - Right aligned */}
+          <div className="flex justify-end">
+            <div className="w-full max-w-sm">
+              <Newsletter />
             </div>
           </div>
         </div>
@@ -79,7 +75,7 @@ const SocialIcon = ({ href, icon }: SocialIconProps) => {
       href={href} 
       target="_blank" 
       rel="noopener noreferrer" 
-      className="w-10 h-10 rounded-full border border-soft-white/20 flex items-center justify-center text-soft-white hover:text-warm-yellow hover:border-warm-yellow transition-all duration-300"
+      className="text-soft-white hover:text-warm-yellow transition-all duration-300"
     >
       {icon}
     </a>
