@@ -34,7 +34,7 @@ const Newsletter = () => {
         Newsletter
       </h3>
       <p className="text-soft-white/70 mb-4 text-sm">
-        Stay updated with our latest design tips, trends & special offers.
+        Subscribe to our newsletter for latest design tips, trends & special offers.
       </p>
       <form onSubmit={handleSubmit} className="flex gap-2">
         <Input
@@ -42,13 +42,13 @@ const Newsletter = () => {
           placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="flex-1"
+          className="flex-1 text-charcoal/80 placeholder:text-charcoal/50"
           required
         />
         <Button 
           type="submit" 
           disabled={isSubmitting}
-          className="bg-warm-yellow text-charcoal hover:bg-charcoal hover:text-soft-white hover:border-soft-white transition-colors"
+          className="bg-warm-yellow text-charcoal hover:bg-charcoal hover:text-soft-white hover:border-soft-white border border-transparent transition-all duration-300"
         >
           {isSubmitting ? "..." : "Subscribe"}
         </Button>

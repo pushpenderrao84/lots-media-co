@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="bg-charcoal text-soft-white py-12">
       <div className="container-padding max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8 items-start">
           {/* Logo and Description */}
           <div>
             <a href="#" className="flex items-center mb-4">
@@ -24,18 +24,18 @@ const Footer = () => {
           </div>
 
           {/* Newsletter - Centered */}
-          <div className="flex justify-center-top">
-            <div className="w-full max-w-md">
+          <div className="flex justify-center">
+            <div className="w-full max-w-sm">
               <Newsletter />
             </div>
           </div>
 
           {/* Social Icons - Right aligned */}
-          <div className="flex justify-end">
-            <div className="flex space-x-2">
-              <SocialIcon href="https://instagram.com/lotsmediaco" icon={<Instagram />} />
-              <SocialIcon href="mailto:lotsmediaco@gmail.com" icon={<Mail />} />
-              <SocialIcon href="https://x.com/lotsmediaco" icon={<Twitter />} />
+          <div className="flex justify-end items-start">
+            <div className="flex space-x-3">
+              <SocialIcon href="https://instagram.com/lotsmediaco" icon={<Instagram size={20} />} />
+              <SocialIcon href="mailto:lotsmediaco@gmail.com" icon={<Mail size={20} />} />
+              <SocialIcon href="https://x.com/lotsmediaco" icon={<Twitter size={20} />} />
             </div>
           </div>
         </div>
@@ -79,11 +79,9 @@ const SocialIcon = ({ href, icon }: SocialIconProps) => {
       href={href} 
       target="_blank" 
       rel="noopener noreferrer" 
-      className="bg-warm-yellow/5 p-3 rounded-full hover:bg-charcoal text-soft-white transition-colors group"
+      className="w-10 h-10 rounded-full border border-soft-white/20 flex items-center justify-center text-soft-white hover:text-warm-yellow hover:border-warm-yellow transition-all duration-300"
     >
-      <span className="text-charcoal group-hover:bg-charcoal text-soft-white transition-colors">
-        {icon}
-      </span>
+      {icon}
     </a>
   );
 };
