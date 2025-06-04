@@ -45,7 +45,6 @@ const PricingPage = () => {
           "2 revisions included",
           "Fast delivery (36 hrs)"
         ],
-        popular: true
       },
       {
         title: "Pro",
@@ -56,6 +55,7 @@ const PricingPage = () => {
           "Highlight covers",
           "Priority delivery (24 hrs)"
         ]
+        popular: true
       }
     ],
     'branding': [
@@ -169,7 +169,7 @@ const PricingPage = () => {
 
   const formatPrice = (priceINR: number) => {
     if (currency === 'USD') {
-      const priceUSD = Math.round(priceINR * 2);
+      const priceUSD = Math.round(priceINR / 45);
       return `$${priceUSD}`;
     }
     return `₹${priceINR}`;
