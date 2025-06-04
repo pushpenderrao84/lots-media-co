@@ -31,7 +31,6 @@ const Pricing = ({ isHomePage = false }: PricingProps) => {
         "2 revisions included",
         "Fast delivery (36 hrs)"
       ],
-      popular: true
     },
     {
       title: "Pro",
@@ -42,6 +41,7 @@ const Pricing = ({ isHomePage = false }: PricingProps) => {
         "Highlight covers",
         "Priority delivery (24 hrs)"
       ]
+      popular: true
     }
   ];
 
@@ -67,7 +67,6 @@ const Pricing = ({ isHomePage = false }: PricingProps) => {
         "3 revisions included",
         "Delivery in 5-7 days"
       ],
-      popular: true
     },
     {
       title: "Complete Brand Kit",
@@ -81,6 +80,7 @@ const Pricing = ({ isHomePage = false }: PricingProps) => {
         "Unlimited revisions",
         "Delivery in 10-14 days"
       ]
+      popular: true
     }
   ];
 
@@ -104,7 +104,6 @@ const Pricing = ({ isHomePage = false }: PricingProps) => {
         "2 revisions included",
         "Delivery in 3-4 days"
       ],
-      popular: true
     },
     {
       title: "Pro Creator",
@@ -116,6 +115,7 @@ const Pricing = ({ isHomePage = false }: PricingProps) => {
         "3 revisions included",
         "Priority delivery (48 hrs)"
       ]
+      popular: true
     }
   ];
 
@@ -142,7 +142,6 @@ const Pricing = ({ isHomePage = false }: PricingProps) => {
         "Priority support",
         "2-day turnaround"
       ],
-      popular: true
     },
     {
       title: "Content Partner",
@@ -155,6 +154,7 @@ const Pricing = ({ isHomePage = false }: PricingProps) => {
         "VIP support",
         "1-day turnaround"
       ]
+      popular: true
     }
   ];
 
