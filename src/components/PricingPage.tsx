@@ -79,7 +79,6 @@ const PricingPage = () => {
           "3 revisions included",
           "Delivery in 5-7 days"
         ],
-        popular: true
       },
       {
         title: "Complete Brand Kit",
@@ -93,6 +92,7 @@ const PricingPage = () => {
           "Unlimited revisions",
           "Delivery in 10-14 days"
         ]
+        popular: true
       }
     ],
     'youtube': [
@@ -114,7 +114,6 @@ const PricingPage = () => {
           "2 revisions included",
           "Delivery in 3-4 days"
         ],
-        popular: true
       },
       {
         title: "Pro Creator",
@@ -126,6 +125,7 @@ const PricingPage = () => {
           "3 revisions included",
           "Priority delivery (48 hrs)"
         ]
+        popular: true
       }
     ],
     'retainers': [
@@ -150,7 +150,6 @@ const PricingPage = () => {
           "Priority support",
           "2-day turnaround"
         ],
-        popular: true
       },
       {
         title: "Content Partner",
@@ -163,6 +162,7 @@ const PricingPage = () => {
           "VIP support",
           "1-day turnaround"
         ]
+        popular: true
       }
     ]
   };
