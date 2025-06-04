@@ -48,7 +48,7 @@ const Newsletter = () => {
         <Button 
           type="submit" 
           disabled={isSubmitting}
-          className="bg-warm-yellow text-charcoal hover:bg-charcoal hover:text-soft-white hover:border-softwhite transition-colors"
+          className="bg-warm-yellow text-charcoal hover:bg-charcoal hover:text-soft-white hover:border-soft-white transition-colors"
         >
           {isSubmitting ? "..." : "Subscribe"}
         </Button>
