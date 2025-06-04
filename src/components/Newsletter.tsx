@@ -33,7 +33,7 @@ const Newsletter = () => {
         <Mail className="h-5 w-5 mr-2 text-warm-yellow" />
         Newsletter
       </h3>
-      <p className="text-soft-white/70 mb-4">
+      <p className="text-soft-white/70 mb-4 text-sm">
         Stay updated with our latest design tips, trends & special offers.
       </p>
       <form onSubmit={handleSubmit} className="flex gap-2">
