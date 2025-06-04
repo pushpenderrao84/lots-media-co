@@ -286,8 +286,8 @@ const PricingPage = () => {
                   <Button 
                     className={`w-full mt-auto ${
                       pkg.popular 
-                        ? 'bg-warm-yellow text-charcoal hover:bg-warm-yellow/90' 
-                        : 'bg-charcoal/90 text-soft-white hover:bg-charcoal'
+                        ? 'bg-warm-yellow text-charcoal hover:bg-charcoal hover:text-soft-white' 
+                        : 'bg-charcoal text-soft-white hover:bg-warm-yellow hover:text-charcoal'
                     }`}
                   >
                     Book Now
