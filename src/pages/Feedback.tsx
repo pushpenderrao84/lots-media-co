@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -9,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Star } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
+import { sendEmail, formatFeedbackEmail } from '../utils/emailService';
 
 const Feedback = () => {
   const [formData, setFormData] = useState({
@@ -64,38 +64,41 @@ const Feedback = () => {
     setIsSubmitting(true);
 
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      const emailData = formatFeedbackEmail(formData);
+      const emailSent = await sendEmail(emailData);
       
-      toast({
-        title: "Success!",
-        description: "Thank you for your feedback. We appreciate your input!",
-      });
-      
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        service: '',
-        experience: '',
-        rating: 0,
-        improvements: '',
-        howFound: '',
-        recommendProbability: '',
-        bestAspect: '',
-        worstAspect: '',
-        additionalFeedback: ''
-      });
-      
-      setIsSubmitting(false);
+      if (emailSent) {
+        toast({
+          title: "Success!",
+          description: "Thank you for your feedback. We appreciate your input!",
+        });
+        
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          service: '',
+          experience: '',
+          rating: 0,
+          improvements: '',
+          howFound: '',
+          recommendProbability: '',
+          bestAspect: '',
+          worstAspect: '',
+          additionalFeedback: ''
+        });
+      } else {
+        throw new Error('Failed to send email');
+      }
     } catch (error) {
-      setIsSubmitting(false);
       toast({
         title: "Error",
         description: "Failed to submit feedback. Please try again.",
         variant: "destructive"
       });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 

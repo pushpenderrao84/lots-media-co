@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -10,6 +9,7 @@ import { Mail, Send, Instagram, Twitter, Phone } from 'lucide-react';
 import { cn } from "@/lib/utils";
 import ContactSuccess from './ContactSuccess';
 import { useToast } from "@/hooks/use-toast";
+import { sendEmail, formatContactEmail } from '../utils/emailService';
 
 interface ContactProps {
   isHomePage?: boolean;
@@ -48,26 +48,33 @@ const Contact = ({ isHomePage = false }: ContactProps) => {
 
     setIsSubmitting(true);
 
-    // Simulate sending email to backend
     try {
-      // Here you would normally send to your backend API
-      // For now, we'll simulate the process
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      const emailData = formatContactEmail(formData);
+      const emailSent = await sendEmail(emailData);
       
-      setIsSubmitting(false);
-      setShowSuccess(true);
-      
-      // Reset form and hide success message after 5 seconds
-      setTimeout(() => {
-        setShowSuccess(false);
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          subject: '',
-          message: ''
+      if (emailSent) {
+        setIsSubmitting(false);
+        setShowSuccess(true);
+        
+        toast({
+          title: "Success!",
+          description: "Your message has been sent. We'll get back to you soon!",
         });
-      }, 5000);
+        
+        // Reset form and hide success message after 5 seconds
+        setTimeout(() => {
+          setShowSuccess(false);
+          setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            subject: '',
+            message: ''
+          });
+        }, 5000);
+      } else {
+        throw new Error('Failed to send email');
+      }
     } catch (error) {
       setIsSubmitting(false);
       toast({

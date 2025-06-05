@@ -15,8 +15,7 @@ const HomePricing = () => {
         "1 carousel (multi-slide)",
         "2 revisions included",
         "Fast delivery (36 hrs)"
-      ],
-      popular: true
+      ]
     },
     {
       title: "Branding Starter",
@@ -52,9 +51,15 @@ const HomePricing = () => {
         "2 posters",
         "Priority support",
         "2-day turnaround"
-      ]
+      ],
+      popular: true
     }
   ];
+
+  const generateInstagramDMLink = (packageTitle: string, category: string) => {
+    const message = `Want to book: ${category} - ${packageTitle}`;
+    return `https://www.instagram.com/direct/t/17847879945423429?text=${encodeURIComponent(message)}`;
+  };
 
   return (
     <section id="pricing" className="section-padding bg-soft-white">
@@ -103,15 +108,22 @@ const HomePricing = () => {
                   ))}
                 </ul>
                 
-                <Button 
-                  className={`w-full text-sm mt-auto ${
-                    pkg.popular 
-                      ? 'bg-warm-yellow text-charcoal hover:bg-warm-yellow/90' 
-                      : 'bg-charcoal/90 text-soft-white hover:bg-charcoal'
-                  }`}
+                <a 
+                  href={generateInstagramDMLink(pkg.title, pkg.category)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full"
                 >
-                  Get Started
-                </Button>
+                  <Button 
+                    className={`w-full text-sm mt-auto transition-colors ${
+                      pkg.popular 
+                        ? 'bg-warm-yellow text-charcoal hover:bg-charcoal hover:text-soft-white' 
+                        : 'bg-charcoal text-soft-white hover:bg-warm-yellow hover:text-charcoal'
+                    }`}
+                  >
+                    Get Started
+                  </Button>
+                </a>
               </CardContent>
             </Card>
           ))}

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -176,8 +175,8 @@ const PricingPage = () => {
     return `₹${priceINR}`;
   };
 
-  const generateInstagramDMLink = (packageTitle: string, categoryName: string, price: string) => {
-    const message = `Hi! I'm interested in the ${packageTitle} package from ${categoryName} (${price}). Can you please provide more details?`;
+  const generateInstagramDMLink = (packageTitle: string, categoryName: string) => {
+    const message = `Want to book: ${categoryName} - ${packageTitle}`;
     return `https://www.instagram.com/direct/t/17847879945423429?text=${encodeURIComponent(message)}`;
   };
 
@@ -290,7 +289,7 @@ const PricingPage = () => {
                   </ul>
                   
                   <a 
-                    href={generateInstagramDMLink(pkg.title, selectedCategoryData?.name || '', formatPrice(pkg.priceINR) + (pkg.period || ''))}
+                    href={generateInstagramDMLink(pkg.title, selectedCategoryData?.name || '')}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full"
@@ -310,22 +309,22 @@ const PricingPage = () => {
             ))}
           </div>
 
-          {/* Add-ons Section */}
+          {/* Add-ons Section with currency conversion */}
           {selectedCategory === 'social-media' && (
             <div className="mt-8 bg-charcoal/5 rounded-lg p-6 mb-12">
               <h4 className="font-medium mb-3">Add-ons:</h4>
               <ul className="space-y-2">
                 <li className="flex items-center">
                   <div className="h-1.5 w-1.5 bg-warm-yellow rounded-full mr-2"></div>
-                  <span>Revisions beyond 2 → ₹100 each</span>
+                  <span>Revisions beyond 2 → {formatPrice(100)} each</span>
                 </li>
                 <li className="flex items-center">
                   <div className="h-1.5 w-1.5 bg-warm-yellow rounded-full mr-2"></div>
-                  <span>Reels covers (per piece) → ₹100</span>
+                  <span>Reels covers (per piece) → {formatPrice(100)}</span>
                 </li>
                 <li className="flex items-center">
                   <div className="h-1.5 w-1.5 bg-warm-yellow rounded-full mr-2"></div>
-                  <span>Brand style guide → ₹499</span>
+                  <span>Brand style guide → {formatPrice(499)}</span>
                 </li>
               </ul>
             </div>
@@ -337,15 +336,15 @@ const PricingPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center">
                   <div className="h-1.5 w-1.5 bg-warm-yellow rounded-full mr-2"></div>
-                  <span>Animated logo → ₹999</span>
+                  <span>Animated logo → {formatPrice(999)}</span>
                 </li>
                 <li className="flex items-center">
                   <div className="h-1.5 w-1.5 bg-warm-yellow rounded-full mr-2"></div>
-                  <span>Flyer/poster (each) → ₹399</span>
+                  <span>Flyer/poster (each) → {formatPrice(399)}</span>
                 </li>
                 <li className="flex items-center">
                   <div className="h-1.5 w-1.5 bg-warm-yellow rounded-full mr-2"></div>
-                  <span>Menu/Brochure design → ₹799+</span>
+                  <span>Menu/Brochure design → {formatPrice(799)}+</span>
                 </li>
               </ul>
             </div>
@@ -357,11 +356,11 @@ const PricingPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center">
                   <div className="h-1.5 w-1.5 bg-warm-yellow rounded-full mr-2"></div>
-                  <span>Intro/outro graphics (non-motion) → ₹799</span>
+                  <span>Intro/outro graphics (non-motion) → {formatPrice(799)}</span>
                 </li>
                 <li className="flex items-center">
                   <div className="h-1.5 w-1.5 bg-warm-yellow rounded-full mr-2"></div>
-                  <span>Thumbnail template for reuse → ₹299</span>
+                  <span>Thumbnail template for reuse → {formatPrice(299)}</span>
                 </li>
               </ul>
             </div>
@@ -392,14 +391,18 @@ const PricingPage = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-            <Button className="bg-warm-yellow text-charcoal hover:bg-charcoal hover:text-soft-white transition-colors px-6 py-6 h-auto text-base">
-              <Mail className="h-5 w-5 mr-2" />
-              Mail Us
-            </Button>
-            <Button className="bg-warm-yellow text-charcoal hover:bg-charcoal hover:text-soft-white transition-colors px-6 py-6 h-auto text-base">
-              <Instagram className="h-5 w-5 mr-2" />
-              DM on Instagram
-            </Button>
+            <a href="mailto:lotsmediaco@gmail.com">
+              <Button className="bg-warm-yellow text-charcoal hover:bg-charcoal hover:text-soft-white transition-colors px-6 py-6 h-auto text-base">
+                <Mail className="h-5 w-5 mr-2" />
+                Mail Us
+              </Button>
+            </a>
+            <a href="https://www.instagram.com/direct/t/17847879945423429" target="_blank" rel="noopener noreferrer">
+              <Button className="bg-warm-yellow text-charcoal hover:bg-charcoal hover:text-soft-white transition-colors px-6 py-6 h-auto text-base">
+                <Instagram className="h-5 w-5 mr-2" />
+                DM on Instagram
+              </Button>
+            </a>
             <Button variant="outline" className="border-charcoal bg-soft-white text-charcoal hover:text-soft-white hover:bg-charcoal transition-colors px-6 py-6 h-auto text-base">
               Request Custom Quote
             </Button>

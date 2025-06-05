@@ -10,8 +10,8 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   
-  // Check if we're on pages that need different header behavior
-  const needsLightBackground = location.pathname === '/services' || location.pathname === '/testimonials';
+  // Check if we're on pages that need dark header
+  const needsDarkHeader = location.pathname === '/services' || location.pathname === '/testimonials';
 
   // Handle scroll effect
   useEffect(() => {
@@ -40,14 +40,19 @@ const Navbar = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300", 
         isScrolled 
-          ? "bg-soft-white shadow-md py-3" 
-          : needsLightBackground 
-            ? "bg-soft-white shadow-md py-3" 
+          ? needsDarkHeader 
+            ? "bg-charcoal shadow-md py-3" 
+            : "bg-soft-white shadow-md py-3"
+          : needsDarkHeader 
+            ? "bg-charcoal py-5" 
             : "bg-transparent py-5"
       )}
     >
       <div className="container-padding max-w-7xl mx-auto flex justify-between items-center">
-      <Link to="/" className="text-2xl font-bold text-charcoal z-50 flex items-center">
+      <Link to="/" className={cn(
+        "text-2xl font-bold z-50 flex items-center",
+        needsDarkHeader ? "text-soft-white" : "text-charcoal"
+      )}>
           <img 
             src="/lovable-uploads/a6e0b97c-98e4-46fd-bb8d-0ef459a48468.png" 
             alt="LOTS Media Logo" 
@@ -59,7 +64,7 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8 items-center">
-          <NavLinks />
+          <NavLinks isDark={needsDarkHeader} />
         </nav>
 
         {/* Mobile Menu Button */}
@@ -69,16 +74,17 @@ const Navbar = () => {
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="md:hidden z-50"
         >
-          <Menu />
+          <Menu className={needsDarkHeader ? "text-soft-white" : "text-charcoal"} />
         </Button>
 
         {/* Mobile Navigation */}
         <div className={cn(
-          "fixed inset-0 bg-soft-white flex flex-col items-center justify-center transition-transform duration-300 ease-in-out md:hidden",
+          "fixed inset-0 flex flex-col items-center justify-center transition-transform duration-300 ease-in-out md:hidden",
+          needsDarkHeader ? "bg-charcoal" : "bg-soft-white",
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         )}>
           <nav className="flex flex-col space-y-6 items-center">
-            <NavLinks onClick={() => setIsMobileMenuOpen(false)} />
+            <NavLinks onClick={() => setIsMobileMenuOpen(false)} isDark={needsDarkHeader} />
           </nav>
         </div>
       </div>
@@ -86,25 +92,29 @@ const Navbar = () => {
   );
 };
 
-const NavLinks = ({ onClick }: { onClick?: () => void }) => {
+const NavLinks = ({ onClick, isDark = false }: { onClick?: () => void; isDark?: boolean }) => {
+  const linkClass = isDark 
+    ? "text-soft-white hover:text-warm-yellow transition-colors" 
+    : "text-charcoal hover:text-warm-yellow transition-colors";
+    
   return (
     <>
-      <Link to="/about" className="text-charcoal hover:text-warm-yellow transition-colors">
+      <Link to="/about" className={linkClass} onClick={onClick}>
         About
       </Link>
-      <Link to="/services" className="text-charcoal hover:text-warm-yellow transition-colors">
+      <Link to="/services" className={linkClass} onClick={onClick}>
         Services
       </Link>
-      <Link to="/portfolio" className="text-charcoal hover:text-warm-yellow transition-colors">
+      <Link to="/portfolio" className={linkClass} onClick={onClick}>
         Portfolio
       </Link>
-      <Link to="/testimonials" className="text-charcoal hover:text-warm-yellow transition-colors">
+      <Link to="/testimonials" className={linkClass} onClick={onClick}>
         Testimonials
       </Link>
-      <Link to="/pricing" className="text-charcoal hover:text-warm-yellow transition-colors">
+      <Link to="/pricing" className={linkClass} onClick={onClick}>
         Pricing
       </Link>
-      <Link to="/contact" className="text-charcoal hover:text-warm-yellow transition-colors">
+      <Link to="/contact" className={linkClass} onClick={onClick}>
         Contact
       </Link>
     </>
