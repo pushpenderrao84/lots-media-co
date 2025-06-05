@@ -176,7 +176,7 @@ const BookingDialog = ({ isOpen, onClose, packageName, packageCategory }: Bookin
                 type="button" 
                 variant="outline" 
                 onClick={onClose}
-                className="flex-1"
+                className="flex-1 hover:bg-charcoal hover:text-soft-white"
               >
                 Cancel
               </Button>
