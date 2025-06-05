@@ -2,13 +2,14 @@
 import React, { useState } from 'react';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Mail } from 'lucide-react';
+import { Mail, CheckCircle } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
-import { sendEmail, formatNewsletterEmail } from '../utils/emailService';
+import { sendEmailJS, formatNewsletterEmail } from '../utils/emailService';
 
 const Newsletter = () => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -19,14 +20,20 @@ const Newsletter = () => {
     
     try {
       const emailData = formatNewsletterEmail(email);
-      const emailSent = await sendEmail(emailData);
+      const emailSent = await sendEmailJS(emailData);
       
       if (emailSent) {
+        setShowSuccess(true);
         toast({
           title: "Success!",
           description: "You've been subscribed to our newsletter.",
         });
-        setEmail('');
+        
+        // Reset form and hide success message after 3 seconds
+        setTimeout(() => {
+          setShowSuccess(false);
+          setEmail('');
+        }, 3000);
       } else {
         throw new Error('Failed to send email');
       }
@@ -40,6 +47,20 @@ const Newsletter = () => {
       setIsSubmitting(false);
     }
   };
+
+  if (showSuccess) {
+    return (
+      <div className="bg-charcoal/5 p-6 rounded-lg text-center">
+        <div className="bg-warm-yellow rounded-full p-3 mx-auto mb-3 w-fit">
+          <CheckCircle className="h-5 w-5 text-charcoal" />
+        </div>
+        <h3 className="text-lg font-semibold mb-2">Subscribed!</h3>
+        <p className="text-soft-white/70 text-sm">
+          Thank you for subscribing to our newsletter.
+        </p>
+      </div>
+    );
+  }
 
   return (
     <div className="bg-charcoal/5 p-6 rounded-lg">

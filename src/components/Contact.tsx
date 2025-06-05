@@ -9,7 +9,7 @@ import { Mail, Send, Instagram, Twitter, Phone } from 'lucide-react';
 import { cn } from "@/lib/utils";
 import ContactSuccess from './ContactSuccess';
 import { useToast } from "@/hooks/use-toast";
-import { sendEmail, formatContactEmail } from '../utils/emailService';
+import { sendEmailJS, formatContactEmail } from '../utils/emailService';
 
 interface ContactProps {
   isHomePage?: boolean;
@@ -50,7 +50,7 @@ const Contact = ({ isHomePage = false }: ContactProps) => {
 
     try {
       const emailData = formatContactEmail(formData);
-      const emailSent = await sendEmail(emailData);
+      const emailSent = await sendEmailJS(emailData);
       
       if (emailSent) {
         setIsSubmitting(false);

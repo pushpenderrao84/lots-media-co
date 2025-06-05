@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Star } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
-import { sendEmail, formatFeedbackEmail } from '../utils/emailService';
+import { sendEmailJS, formatFeedbackEmail } from '../utils/emailService';
 
 const Feedback = () => {
   const [formData, setFormData] = useState({
@@ -65,7 +65,7 @@ const Feedback = () => {
 
     try {
       const emailData = formatFeedbackEmail(formData);
-      const emailSent = await sendEmail(emailData);
+      const emailSent = await sendEmailJS(emailData);
       
       if (emailSent) {
         toast({
