@@ -178,7 +178,7 @@ const PricingPage = () => {
 
   const generateInstagramDMLink = (packageTitle: string, categoryName: string, price: string) => {
     const message = `Hi! I'm interested in the ${packageTitle} package from ${categoryName} (${price}). Can you please provide more details?`;
-    return `https://www.instagram.com/direct/new/?text=${encodeURIComponent(message)}`;
+    return `https://www.instagram.com/direct/t/17847879945423429?text=${encodeURIComponent(message)}`;
   };
 
   const currentPackages = packageData[selectedCategory as keyof typeof packageData];
