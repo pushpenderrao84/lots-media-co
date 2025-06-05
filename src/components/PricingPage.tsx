@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -44,7 +45,7 @@ const PricingPage = () => {
           "1 carousel (multi-slide)",
           "2 revisions included",
           "Fast delivery (36 hrs)"
-        ],
+        ]
       },
       {
         title: "Pro",
@@ -54,7 +55,7 @@ const PricingPage = () => {
           "3 carousels",
           "Highlight covers",
           "Priority delivery (24 hrs)"
-        ]
+        ],
         popular: true
       }
     ],
@@ -78,7 +79,7 @@ const PricingPage = () => {
           "Letterhead design",
           "3 revisions included",
           "Delivery in 5-7 days"
-        ],
+        ]
       },
       {
         title: "Complete Brand Kit",
@@ -91,7 +92,7 @@ const PricingPage = () => {
           "Mini brand guide",
           "Unlimited revisions",
           "Delivery in 10-14 days"
-        ]
+        ],
         popular: true
       }
     ],
@@ -113,7 +114,7 @@ const PricingPage = () => {
           "Channel art",
           "2 revisions included",
           "Delivery in 3-4 days"
-        ],
+        ]
       },
       {
         title: "Pro Creator",
@@ -124,7 +125,7 @@ const PricingPage = () => {
           "Reels/Shorts covers",
           "3 revisions included",
           "Priority delivery (48 hrs)"
-        ]
+        ],
         popular: true
       }
     ],
@@ -149,7 +150,7 @@ const PricingPage = () => {
           "2 posters",
           "Priority support",
           "2-day turnaround"
-        ],
+        ]
       },
       {
         title: "Content Partner",
@@ -161,7 +162,7 @@ const PricingPage = () => {
           "Strategy sessions",
           "VIP support",
           "1-day turnaround"
-        ]
+        ],
         popular: true
       }
     ]
@@ -169,10 +170,15 @@ const PricingPage = () => {
 
   const formatPrice = (priceINR: number) => {
     if (currency === 'USD') {
-      const priceUSD = Math.round(2 * (priceINR / 85.84));
+      const priceUSD = Math.round(priceINR / 42.92);
       return `$${priceUSD}`;
     }
     return `₹${priceINR}`;
+  };
+
+  const generateInstagramDMLink = (packageTitle: string, categoryName: string, price: string) => {
+    const message = `Hi! I'm interested in the ${packageTitle} package from ${categoryName} (${price}). Can you please provide more details?`;
+    return `https://www.instagram.com/direct/new/?text=${encodeURIComponent(message)}`;
   };
 
   const currentPackages = packageData[selectedCategory as keyof typeof packageData];
@@ -249,7 +255,7 @@ const PricingPage = () => {
           )}
 
           {/* Packages Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             {currentPackages.map((pkg, index) => (
               <Card 
                 key={index}
@@ -283,19 +289,83 @@ const PricingPage = () => {
                     ))}
                   </ul>
                   
-                  <Button 
-                    className={`w-full mt-auto ${
-                      pkg.popular 
-                        ? 'bg-warm-yellow text-charcoal hover:bg-charcoal hover:text-soft-white' 
-                        : 'bg-charcoal text-soft-white hover:bg-warm-yellow hover:text-charcoal'
-                    }`}
+                  <a 
+                    href={generateInstagramDMLink(pkg.title, selectedCategoryData?.name || '', formatPrice(pkg.priceINR) + (pkg.period || ''))}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full"
                   >
-                    Book Now
-                  </Button>
+                    <Button 
+                      className={`w-full transition-colors ${
+                        pkg.popular 
+                          ? 'bg-warm-yellow text-charcoal hover:bg-charcoal hover:text-soft-white' 
+                          : 'bg-charcoal text-soft-white hover:bg-warm-yellow hover:text-charcoal'
+                      }`}
+                    >
+                      Book Now
+                    </Button>
+                  </a>
                 </CardContent>
               </Card>
             ))}
           </div>
+
+          {/* Add-ons Section */}
+          {selectedCategory === 'social-media' && (
+            <div className="mt-8 bg-charcoal/5 rounded-lg p-6 mb-12">
+              <h4 className="font-medium mb-3">Add-ons:</h4>
+              <ul className="space-y-2">
+                <li className="flex items-center">
+                  <div className="h-1.5 w-1.5 bg-warm-yellow rounded-full mr-2"></div>
+                  <span>Revisions beyond 2 → ₹100 each</span>
+                </li>
+                <li className="flex items-center">
+                  <div className="h-1.5 w-1.5 bg-warm-yellow rounded-full mr-2"></div>
+                  <span>Reels covers (per piece) → ₹100</span>
+                </li>
+                <li className="flex items-center">
+                  <div className="h-1.5 w-1.5 bg-warm-yellow rounded-full mr-2"></div>
+                  <span>Brand style guide → ₹499</span>
+                </li>
+              </ul>
+            </div>
+          )}
+
+          {selectedCategory === 'branding' && (
+            <div className="mt-8 bg-charcoal/5 rounded-lg p-6 mb-12">
+              <h4 className="font-medium mb-3">Add-ons:</h4>
+              <ul className="space-y-2">
+                <li className="flex items-center">
+                  <div className="h-1.5 w-1.5 bg-warm-yellow rounded-full mr-2"></div>
+                  <span>Animated logo → ₹999</span>
+                </li>
+                <li className="flex items-center">
+                  <div className="h-1.5 w-1.5 bg-warm-yellow rounded-full mr-2"></div>
+                  <span>Flyer/poster (each) → ₹399</span>
+                </li>
+                <li className="flex items-center">
+                  <div className="h-1.5 w-1.5 bg-warm-yellow rounded-full mr-2"></div>
+                  <span>Menu/Brochure design → ₹799+</span>
+                </li>
+              </ul>
+            </div>
+          )}
+
+          {selectedCategory === 'youtube' && (
+            <div className="mt-8 bg-charcoal/5 rounded-lg p-6 mb-12">
+              <h4 className="font-medium mb-3">Add-ons:</h4>
+              <ul className="space-y-2">
+                <li className="flex items-center">
+                  <div className="h-1.5 w-1.5 bg-warm-yellow rounded-full mr-2"></div>
+                  <span>Intro/outro graphics (non-motion) → ₹799</span>
+                </li>
+                <li className="flex items-center">
+                  <div className="h-1.5 w-1.5 bg-warm-yellow rounded-full mr-2"></div>
+                  <span>Thumbnail template for reuse → ₹299</span>
+                </li>
+              </ul>
+            </div>
+          )}
 
         {/* Smart Pricing Notes */}
         <div className="bg-charcoal/5 p-8 rounded-lg mb-12">
