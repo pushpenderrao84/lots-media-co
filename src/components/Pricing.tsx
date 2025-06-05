@@ -30,7 +30,7 @@ const Pricing = ({ isHomePage = false }: PricingProps) => {
         "1 carousel (multi-slide)",
         "2 revisions included",
         "Fast delivery (36 hrs)"
-      ],
+      ]
     },
     {
       title: "Pro",
@@ -40,7 +40,7 @@ const Pricing = ({ isHomePage = false }: PricingProps) => {
         "3 carousels",
         "Highlight covers",
         "Priority delivery (24 hrs)"
-      ]
+      ],
       popular: true
     }
   ];
@@ -66,7 +66,7 @@ const Pricing = ({ isHomePage = false }: PricingProps) => {
         "Letterhead design",
         "3 revisions included",
         "Delivery in 5-7 days"
-      ],
+      ]
     },
     {
       title: "Complete Brand Kit",
@@ -79,7 +79,7 @@ const Pricing = ({ isHomePage = false }: PricingProps) => {
         "Mini brand guide",
         "Unlimited revisions",
         "Delivery in 10-14 days"
-      ]
+      ],
       popular: true
     }
   ];
@@ -103,7 +103,7 @@ const Pricing = ({ isHomePage = false }: PricingProps) => {
         "Channel art",
         "2 revisions included",
         "Delivery in 3-4 days"
-      ],
+      ]
     },
     {
       title: "Pro Creator",
@@ -114,7 +114,7 @@ const Pricing = ({ isHomePage = false }: PricingProps) => {
         "Reels/Shorts covers",
         "3 revisions included",
         "Priority delivery (48 hrs)"
-      ]
+      ],
       popular: true
     }
   ];
@@ -141,7 +141,7 @@ const Pricing = ({ isHomePage = false }: PricingProps) => {
         "2 posters",
         "Priority support",
         "2-day turnaround"
-      ],
+      ]
     },
     {
       title: "Content Partner",
@@ -153,7 +153,7 @@ const Pricing = ({ isHomePage = false }: PricingProps) => {
         "Strategy sessions",
         "VIP support",
         "1-day turnaround"
-      ]
+      ],
       popular: true
     }
   ];
