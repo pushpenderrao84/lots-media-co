@@ -20,7 +20,7 @@ const Newsletter = () => {
     
     try {
       const emailData = formatNewsletterEmail(email);
-      const emailSent = await sendEmailJS(emailData);
+      const emailSent = await sendEmailJS(emailData, 'newsletter');
       
       if (emailSent) {
         setShowSuccess(true);

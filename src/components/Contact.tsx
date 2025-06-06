@@ -50,7 +50,7 @@ const Contact = ({ isHomePage = false }: ContactProps) => {
 
     try {
       const emailData = formatContactEmail(formData);
-      const emailSent = await sendEmailJS(emailData);
+      const emailSent = await sendEmailJS(emailData, 'contact');
       
       if (emailSent) {
         setIsSubmitting(false);

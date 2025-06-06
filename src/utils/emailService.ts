@@ -9,14 +9,22 @@ interface EmailData {
 
 // EmailJS configuration - you'll need to set these up in EmailJS dashboard
 const EMAILJS_SERVICE_ID = 'service_lotsmedia'; // Replace with your EmailJS service ID
-const EMAILJS_TEMPLATE_ID = 'template_lotsmedia'; // Replace with your EmailJS template ID
 const EMAILJS_PUBLIC_KEY = '8yo6AtiVXRPHPSQQd'; // Replace with your EmailJS public key
 
-export const sendEmailJS = async (templateParams: any): Promise<boolean> => {
+// Different template IDs for different forms
+const EMAILJS_TEMPLATES = {
+  CONTACT: 'template_contact', // Replace with your contact template ID
+  FEEDBACK: 'template_feedback', // Replace with your feedback template ID
+  NEWSLETTER: 'template_newsletter', // Replace with your newsletter template ID
+  BOOKING: 'template_booking' // Replace with your booking template ID
+};
+
+export const sendEmailJS = async (templateParams: any, templateType: 'contact' | 'feedback' | 'newsletter' | 'booking'): Promise<boolean> => {
   try {
+    const templateId = EMAILJS_TEMPLATES[templateType.toUpperCase() as keyof typeof EMAILJS_TEMPLATES];
     await emailjs.send(
       EMAILJS_SERVICE_ID,
-      EMAILJS_TEMPLATE_ID,
+      templateId,
       templateParams,
       EMAILJS_PUBLIC_KEY
     );
@@ -51,7 +59,7 @@ export const formatContactEmail = (formData: any) => {
     phone: formData.phone || 'Not provided',
     subject: formData.subject,
     message: formData.message,
-    time: formData.time || new Date().toLocaleString(),
+    time: new Date().toLocaleString(),
     template_type: 'contact'
   };
 };
@@ -72,7 +80,7 @@ export const formatFeedbackEmail = (formData: any) => {
     worst_aspect: formData.worstAspect || 'Not provided',
     improvements: formData.improvements || 'Not provided',
     additional_feedback: formData.additionalFeedback || 'Not provided',
-    time: formData.time || new Date().toLocaleString(),
+    time: new Date().toLocaleString(),
     template_type: 'feedback'
   };
 };
@@ -82,7 +90,7 @@ export const formatNewsletterEmail = (email: string) => {
     to_name: 'LOTS Media',
     to_email: 'lotsmediaco@gmail.com',
     subscriber_email: email,
-    time: formData.time || new Date().toLocaleString(),
+    time: new Date().toLocaleString(),
     template_type: 'newsletter'
   };
 };
@@ -97,7 +105,7 @@ export const formatBookingEmail = (formData: any) => {
     package_category: formData.packageCategory,
     package_name: formData.packageName,
     custom_message: formData.customMessage || 'No additional message',
-    time: formData.time || new Date().toLocaleString(),
+    time: new Date().toLocaleString(),
     template_type: 'booking'
   };
 };

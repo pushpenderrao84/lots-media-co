@@ -59,7 +59,7 @@ const BookingDialog = ({ isOpen, onClose, packageName, packageCategory }: Bookin
         packageCategory
       });
       
-      const emailSent = await sendEmailJS(emailData);
+      const emailSent = await sendEmailJS(emailData, 'booking');
       
       if (emailSent) {
         setShowSuccess(true);
