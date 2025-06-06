@@ -2,14 +2,15 @@
 import React, { useState } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import BookingDialog from './BookingDialog';
+import { Instagram, Mail } from 'lucide-react';
 
 const PricingPage = () => {
   const [currency, setCurrency] = useState('INR');
+  const [activeCategory, setActiveCategory] = useState('Social Media Design');
   const [selectedPackage, setSelectedPackage] = useState<{name: string, category: string} | null>(null);
 
   const exchangeRates = {
@@ -33,25 +34,46 @@ const PricingPage = () => {
     setSelectedPackage({ name: packageTitle, category });
   };
 
+  const categories = [
+    { name: 'Social Media Design', icon: '📱' },
+    { name: 'Branding & Business', icon: '📄' },
+    { name: 'YouTube & Creator', icon: '📹' },
+    { name: 'Monthly Retainers', icon: '📅' }
+  ];
+
   const packages = {
-    "Social Media": [
+    "Social Media Design": [
       {
         title: "Basic",
-        price: 799,
-        features: ["3 posts", "1 revision", "24-48 hr delivery"],
+        price: 499,
+        features: [
+          "3 Instagram posts (static)",
+          "2 revisions included",
+          "Standard delivery (48 hrs)"
+        ],
         popular: false
       },
       {
         title: "Standard",
         price: 999,
-        features: ["5 posts", "1 carousel", "2 revisions", "24-36 hr delivery"],
-        popular: true
+        features: [
+          "5 posts",
+          "1 carousel (multi-slides)",
+          "2 revisions included",
+          "Fast delivery (36 hrs)"
+        ],
+        popular: false
       },
       {
-        title: "Premium",
-        price: 1499,
-        features: ["8 posts", "2 carousels", "3 revisions", "Priority support"],
-        popular: false
+        title: "Pro",
+        price: 1899,
+        features: [
+          "10 posts",
+          "3 carousels",
+          "Highlight covers",
+          "Priority delivery (24 hrs)"
+        ],
+        popular: true
       }
     ],
     "Branding & Business": [
@@ -94,130 +116,196 @@ const PricingPage = () => {
         popular: false
       }
     ],
-    "Monthly Retainer": [
+    "Monthly Retainers": [
       {
         title: "Starter",
         price: 3999,
         features: ["10 designs/month", "1 thumbnail", "Basic support"],
-        popular: false,
-        period: "/month"
+        popular: false
       },
       {
         title: "Creative Retainer",
         price: 5999,
         features: ["20 designs/month", "2 thumbnails", "2 posters", "Priority support"],
-        popular: true,
-        period: "/month"
+        popular: true
       },
       {
         title: "Pro",
         price: 9999,
         features: ["Unlimited designs", "5 thumbnails", "5 posters", "Dedicated designer"],
-        popular: false,
-        period: "/month"
+        popular: false
       }
     ]
   };
 
-  const addOns = [
-    { title: "Extra Revision", price: 199 },
-    { title: "Rush Delivery (12 hrs)", price: 499 },
-    { title: "Source Files", price: 299 },
-    { title: "Additional Format", price: 199 },
-    { title: "Commercial License", price: 799 }
-  ];
-
   return (
     <>
       <Navbar />
-      <section className="section-padding bg-soft-white pt-24">
-        <div className="container-padding max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-3xl md:text-4xl font-bold mb-4">
-              Choose Your Perfect <span className="text-warm-yellow">Package</span>
+      <section className="bg-gray-50 min-h-screen pt-24 pb-12">
+        <div className="max-w-6xl mx-auto px-4">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-800 mb-4">
+              Pricing & <span className="text-yellow-500">Packages</span>
             </h1>
-            <p className="text-charcoal/80 max-w-2xl mx-auto mb-8">
+            <p className="text-gray-600 mb-8">
               Professional design solutions tailored to your unique brand needs and budget.
             </p>
             
-            <div className="flex justify-center">
-              <Select value={currency} onValueChange={setCurrency}>
-                <SelectTrigger className="w-32">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="INR">₹ INR</SelectItem>
-                  <SelectItem value="USD">$ USD</SelectItem>
-                </SelectContent>
-              </Select>
+            {/* Currency Selector */}
+            <div className="flex justify-center mb-8">
+              <div className="bg-yellow-500 rounded-lg p-1 flex">
+                <button 
+                  onClick={() => setCurrency('INR')}
+                  className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                    currency === 'INR' 
+                      ? 'bg-yellow-600 text-white' 
+                      : 'text-gray-700 hover:bg-yellow-400'
+                  }`}
+                >
+                  ₹ INR
+                </button>
+                <button 
+                  onClick={() => setCurrency('USD')}
+                  className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                    currency === 'USD' 
+                      ? 'bg-yellow-600 text-white' 
+                      : 'text-gray-700 hover:bg-yellow-400'
+                  }`}
+                >
+                  $ USD
+                </button>
+              </div>
             </div>
           </div>
 
-          {Object.entries(packages).map(([category, categoryPackages]) => (
-            <div key={category} className="mb-16">
-              <h2 className="text-2xl font-bold mb-8 text-center">{category}</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {categoryPackages.map((pkg, index) => (
-                  <Card 
-                    key={index}
-                    className={`overflow-hidden transition-all duration-300 hover:shadow-xl flex flex-col ${
+          {/* Category Tabs */}
+          <div className="grid grid-cols-4 gap-4 mb-12">
+            {categories.map((category) => (
+              <button
+                key={category.name}
+                onClick={() => setActiveCategory(category.name)}
+                className={`p-4 rounded-lg border text-center transition-all ${
+                  activeCategory === category.name
+                    ? 'bg-yellow-500 border-yellow-500 text-white shadow-lg'
+                    : 'bg-white border-gray-200 text-gray-700 hover:border-yellow-300'
+                }`}
+              >
+                <div className="text-2xl mb-2">{category.icon}</div>
+                <div className="text-sm font-medium">{category.name}</div>
+              </button>
+            ))}
+          </div>
+
+          {/* Active Category Title */}
+          <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">{activeCategory}</h2>
+
+          {/* Pricing Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            {packages[activeCategory as keyof typeof packages]?.map((pkg, index) => (
+              <Card 
+                key={index}
+                className={`relative overflow-hidden transition-all duration-300 hover:shadow-xl ${
+                  pkg.popular 
+                    ? 'border-yellow-500 shadow-lg transform scale-105' 
+                    : 'border-gray-200 hover:border-yellow-300'
+                }`}
+              >
+                {pkg.popular && (
+                  <div className="absolute top-4 right-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+                    Most Popular
+                  </div>
+                )}
+                
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-gray-800 mb-4">{pkg.title}</h3>
+                  <div className="mb-6">
+                    <span className="text-3xl font-bold text-gray-800">{formatPrice(pkg.price)}</span>
+                  </div>
+                  
+                  <ul className="space-y-3 mb-8">
+                    {pkg.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-start">
+                        <div className="h-2 w-2 bg-yellow-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <span className="text-gray-600 text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <Button 
+                    onClick={() => handleBookNow(pkg.title, activeCategory)}
+                    className={`w-full transition-colors ${
                       pkg.popular 
-                        ? 'border-warm-yellow shadow-lg transform hover:-translate-y-1' 
-                        : 'border-soft-white/20 shadow hover:border-warm-yellow/50'
+                        ? 'bg-yellow-500 hover:bg-yellow-600 text-white' 
+                        : 'bg-gray-800 hover:bg-gray-900 text-white'
                     }`}
                   >
-                    {pkg.popular && (
-                      <div className="bg-warm-yellow text-charcoal py-1 px-3 text-xs font-medium absolute right-0 top-4 rounded-l-md">
-                        Most Popular
-                      </div>
-                    )}
-                    
-                    <CardHeader className={`pb-4 ${pkg.popular ? 'bg-warm-yellow/10' : ''}`}>
-                      <CardTitle className="text-xl">{pkg.title}</CardTitle>
-                      <div className="mt-4">
-                        <span className="text-3xl font-bold">{formatPrice(pkg.price)}</span>
-                        <span className="text-sm text-charcoal/60">{pkg.period || ""}</span>
-                      </div>
-                    </CardHeader>
-                    
-                    <CardContent className="pt-0 flex flex-col flex-grow">
-                      <ul className="space-y-3 mb-6 flex-grow">
-                        {pkg.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-start">
-                            <div className="h-2 w-2 bg-warm-yellow rounded-full mt-2 mr-3"></div>
-                            <span className="text-charcoal/80">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                      
-                      <Button 
-                        onClick={() => handleBookNow(pkg.title, category)}
-                        className={`w-full mt-auto transition-colors ${
-                          pkg.popular 
-                            ? 'bg-warm-yellow text-charcoal hover:bg-charcoal hover:text-soft-white' 
-                            : 'bg-charcoal text-soft-white hover:bg-warm-yellow hover:text-charcoal'
-                        }`}
-                      >
-                        Book Now
-                      </Button>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
-          ))}
+                    Book Now
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
 
           {/* Add-ons Section */}
-          <div className="mt-20">
-            <h2 className="text-2xl font-bold mb-8 text-center">Add-ons & Extras</h2>
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-              {addOns.map((addon, index) => (
-                <Card key={index} className="text-center p-4 hover:shadow-md transition-shadow">
-                  <h3 className="font-medium mb-2">{addon.title}</h3>
-                  <p className="text-warm-yellow font-bold">{formatPrice(addon.price)}</p>
-                </Card>
-              ))}
+          <div className="bg-white rounded-lg p-6 mb-12">
+            <h3 className="text-lg font-bold text-gray-800 mb-4">Add-ons:</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="flex justify-between items-center">
+                <span className="text-gray-600">Revisions beyond 2</span>
+                <span className="text-yellow-600 font-medium">{formatPrice(200)} each</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-gray-600">Rush covers (per piece)</span>
+                <span className="text-yellow-600 font-medium">{formatPrice(700)}</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-gray-600">Brand style guide</span>
+                <span className="text-yellow-600 font-medium">{formatPrice(499)}</span>
+              </div>
             </div>
+          </div>
+
+          {/* Smart Pricing Notes */}
+          <div className="bg-white rounded-lg p-6 mb-12">
+            <h3 className="text-lg font-bold text-gray-800 mb-4">Smart Pricing Notes:</h3>
+            <ul className="space-y-2">
+              <li className="flex items-start">
+                <div className="h-2 w-2 bg-yellow-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                <span className="text-gray-600 text-sm">At LOTS Media, we believe in fair pricing that respects creative value and client goals.</span>
+              </li>
+              <li className="flex items-start">
+                <div className="h-2 w-2 bg-yellow-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                <span className="text-gray-600 text-sm">We start affordable, but never under-value.</span>
+              </li>
+              <li className="flex items-start">
+                <div className="h-2 w-2 bg-yellow-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                <span className="text-gray-600 text-sm">You get strategic design support, not just pretty visuals.</span>
+              </li>
+              <li className="flex items-start">
+                <div className="h-2 w-2 bg-yellow-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                <span className="text-gray-600 text-sm">Repeat clients & bundles get exclusive discounts.</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact Buttons */}
+          <div className="flex justify-center gap-4">
+            <Button className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3 rounded-lg flex items-center gap-2">
+              <Mail size={20} />
+              Mail Us
+            </Button>
+            <Button className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3 rounded-lg flex items-center gap-2">
+              <Instagram size={20} />
+              DM on Instagram
+            </Button>
+            <Button variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-3 rounded-lg">
+              Request Custom Quote
+            </Button>
+          </div>
+
+          <div className="text-center mt-4">
+            <p className="text-gray-500 text-sm">For custom requests, reach out via Instagram DM or Mail us.</p>
           </div>
         </div>
       </section>
