@@ -11,20 +11,14 @@ interface EmailData {
 const EMAILJS_SERVICE_ID = 'service_lotsmedia'; // Replace with your EmailJS service ID
 const EMAILJS_PUBLIC_KEY = '8yo6AtiVXRPHPSQQd'; // Replace with your EmailJS public key
 
-// Different template IDs for different forms
-const EMAILJS_TEMPLATES = {
-  CONTACT: 'template_contact', // Replace with your contact template ID
-  FEEDBACK: 'template_feedback', // Replace with your feedback template ID
-  NEWSLETTER: 'template_newsletter', // Replace with your newsletter template ID
-  BOOKING: 'template_booking' // Replace with your booking template ID
-};
+// Since you're using a single template, we'll use the same template ID for all forms
+const EMAILJS_TEMPLATE_ID = 'template_universal'; // Replace with your universal template ID
 
 export const sendEmailJS = async (templateParams: any, templateType: 'contact' | 'feedback' | 'newsletter' | 'booking'): Promise<boolean> => {
   try {
-    const templateId = EMAILJS_TEMPLATES[templateType.toUpperCase() as keyof typeof EMAILJS_TEMPLATES];
     await emailjs.send(
       EMAILJS_SERVICE_ID,
-      templateId,
+      EMAILJS_TEMPLATE_ID, // Using single template for all
       templateParams,
       EMAILJS_PUBLIC_KEY
     );
@@ -56,11 +50,11 @@ export const formatContactEmail = (formData: any) => {
     to_email: 'lotsmediaco@gmail.com',
     from_name: formData.name,
     from_email: formData.email,
-    phone: formData.phone || 'Not provided',
+    phone: formData.phone || '',
     subject: formData.subject,
     message: formData.message,
     time: new Date().toLocaleString(),
-    template_type: 'contact'
+    template_type: 'Contact'
   };
 };
 
@@ -70,18 +64,18 @@ export const formatFeedbackEmail = (formData: any) => {
     to_email: 'lotsmediaco@gmail.com',
     from_name: formData.name,
     from_email: formData.email,
-    phone: formData.phone || 'Not provided',
+    phone: formData.phone || '',
     service: formData.service,
     rating: formData.rating,
-    experience: formData.experience || 'Not provided',
-    how_found: formData.howFound || 'Not provided',
-    recommend_probability: formData.recommendProbability || 'Not provided',
-    best_aspect: formData.bestAspect || 'Not provided',
-    worst_aspect: formData.worstAspect || 'Not provided',
-    improvements: formData.improvements || 'Not provided',
-    additional_feedback: formData.additionalFeedback || 'Not provided',
+    experience: formData.experience || '',
+    how_found: formData.howFound || '',
+    recommend_probability: formData.recommendProbability || '',
+    best_aspect: formData.bestAspect || '',
+    worst_aspect: formData.worstAspect || '',
+    improvements: formData.improvements || '',
+    additional_feedback: formData.additionalFeedback || '',
     time: new Date().toLocaleString(),
-    template_type: 'feedback'
+    template_type: 'Feedback'
   };
 };
 
@@ -89,9 +83,9 @@ export const formatNewsletterEmail = (email: string) => {
   return {
     to_name: 'LOTS Media',
     to_email: 'lotsmediaco@gmail.com',
-    subscriber_email: email,
+    from_email: email, // Changed from subscriber_email to from_email to match template
     time: new Date().toLocaleString(),
-    template_type: 'newsletter'
+    template_type: 'Newsletter'
   };
 };
 
@@ -101,11 +95,11 @@ export const formatBookingEmail = (formData: any) => {
     to_email: 'lotsmediaco@gmail.com',
     from_name: formData.name,
     from_email: formData.email,
-    phone: formData.phone || 'Not provided',
+    phone: formData.phone || '',
     package_category: formData.packageCategory,
     package_name: formData.packageName,
-    custom_message: formData.customMessage || 'No additional message',
+    custom_message: formData.customMessage || '',
     time: new Date().toLocaleString(),
-    template_type: 'booking'
+    template_type: 'Booking'
   };
 };
