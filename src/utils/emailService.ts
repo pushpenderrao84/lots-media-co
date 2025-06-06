@@ -51,6 +51,7 @@ export const formatContactEmail = (formData: any) => {
     phone: formData.phone || 'Not provided',
     subject: formData.subject,
     message: formData.message,
+    time: new Date().toLocaleString()
     template_type: 'contact'
   };
 };
