@@ -13,7 +13,7 @@ const Footer = () => {
           <div>
             <a href="#" className="flex items-center mb-4">
               <img 
-                src="/lovable-uploads/a6e0b97c-98e4-46fd-bb8d-0ef459a48468.png" 
+                src="/logo/lots-media-co.png" 
                 alt="LOTS Media Logo" 
                 className="h-12 mr-2 outline outline-[0.5px] outline-[#FAFAFA] rounded-md"
               />
