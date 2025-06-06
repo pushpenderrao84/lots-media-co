@@ -51,7 +51,7 @@ export const formatContactEmail = (formData: any) => {
     phone: formData.phone || 'Not provided',
     subject: formData.subject,
     message: formData.message,
-    time: new Date().toLocaleString()
+    time: formData.time || new Date().toLocaleString(),
     template_type: 'contact'
   };
 };
@@ -72,6 +72,7 @@ export const formatFeedbackEmail = (formData: any) => {
     worst_aspect: formData.worstAspect || 'Not provided',
     improvements: formData.improvements || 'Not provided',
     additional_feedback: formData.additionalFeedback || 'Not provided',
+    time: formData.time || new Date().toLocaleString(),
     template_type: 'feedback'
   };
 };
@@ -81,7 +82,7 @@ export const formatNewsletterEmail = (email: string) => {
     to_name: 'LOTS Media',
     to_email: 'lotsmediaco@gmail.com',
     subscriber_email: email,
-    date: new Date().toLocaleDateString(),
+    time: formData.time || new Date().toLocaleString(),
     template_type: 'newsletter'
   };
 };
@@ -96,6 +97,7 @@ export const formatBookingEmail = (formData: any) => {
     package_category: formData.packageCategory,
     package_name: formData.packageName,
     custom_message: formData.customMessage || 'No additional message',
+    time: formData.time || new Date().toLocaleString(),
     template_type: 'booking'
   };
 };
