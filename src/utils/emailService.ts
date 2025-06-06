@@ -1,4 +1,3 @@
-
 import emailjs from '@emailjs/browser';
 
 interface EmailData {
@@ -11,14 +10,20 @@ interface EmailData {
 const EMAILJS_SERVICE_ID = 'service_lotsmedia'; // Replace with your EmailJS service ID
 const EMAILJS_PUBLIC_KEY = '8yo6AtiVXRPHPSQQd'; // Replace with your EmailJS public key
 
-// Since you're using a single template, we'll use the same template ID for all forms
-const EMAILJS_TEMPLATE_ID = 'template_lotsmedia'; // Replace with your universal template ID
+// Template IDs for different forms
+const EMAILJS_NEWSLETTER_TEMPLATE_ID = 'template_newsletter'; // For newsletter subscriptions
+const EMAILJS_MAIN_FORMS_TEMPLATE_ID = 'template_main_forms'; // For contact, feedback & booking
 
 export const sendEmailJS = async (templateParams: any, templateType: 'contact' | 'feedback' | 'newsletter' | 'booking'): Promise<boolean> => {
   try {
+    // Select the appropriate template based on form type
+    const templateId = templateType === 'newsletter' 
+      ? EMAILJS_NEWSLETTER_TEMPLATE_ID 
+      : EMAILJS_MAIN_FORMS_TEMPLATE_ID;
+
     await emailjs.send(
       EMAILJS_SERVICE_ID,
-      EMAILJS_TEMPLATE_ID, // Using single template for all
+      templateId,
       templateParams,
       EMAILJS_PUBLIC_KEY
     );
@@ -83,7 +88,7 @@ export const formatNewsletterEmail = (email: string) => {
   return {
     to_name: 'LOTS Media',
     to_email: 'lotsmediaco@gmail.com',
-    from_email: email, // Changed from subscriber_email to from_email to match template
+    subscriber_email: email, // Changed from from_email to subscriber_email to match your template
     time: new Date().toLocaleString(),
     template_type: 'Newsletter'
   };
