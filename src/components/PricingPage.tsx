@@ -2,75 +2,52 @@
 import React, { useState } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import BookingDialog from './BookingDialog';
 import { Instagram, Mail, FileText, Calendar } from 'lucide-react';
 
 const PricingPage = () => {
+  const [selectedCategory, setSelectedCategory] = useState('social-media');
   const [currency, setCurrency] = useState('INR');
-  const [activeCategory, setActiveCategory] = useState('Social Media Design');
   const [selectedPackage, setSelectedPackage] = useState<{name: string, category: string} | null>(null);
 
-  const exchangeRates = {
-    INR: 1,
-    USD: 0.012
-  };
-
-  const convertPrice = (inrPrice: number) => {
-    if (currency === 'USD') {
-      return Math.round(inrPrice * exchangeRates.USD);
-    }
-    return inrPrice;
-  };
-
-  const formatPrice = (inrPrice: number) => {
-    const convertedPrice = convertPrice(inrPrice);
-    return currency === 'USD' ? `$${convertedPrice}` : `₹${convertedPrice}`;
-  };
-
-  const handleBookNow = (packageTitle: string, category: string) => {
-    setSelectedPackage({ name: packageTitle, category });
-  };
-
   const categories = [
-    { name: 'Social Media Design', icon: Instagram },
-    { name: 'Branding & Business', icon: FileText },
-    { name: 'YouTube & Creator', icon: ({ className }: { className?: string }) => (
-      <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    { id: 'social-media', name: 'Social Media Design', icon: Instagram },
+    { id: 'branding', name: 'Branding & Business', icon: FileText },
+    { id: 'youtube', name: 'YouTube & Creator', icon: () => (
+      <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M22.54 6.42C22.4212 5.94541 22.1793 5.51057 21.8387 5.15941C21.4981 4.80824 21.0708 4.55318 20.6 4.42C18.88 4 12 4 12 4C12 4 5.12 4 3.4 4.46C2.92925 4.59318 2.50195 4.84824 2.16135 5.19941C1.82075 5.55057 1.57878 5.98541 1.46 6.46C1.14522 8.20556 0.991243 9.97631 1 11.75C0.988852 13.537 1.14283 15.3213 1.46 17.08C1.59096 17.5398 1.8333 17.9581 2.17322 18.2945C2.51314 18.6308 2.93894 18.8738 3.4 19C5.12 19.46 12 19.46 12 19.46C12 19.46 18.88 19.46 20.6 19C21.0708 18.8668 21.4981 18.6118 21.8387 18.2606C22.1793 17.9094 22.4212 17.4746 22.54 17C22.8524 15.2676 23.0063 13.5103 23 11.75C23.0112 9.96295 22.8572 8.1787 22.54 6.42Z" fill="currentColor" />
         <path d="M9.75 15.02L15.5 11.75L9.75 8.48001V15.02Z" fill="white" />
       </svg>
     ) },
-    { name: 'Monthly Retainers', icon: Calendar }
+    { id: 'retainers', name: 'Monthly Retainers', icon: Calendar }
   ];
 
-  const packages = {
-    "Social Media Design": [
+  const packageData = {
+    'social-media': [
       {
         title: "Basic",
-        price: 499,
+        priceINR: 499,
         features: [
           "3 Instagram posts (static)",
           "2 revisions included",
           "Standard delivery (48 hrs)"
-        ],
-        popular: false
+        ]
       },
       {
         title: "Standard",
-        price: 999,
+        priceINR: 999,
         features: [
           "5 posts",
-          "1 carousel (multi-slides)",
+          "1 carousel (multi-slide)",
           "2 revisions included",
           "Fast delivery (36 hrs)"
-        ],
-        popular: false
+        ]
       },
       {
         title: "Pro",
-        price: 1899,
+        priceINR: 1999,
         features: [
           "10 posts",
           "3 carousels",
@@ -80,188 +57,241 @@ const PricingPage = () => {
         popular: true
       }
     ],
-    "Branding & Business": [
+    'branding': [
+      {
+        title: "Logo Only",
+        priceINR: 1499,
+        features: [
+          "2 logo concepts",
+          "2 revisions included",
+          "Source files provided",
+          "Delivery in 3-4 days"
+        ]
+      },
       {
         title: "Starter",
-        price: 2499,
-        features: ["Logo package", "Business card", "Letterhead", "3 revisions"],
-        popular: false
+        priceINR: 2499,
+        features: [
+          "Logo package",
+          "Business card",
+          "Letterhead design",
+          "3 revisions included",
+          "Delivery in 5-7 days"
+        ]
       },
       {
-        title: "Professional",
-        price: 4999,
-        features: ["Complete brand kit", "Stationery set", "Brand guidelines", "5 revisions"],
-        popular: false
-      },
-      {
-        title: "Enterprise",
-        price: 9999,
-        features: ["Full brand identity", "Marketing materials", "Brand strategy", "Unlimited revisions"],
+        title: "Complete Brand Kit",
+        priceINR: 4499,
+        features: [
+          "Logo package",
+          "Business cards & Letterhead",
+          "Poster design",
+          "Social media templates",
+          "Mini brand guide",
+          "Unlimited revisions",
+          "Delivery in 10-14 days"
+        ],
         popular: true
       }
     ],
-    "YouTube & Creator": [
+    'youtube': [
       {
         title: "Basic",
-        price: 999,
-        features: ["3 thumbnails", "Basic editing", "2 revisions"],
-        popular: false
+        priceINR: 499,
+        features: [
+          "2 thumbnails",
+          "1 revision included",
+          "Standard delivery (48 hrs)"
+        ]
       },
       {
         title: "Standard",
-        price: 1499,
-        features: ["5 thumbnails", "Channel art", "3 revisions", "Fast delivery"],
-        popular: false
+        priceINR: 1499,
+        features: [
+          "5 thumbnails",
+          "Channel art",
+          "2 revisions included",
+          "Delivery in 3-4 days"
+        ]
       },
       {
-        title: "Premium",
-        price: 2499,
-        features: ["10 thumbnails", "Complete channel branding", "Unlimited revisions", "Priority support"],
+        title: "Pro Creator",
+        priceINR: 2999,
+        features: [
+          "10 thumbnails",
+          "Channel art",
+          "Reels/Shorts covers",
+          "3 revisions included",
+          "Priority delivery (48 hrs)"
+        ],
         popular: true
       }
     ],
-    "Monthly Retainers": [
+    'retainers': [
       {
-        title: "Starter",
-        price: 3999,
-        features: ["10 designs/month", "1 thumbnail", "Basic support"],
-        popular: false
+        title: "Lite",
+        priceINR: 2999,
+        period: "/month",
+        features: [
+          "10 designs/month (any mix)",
+          "Basic support",
+          "3-day turnaround"
+        ]
       },
       {
-        title: "Creative Retainer",
-        price: 5999,
-        features: ["20 designs/month", "2 thumbnails", "2 posters", "Priority support"],
-        popular: false
+        title: "Creative",
+        priceINR: 5999,
+        period: "/month",
+        features: [
+          "20 designs/month",
+          "2 thumbnails",
+          "2 posters",
+          "Priority support",
+          "2-day turnaround"
+        ]
       },
       {
-        title: "Pro",
-        price: 9999,
-        features: ["Unlimited designs", "5 thumbnails", "5 posters", "Dedicated designer"],
+        title: "Content Partner",
+        priceINR: 8999,
+        period: "/month",
+        features: [
+          "30+ custom designs",
+          "Full brand support",
+          "Strategy sessions",
+          "VIP support",
+          "1-day turnaround"
+        ],
         popular: true
       }
     ]
   };
 
-  const addOns = {
-    "Social Media Design": [
-      { name: "Revisions beyond 2", price: 100 },
-      { name: "Reels covers (per piece)", price: 100 },
-      { name: "Brand style guide", price: 499 }
-    ],
-    "Branding & Business": [
-      { name: "Animated logo", price: 999 },
-      { name: "Flyer/poster (each)", price: 399 },
-      { name: "Menu/Brochure design", price: 799 }
-    ],
-    "YouTube & Creator": [
-      { name: "Intro/outro graphics (non-motion)", price: 799 },
-      { name: "Thumbnail template for reuse", price: 299 }
-    ],
-    "Monthly Retainers": []
+  const formatPrice = (priceINR: number) => {
+    if (currency === 'USD') {
+      const priceUSD = Math.round(priceINR / 42.92);
+      return `$${priceUSD}`;
+    }
+    return `₹${priceINR}`;
   };
+
+  const handleBookNow = (packageTitle: string, categoryName: string) => {
+    setSelectedPackage({ name: packageTitle, category: categoryName });
+  };
+
+  const currentPackages = packageData[selectedCategory as keyof typeof packageData];
+  const selectedCategoryData = categories.find(cat => cat.id === selectedCategory);
 
   return (
     <>
       <Navbar />
-      <section className="bg-soft-white min-h-screen pt-24 pb-12">
-        <div className="max-w-6xl mx-auto px-4">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-charcoal mb-4">
+      <section className="section-padding bg-soft-white pt-24">
+        <div className="container-padding max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Pricing & <span className="text-warm-yellow">Packages</span>
-            </h1>
-            <p className="text-charcoal/70 mb-8">
+            </h2>
+            <p className="text-charcoal/80 max-w-2xl mx-auto">
               Professional design solutions tailored to your unique brand needs and budget.
             </p>
-            
-            {/* Currency Selector */}
-            <div className="flex justify-center mb-8">
-              <div className="bg-soft-white border border-charcoal/20 rounded-lg p-1 flex">
-                <button 
-                  onClick={() => setCurrency('INR')}
-                  className={`px-6 py-2 rounded-md text-sm font-medium transition-colors ${
-                    currency === 'INR' 
-                      ? 'bg-warm-yellow text-charcoal' 
-                      : 'text-charcoal/70 hover:text-charcoal'
-                  }`}
-                >
-                  ₹ INR
-                </button>
-                <button 
-                  onClick={() => setCurrency('USD')}
-                  className={`px-6 py-2 rounded-md text-sm font-medium transition-colors ${
-                    currency === 'USD' 
-                      ? 'bg-warm-yellow text-charcoal' 
-                      : 'text-charcoal/70 hover:text-charcoal'
-                  }`}
-                >
-                  $ USD
-                </button>
-              </div>
+          </div>
+
+          {/* Currency Toggle */}
+          <div className="flex justify-center mb-12">
+            <div className="bg-charcoal/5 p-1 rounded-lg">
+              <button
+                onClick={() => setCurrency('INR')}
+                className={`px-4 py-2 rounded-md transition-colors ${
+                  currency === 'INR' 
+                    ? 'bg-warm-yellow text-charcoal' 
+                    : 'text-charcoal/70 hover:text-charcoal'
+                }`}
+              >
+                ₹ INR
+              </button>
+              <button
+                onClick={() => setCurrency('USD')}
+                className={`px-4 py-2 rounded-md transition-colors ${
+                  currency === 'USD' 
+                    ? 'bg-warm-yellow text-charcoal' 
+                    : 'text-charcoal/70 hover:text-charcoal'
+                }`}
+              >
+                $ USD
+              </button>
             </div>
           </div>
 
-          {/* Category Tabs */}
-          <div className="grid grid-cols-4 gap-4 mb-12">
+          {/* Category Selection */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
             {categories.map((category) => {
               const IconComponent = category.icon;
               return (
                 <button
-                  key={category.name}
-                  onClick={() => setActiveCategory(category.name)}
-                  className={`p-6 rounded-lg border text-center transition-all ${
-                    activeCategory === category.name
-                      ? 'bg-warm-yellow border-warm-yellow text-charcoal shadow-lg'
-                      : 'bg-soft-white border-charcoal/20 text-charcoal hover:border-warm-yellow/50'
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`p-6 rounded-lg border transition-all duration-300 ${
+                    selectedCategory === category.id
+                      ? 'bg-warm-yellow border-warm-yellow text-charcoal'
+                      : 'bg-white border-charcoal/10 text-charcoal hover:border-warm-yellow/50'
                   }`}
                 >
-                  <div className="flex justify-center mb-3">
-                    <IconComponent className="h-8 w-8" />
+                  <div className="flex flex-col items-center text-center">
+                    <IconComponent />
+                    <h3 className="mt-3 font-medium">{category.name}</h3>
                   </div>
-                  <div className="text-sm font-medium">{category.name}</div>
                 </button>
               );
             })}
           </div>
 
-          {/* Pricing Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            {packages[activeCategory as keyof typeof packages]?.map((pkg, index) => (
+          {/* Selected Category Title */}
+          {selectedCategoryData && (
+            <div className="text-center mb-12">
+              <h3 className="text-2xl font-bold">{selectedCategoryData.name}</h3>
+            </div>
+          )}
+
+          {/* Packages Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            {currentPackages.map((pkg, index) => (
               <Card 
                 key={index}
-                className={`relative overflow-hidden transition-all duration-300 hover:shadow-xl ${
+                className={`overflow-hidden transition-all duration-300 hover:shadow-xl flex flex-col ${
                   pkg.popular 
-                    ? 'border-warm-yellow shadow-lg transform scale-105' 
-                    : 'border-charcoal/20 hover:border-warm-yellow/50'
+                    ? 'border-warm-yellow shadow-lg transform hover:-translate-y-1' 
+                    : 'border-soft-white/20 shadow hover:border-warm-yellow/50'
                 }`}
               >
                 {pkg.popular && (
-                  <div className="absolute top-4 right-4 bg-warm-yellow text-charcoal px-3 py-1 rounded-full text-xs font-medium">
+                  <div className="bg-warm-yellow text-charcoal py-1 px-3 text-xs font-medium absolute right-0 top-4 rounded-l-md">
                     Most Popular
                   </div>
                 )}
                 
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-charcoal mb-4">{pkg.title}</h3>
-                  <div className="mb-6">
-                    <span className="text-3xl font-bold text-charcoal">{formatPrice(pkg.price)}</span>
+                <CardHeader className={`pb-0 ${pkg.popular ? 'bg-warm-yellow/10' : ''}`}>
+                  <CardTitle className="text-xl">{pkg.title}</CardTitle>
+                  <div className="mt-4 mb-2">
+                    <span className="text-3xl font-bold">{formatPrice(pkg.priceINR)}</span>
+                    <span className="text-sm text-charcoal/60">{pkg.period || ""}</span>
                   </div>
-                  
-                  <ul className="space-y-3 mb-8">
+                </CardHeader>
+                
+                <CardContent className="pt-6 flex flex-col flex-grow">
+                  <ul className="space-y-3 mb-8 flex-grow">
                     {pkg.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start">
-                        <div className="h-2 w-2 bg-warm-yellow rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        <span className="text-charcoal/80 text-sm">{feature}</span>
+                        <div className="h-2 w-2 bg-warm-yellow rounded-full mt-2 mr-2"></div>
+                        <span className="text-charcoal/80">{feature}</span>
                       </li>
                     ))}
                   </ul>
                   
                   <Button 
-                    onClick={() => handleBookNow(pkg.title, activeCategory)}
+                    onClick={() => handleBookNow(pkg.title, selectedCategoryData?.name || '')}
                     className={`w-full transition-colors ${
                       pkg.popular 
-                        ? 'bg-warm-yellow hover:bg-warm-yellow/90 text-charcoal' 
-                        : 'bg-charcoal hover:bg-charcoal/90 text-soft-white'
+                        ? 'bg-warm-yellow text-charcoal hover:bg-charcoal hover:text-soft-white' 
+                        : 'bg-charcoal text-soft-white hover:bg-warm-yellow hover:text-charcoal'
                     }`}
                   >
                     Book Now
@@ -271,63 +301,108 @@ const PricingPage = () => {
             ))}
           </div>
 
-          {/* Add-ons Section */}
-          {addOns[activeCategory as keyof typeof addOns].length > 0 && (
-            <div className="bg-charcoal/5 rounded-lg p-6 mb-12">
-              <h3 className="text-lg font-bold text-charcoal mb-4">Add-ons:</h3>
-              <div className="space-y-3">
-                {addOns[activeCategory as keyof typeof addOns].map((addon, index) => (
-                  <div key={index} className="flex items-center">
-                    <div className="h-2 w-2 bg-warm-yellow rounded-full mr-3"></div>
-                    <span className="text-charcoal/80 flex-1">{addon.name}</span>
-                    <span className="text-charcoal font-medium ml-4">→ {formatPrice(addon.price)}</span>
-                  </div>
-                ))}
-              </div>
+          {/* Add-ons Section with currency conversion */}
+          {selectedCategory === 'social-media' && (
+            <div className="mt-8 bg-charcoal/5 rounded-lg p-6 mb-12">
+              <h4 className="font-medium mb-3">Add-ons:</h4>
+              <ul className="space-y-2">
+                <li className="flex items-center">
+                  <div className="h-1.5 w-1.5 bg-warm-yellow rounded-full mr-2"></div>
+                  <span>Revisions beyond 2 → {formatPrice(100)} each</span>
+                </li>
+                <li className="flex items-center">
+                  <div className="h-1.5 w-1.5 bg-warm-yellow rounded-full mr-2"></div>
+                  <span>Reels covers (per piece) → {formatPrice(100)}</span>
+                </li>
+                <li className="flex items-center">
+                  <div className="h-1.5 w-1.5 bg-warm-yellow rounded-full mr-2"></div>
+                  <span>Brand style guide → {formatPrice(499)}</span>
+                </li>
+              </ul>
+            </div>
+          )}
+
+          {selectedCategory === 'branding' && (
+            <div className="mt-8 bg-charcoal/5 rounded-lg p-6 mb-12">
+              <h4 className="font-medium mb-3">Add-ons:</h4>
+              <ul className="space-y-2">
+                <li className="flex items-center">
+                  <div className="h-1.5 w-1.5 bg-warm-yellow rounded-full mr-2"></div>
+                  <span>Animated logo → {formatPrice(999)}</span>
+                </li>
+                <li className="flex items-center">
+                  <div className="h-1.5 w-1.5 bg-warm-yellow rounded-full mr-2"></div>
+                  <span>Flyer/poster (each) → {formatPrice(399)}</span>
+                </li>
+                <li className="flex items-center">
+                  <div className="h-1.5 w-1.5 bg-warm-yellow rounded-full mr-2"></div>
+                  <span>Menu/Brochure design → {formatPrice(799)}+</span>
+                </li>
+              </ul>
+            </div>
+          )}
+
+          {selectedCategory === 'youtube' && (
+            <div className="mt-8 bg-charcoal/5 rounded-lg p-6 mb-12">
+              <h4 className="font-medium mb-3">Add-ons:</h4>
+              <ul className="space-y-2">
+                <li className="flex items-center">
+                  <div className="h-1.5 w-1.5 bg-warm-yellow rounded-full mr-2"></div>
+                  <span>Intro/outro graphics (non-motion) → {formatPrice(799)}</span>
+                </li>
+                <li className="flex items-center">
+                  <div className="h-1.5 w-1.5 bg-warm-yellow rounded-full mr-2"></div>
+                  <span>Thumbnail template for reuse → {formatPrice(299)}</span>
+                </li>
+              </ul>
             </div>
           )}
 
           {/* Smart Pricing Notes */}
-          <div className="bg-charcoal/5 rounded-lg p-6 mb-12">
-            <h3 className="text-lg font-bold text-charcoal mb-4">Smart Pricing Notes:</h3>
-            <div className="space-y-3">
-              <div className="flex items-start">
-                <div className="h-2 w-2 bg-warm-yellow rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                <span className="text-charcoal/80">At LOTS Media, we believe in fair pricing that respects creative value and client goals.</span>
-              </div>
-              <div className="flex items-start">
-                <div className="h-2 w-2 bg-warm-yellow rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                <span className="text-charcoal/80">We start affordably, but never undervalue.</span>
-              </div>
-              <div className="flex items-start">
-                <div className="h-2 w-2 bg-warm-yellow rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                <span className="text-charcoal/80">You get strategic design support, not just pretty visuals.</span>
-              </div>
-              <div className="flex items-start">
-                <div className="h-2 w-2 bg-warm-yellow rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                <span className="text-charcoal/80">Repeat clients & bundles get exclusive discounts.</span>
-              </div>
-            </div>
+          <div className="bg-charcoal/5 p-8 rounded-lg mb-12">
+            <h4 className="text-xl font-bold mb-4">Smart Pricing Notes:</h4>
+            <ul className="space-y-3">
+              <li className="flex items-start">
+                <div className="h-2 w-2 bg-warm-yellow rounded-full mt-2 mr-3"></div>
+                <p>At LOTS Media, we believe in fair pricing that respects creative value and client goals.</p>
+              </li>
+              <li className="flex items-start">
+                <div className="h-2 w-2 bg-warm-yellow rounded-full mt-2 mr-3"></div>
+                <p>We start affordably, but never undervalue.</p>
+              </li>
+              <li className="flex items-start">
+                <div className="h-2 w-2 bg-warm-yellow rounded-full mt-2 mr-3"></div>
+                <p>You get strategic design support, not just pretty visuals.</p>
+              </li>
+              <li className="flex items-start">
+                <div className="h-2 w-2 bg-warm-yellow rounded-full mt-2 mr-3"></div>
+                <p>Repeat clients & bundles get exclusive discounts.</p>
+              </li>
+            </ul>
           </div>
-
-          {/* Contact Buttons */}
-          <div className="flex justify-center gap-4">
-            <Button className="bg-warm-yellow hover:bg-warm-yellow/90 text-charcoal px-8 py-3 rounded-lg flex items-center gap-2">
-              <Mail size={20} />
-              Mail Us
-            </Button>
-            <Button className="bg-warm-yellow hover:bg-warm-yellow/90 text-charcoal px-8 py-3 rounded-lg flex items-center gap-2">
-              <Instagram size={20} />
-              DM on Instagram
-            </Button>
-            <Button variant="outline" className="border-charcoal/30 text-charcoal hover:bg-charcoal/5 px-8 py-3 rounded-lg">
+          
+          {/* CTA Buttons */}
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+            <a href="mailto:lotsmediaco@gmail.com">
+              <Button className="bg-warm-yellow text-charcoal hover:bg-charcoal hover:text-soft-white transition-colors px-6 py-6 h-auto text-base">
+                <Mail className="h-5 w-5 mr-2" />
+                Mail Us
+              </Button>
+            </a>
+            <a href="https://www.instagram.com/direct/t/17847879945423429" target="_blank" rel="noopener noreferrer">
+              <Button className="bg-warm-yellow text-charcoal hover:bg-charcoal hover:text-soft-white transition-colors px-6 py-6 h-auto text-base">
+                <Instagram className="h-5 w-5 mr-2" />
+                DM on Instagram
+              </Button>
+            </a>
+            <Button variant="outline" className="border-charcoal bg-soft-white text-charcoal hover:text-soft-white hover:bg-charcoal transition-colors px-6 py-6 h-auto text-base">
               Request Custom Quote
             </Button>
           </div>
 
-          <div className="text-center mt-4">
-            <p className="text-charcoal/60 text-sm">For custom requests, reach out via Instagram DM or Mail us.</p>
-          </div>
+          <p className="text-center text-charcoal/70 mt-4 mb-0">
+            For custom requests, reach out via Instagram DM or Mail us.
+          </p>
         </div>
       </section>
 
