@@ -10,7 +10,7 @@ interface EmailData {
 // EmailJS configuration - you'll need to set these up in EmailJS dashboard
 const EMAILJS_SERVICE_ID = 'service_lotsmedia'; // Replace with your EmailJS service ID
 const EMAILJS_TEMPLATE_ID = 'template_lotsmedia'; // Replace with your EmailJS template ID
-const EMAILJS_PUBLIC_KEY = 'your_public_key'; // Replace with your EmailJS public key
+const EMAILJS_PUBLIC_KEY = '8yo6AtiVXRPHPSQQd'; // Replace with your EmailJS public key
 
 export const sendEmailJS = async (templateParams: any): Promise<boolean> => {
   try {
