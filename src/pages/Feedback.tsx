@@ -65,7 +65,7 @@ const Feedback = () => {
 
     try {
       const emailData = formatFeedbackEmail(formData);
-      const emailSent = await sendEmailJS(emailData);
+      const emailSent = await sendEmailJS(emailData, 'feedback');
       
       if (emailSent) {
         toast({
