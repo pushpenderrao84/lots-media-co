@@ -12,7 +12,7 @@ const EMAILJS_SERVICE_ID = 'service_lotsmedia'; // Replace with your EmailJS ser
 const EMAILJS_PUBLIC_KEY = '8yo6AtiVXRPHPSQQd'; // Replace with your EmailJS public key
 
 // Since you're using a single template, we'll use the same template ID for all forms
-const EMAILJS_TEMPLATE_ID = 'template_universal'; // Replace with your universal template ID
+const EMAILJS_TEMPLATE_ID = 'template_lotsmedia'; // Replace with your universal template ID
 
 export const sendEmailJS = async (templateParams: any, templateType: 'contact' | 'feedback' | 'newsletter' | 'booking'): Promise<boolean> => {
   try {
