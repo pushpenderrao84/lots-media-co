@@ -3,11 +3,6 @@ Welcome to the public code-base for the **LOTS Media** portfolio & service site.
 
 ---
 
-## 🔗 Live Preview
-**Production URL:** <https://lovable.dev/projects/ba9a4671-535f-4ddb-8ae8-2cb07c1578b6>
-
----
-
 ## ✨ Main Features
 | Area | What’s Included |
 |------|-----------------|
