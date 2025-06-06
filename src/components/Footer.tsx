@@ -11,13 +11,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8 items-center">
           {/* Logo, Description and Social Icons */}
           <div>
-            <a href="#" className="flex items-center mb-4">
+            <Link to="/" className="flex items-center mb-4">
               <img 
                 src="/logo/lots-media-co.png" 
                 alt="LOTS Media Logo" 
                 className="h-12 mr-2 outline outline-[0.5px] outline-[#FAFAFA] rounded-md"
               />
-            </a>
+            </Link>
             <p className="text-soft-white/70 mb-4">
               Designs that speak. Stories that connect.
             </p>
